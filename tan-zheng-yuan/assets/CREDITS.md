@@ -13,6 +13,22 @@ four animations. `hero-<character>.js` embeds one character's exported files (pl
 before/after view); the page loads it when that character is picked. `<character>-ue-render.webp` is a still rendered in
 the same Unreal project (scripted studio scene, raw HDR capture, graded), and `thumb-<character>.webp` is cropped from it.
 
+## The Realm
+
+| Asset | Used for | Source | Licence |
+|---|---|---|---|
+| KayKit: Medieval Hexagon Pack 1.0 by Kay Lousberg (48 tiles: grass, coasts, rivers, roads, mountains, hills, trees, buildings, props) | The hex-map terrain, water, village, castle and camp | https://github.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0 | CC0 1.0 |
+| KayKit: Character Pack Skeletons 1.0 by Kay Lousberg (Warrior, Minion, Mage, weapons, 12 animations) | The skeleton host | https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Skeletons-1.0 | CC0 1.0 |
+| Animated Monster Pack by Quaternius (Dragon) | The dragon | https://opengameart.org/content/lowpoly-animated-monsters · https://quaternius.com | CC0 1.0 |
+| Farm Animal Pack by Quaternius (Horse) | The horses | https://opengameart.org/content/lowpoly-animated-farm-animal-pack · https://quaternius.com | CC0 1.0 |
+
+All of it went through the same isolated Unreal Engine 5.8 project (`../../ue-knight-refine`, steps 4 to 6): the map is
+generated (rivers, roads and coasts fitted by their open edges), assembled in Unreal as a level of 291 tile actors and
+exported to glTF with a re-graded, baked atlas; the dragon, horses and skeletons get new Unreal materials (the skeletons
+also weapons, LODs and a spectral eye glow) and are exported with their animations. `realm-assets.js` embeds the exports;
+`realm-ue-render.webp` is the level rendered in Unreal at dusk (sky atmosphere, raw HDR capture, graded). The knight and
+barbarian defending the ford are the hero exports above (LOD 2).
+
 ## Environment
 
 All 3D environment assets are from [Poly Haven](https://polyhaven.com) and released under CC0 (public domain).

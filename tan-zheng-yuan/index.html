@@ -245,6 +245,30 @@ button { font: inherit; color: inherit; }
 .tri.lods .tri-val { left: calc(var(--v) / 6000 * 100% + 8px); transition: left .5s cubic-bezier(.2, .8, .2, 1); }
 .tri.lods .tri-bar[aria-pressed="true"] { background: var(--arcane); box-shadow: 0 0 14px rgba(94, 230, 240, .55); }
 @media (max-width: 980px) { .showcase { grid-template-columns: 1fr; } }
+
+/* ---------- III the realm ---------- */
+.realm .vp-stage { aspect-ratio: 16 / 9; max-height: 760px; }
+.realm-caption { position: absolute; z-index: 3; left: 16px; right: 16px; bottom: 54px; width: fit-content; max-width: 640px; margin: 0 auto; padding: 8px 14px; transform: translateY(6px); opacity: 0; font: 500 12.5px/1.45 var(--mono); letter-spacing: .02em; text-align: center; color: var(--text); background: rgba(12, 8, 34, .74); border: 1px solid var(--line-2); border-radius: 6px; pointer-events: none; transition: opacity .5s, transform .5s; }
+.realm-caption.is-on { opacity: 1; transform: translateY(0); }
+.vp-stage.is-render .realm-caption { display: none; }
+.bestiary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); margin-top: clamp(20px, 3vw, 30px); }
+.beast { display: flex; flex-direction: column; padding: 20px 20px 18px; }
+.beast h3 { margin: 4px 0 8px; font: 700 20px/1.15 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.beast > p:not(.sec-num) { margin: 0 0 14px; font-size: 14px; color: var(--text-2); }
+.beast-stats { display: flex; gap: 18px; margin: auto 0 14px; }
+.beast-stats div { display: grid; gap: 2px; }
+.beast-stats dt { font: 500 10.5px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.beast-stats dd { margin: 0; font: 600 15px/1.2 var(--mono); color: var(--text); font-variant-numeric: tabular-nums; }
+.beast .chip { align-self: flex-start; }
+@media (max-width: 1100px) { .bestiary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) {
+  .bestiary { grid-template-columns: 1fr; }
+  .realm-caption { bottom: 50px; font-size: 11.5px; }
+  .realm .vp-stage { aspect-ratio: 4 / 5; }
+  .realm figcaption .seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; width: 100%; background: var(--line-2); }
+  .realm figcaption .seg button { justify-content: center; background: #0c0822; }
+  .realm figcaption .seg button + button { border-left: 0; }
+}
 /* character select */
 .roster { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 18px; }
 .hero-pick { appearance: none; cursor: pointer; display: flex; align-items: center; gap: 11px; min-height: 44px; padding: 6px 16px 6px 6px; text-align: left; color: var(--text-2); background: rgba(17, 12, 44, .78); border: 1px solid var(--line-2); border-radius: 8px; transition: border-color .15s, background-color .15s, box-shadow .2s, transform .2s; }
@@ -529,6 +553,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
     <ul class="nav-links">
       <li><a href="#profile">Profile</a></li>
       <li><a href="#character">Character</a></li>
+      <li><a href="#realm">Realm</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -690,10 +715,93 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
   </div>
 </section>
 
-<!-- ================= III STRENGTHS ================= -->
+
+<!-- ================= III THE REALM ================= -->
+<section class="section" id="realm" aria-labelledby="h-realm">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">Chapter III</span><h2 id="h-realm">The Realm</h2><p>A living hex world: mountains, a river, a lake and the open sea, farmland, forests, a castle and its village. A dragon hunts on the wing, wild horses run the plain and a skeleton host marches on the ford. Every model was sourced under CC0, then assembled, re-graded and exported in Unreal Engine 5.8.</p></div>
+
+    <figure class="vp realm reveal" aria-label="Interactive 3D diorama of the realm">
+      <div class="vp-bar">
+        <span class="vp-file"><span><b>Map_Realm</b> · 291 actors · Unreal Engine 5.8 → glTF</span></span>
+        <div class="vp-tools" role="toolbar" aria-label="Realm display">
+          <div class="seg" role="group" aria-label="Time of day">
+            <button type="button" data-tod="dawn" aria-pressed="false" disabled>Dawn</button>
+            <button type="button" data-tod="day" aria-pressed="false" disabled>Day</button>
+            <button type="button" data-tod="dusk" aria-pressed="true" disabled>Dusk</button>
+            <button type="button" data-tod="night" aria-pressed="false" disabled>Night</button>
+          </div>
+          <div class="seg" role="group" aria-label="View">
+            <button type="button" data-rview="live" aria-pressed="true" disabled>Live</button>
+            <button type="button" data-rview="render" aria-pressed="false" disabled>UE render</button>
+          </div>
+        </div>
+      </div>
+      <div class="vp-stage realm-stage" id="realm-stage">
+        <div class="hud hud-tl" aria-hidden="true"><dl><dt>Actors</dt><dd id="rh-actors">–</dd><dt>Tris</dt><dd id="rh-tris">–</dd><dt>Draws</dt><dd id="rh-calls">–</dd></dl></div>
+        <div class="hud hud-tr" aria-hidden="true"><b id="rh-fps">–</b> fps<br><span id="rh-tod">Dusk</span> · <span id="rh-focus">Tour</span></div>
+        <p class="realm-caption" id="realm-caption" aria-live="polite"></p>
+        <div class="vp-actions">
+          <button type="button" class="chip" id="realm-interact" aria-pressed="false" hidden>Interact</button>
+          <button type="button" class="chip" id="realm-tour" aria-pressed="true" disabled>Tour</button>
+        </div>
+        <img class="vp-render" id="realm-render" src="assets/realm-ue-render.webp" width="1600" height="900" loading="lazy" alt="Unreal Engine render of the realm at dusk: the dragon over the mountains, horses on the plain and the skeleton host at the ford" hidden>
+        <span class="vp-render-cap" aria-hidden="true">Unreal Engine 5.8 render · Map_Realm, raw HDR, graded</span>
+        <div class="vp-loading" id="realm-loading" role="status">The realm loads as you approach…
+          <noscript>JavaScript is off, so the realm can’t run. Everything else on the page works.</noscript>
+        </div>
+      </div>
+      <figcaption>
+        <div class="seg" role="group" aria-label="Focus">
+          <button type="button" data-focus="overview" aria-pressed="true" disabled>Overview</button>
+          <button type="button" data-focus="dragon" aria-pressed="false" disabled>Dragon</button>
+          <button type="button" data-focus="horses" aria-pressed="false" disabled>Horses</button>
+          <button type="button" data-focus="army" aria-pressed="false" disabled>Army</button>
+          <button type="button" data-focus="castle" aria-pressed="false" disabled>Castle</button>
+          <button type="button" data-focus="lake" aria-pressed="false" disabled>Water</button>
+        </div>
+        <span class="fine-only">Drag to orbit · right-drag or Alt+scroll to zoom</span>
+        <span class="touch-only">Tap Interact to orbit with your finger</span>
+      </figcaption>
+    </figure>
+
+    <div class="bestiary">
+      <article class="beast panel reveal">
+        <p class="sec-num">Wyvern · Quaternius (CC0)</p>
+        <h3>The Dragon</h3>
+        <p>The cartoon wyvern re-made as a predator: obsidian-crimson scales, backlit wing membranes, a molten belly and burning eyes, built as new Unreal materials. In the realm it circles the peaks and dives on the ford, breathing fire.</p>
+        <dl class="beast-stats"><div><dt>Tris</dt><dd>1,344</dd></div><div><dt>Bones</dt><dd>37</dd></div><div><dt>Clips</dt><dd>4</dd></div></dl>
+        <button type="button" class="chip" data-beast="dragon">Follow the dragon</button>
+      </article>
+      <article class="beast panel reveal">
+        <p class="sec-num">Horse · Quaternius (CC0)</p>
+        <h3>Wild Horses</h3>
+        <p>One rigged horse, three coats (chestnut, grey and black) authored as Unreal material sets and exported separately. Five run the southern plain kicking up dust; two graze by the lake.</p>
+        <dl class="beast-stats"><div><dt>Tris</dt><dd>690</dd></div><div><dt>Bones</dt><dd>39</dd></div><div><dt>Coats</dt><dd>3</dd></div></dl>
+        <button type="button" class="chip" data-beast="horses">Watch the herd</button>
+      </article>
+      <article class="beast panel reveal">
+        <p class="sec-num">Skeletons · KayKit (CC0)</p>
+        <h3>The Skeleton Host</h3>
+        <p>Warriors, minions and a necromancer, each equipped in Unreal with axe, blade or staff and re-graded to aged bone, dark iron and crimson cloth, with spectral eyes. They share a rig with the heroes, so twelve animations drive all of them.</p>
+        <dl class="beast-stats"><div><dt>Tris</dt><dd>3,545</dd></div><div><dt>LOD1</dt><dd>66%</dd></div><div><dt>Clips</dt><dd>12</dd></div></dl>
+        <button type="button" class="chip" data-beast="army">See the battle</button>
+      </article>
+      <article class="beast panel reveal">
+        <p class="sec-num">Hex terrain · KayKit (CC0)</p>
+        <h3>The Land</h3>
+        <p>A generated map of 217 hexes, with rivers, roads and coasts fitted by their open edges. Unreal assembled it as a level of 291 actors from 50 tile meshes, re-graded the atlas (lush grass, snow-capped rock, slate roofs) and baked it to glTF.</p>
+        <dl class="beast-stats"><div><dt>Tris</dt><dd>34,668</dd></div><div><dt>Meshes</dt><dd>50</dd></div><div><dt>Actors</dt><dd>291</dd></div></dl>
+        <button type="button" class="chip" data-beast="lake">Fly to the water</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IV STRENGTHS ================= -->
 <section class="section" id="strengths" aria-labelledby="h-str">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">Chapter III</span><h2 id="h-str">Core strengths</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">Chapter IV</span><h2 id="h-str">Core strengths</h2></div>
     <div class="strengths">
       <article class="str panel reveal" data-tilt>
         <span class="glare"></span><span class="str-id">S-01</span>
@@ -732,7 +840,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 <!-- ================= IV EXPERIENCE ================= -->
 <section class="section" id="experience" aria-labelledby="h-exp">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">Chapter IV</span><h2 id="h-exp">Work experience</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">Chapter V</span><h2 id="h-exp">Work experience</h2></div>
 
     <figure class="panel tl reveal" aria-labelledby="tl-title">
       <div class="tl-head">
@@ -773,7 +881,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 <!-- ================= V PROJECTS ================= -->
 <section class="section" id="projects" aria-labelledby="h-proj">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">Chapter V</span><h2 id="h-proj">Selected projects</h2><p>Five client trailers, one in-house short, one real-time series.</p></div>
+    <div class="sec-head reveal"><span class="sec-num">Chapter VI</span><h2 id="h-proj">Selected projects</h2><p>Five client trailers, one in-house short, one real-time series.</p></div>
 
     <div class="projects">
       <article class="proj wide panel reveal" data-tilt>
@@ -935,7 +1043,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 <!-- ================= VI INTERNSHIPS ================= -->
 <section class="section" id="internships" aria-labelledby="h-int">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">Chapter VI</span><h2 id="h-int">Internships</h2><p>Three studio placements completed during the degree.</p></div>
+    <div class="sec-head reveal"><span class="sec-num">Chapter VII</span><h2 id="h-int">Internships</h2><p>Three studio placements completed during the degree.</p></div>
     <div class="cards3">
       <article class="panel mini reveal">
         <h3>Glow Production</h3>
@@ -976,7 +1084,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 <!-- ================= VII EDUCATION ================= -->
 <section class="section" id="education" aria-labelledby="h-edu">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">Chapter VII</span><h2 id="h-edu">Education</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">Chapter VIII</span><h2 id="h-edu">Education</h2></div>
     <article class="panel edu reveal">
       <div class="edu-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2 2 10 2 12 0v-5M22 9v6"/></svg></div>
       <div>
@@ -993,7 +1101,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 <!-- ================= VIII SKILL TREE ================= -->
 <section class="section" id="skills" aria-labelledby="h-skills">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">Chapter VIII</span><h2 id="h-skills">Skill tree</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">Chapter IX</span><h2 id="h-skills">Skill tree</h2></div>
     <div class="tree reveal">
       <div class="tree-root"><b>TZY</b><span>Game Modeling<br>Artist</span></div>
       <div class="tree-stem energy" aria-hidden="true"></div>
@@ -1012,7 +1120,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 <!-- ================= IX CONTACT ================= -->
 <section class="section" id="contact" aria-labelledby="h-contact">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">Chapter IX</span><h2 id="h-contact">Contact</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">Chapter X</span><h2 id="h-contact">Contact</h2></div>
     <div class="contact-card panel reveal">
       <div class="portal-deco" aria-hidden="true"><i></i><i></i><i></i></div>
       <p class="eyebrow">New quest</p>
@@ -1031,7 +1139,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 <footer>
   <div class="wrap foot">
     <span><b>Tan Zheng Yuan</b> // Game Modeling Artist</span>
-    <span>World rendered live with three.js · environment: <a href="https://polyhaven.com" rel="noopener">Poly Haven</a> (CC0) · characters: <a href="https://kaylousberg.com" rel="noopener">KayKit by Kay Lousberg</a> (CC0) · <a href="#top">Back to top</a></span>
+    <span>World rendered live with three.js · environment: <a href="https://polyhaven.com" rel="noopener">Poly Haven</a> (CC0) · characters and realm tiles: <a href="https://kaylousberg.com" rel="noopener">KayKit by Kay Lousberg</a> (CC0) · dragon and horses: <a href="https://quaternius.com" rel="noopener">Quaternius</a> (CC0) · <a href="#top">Back to top</a></span>
   </div>
 </footer>
 
@@ -1336,7 +1444,7 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); margin-top: cl
 
   /* ---- active nav link ---- */
   const navLinks = new Map([...document.querySelectorAll('.nav-links a')].map(a => [a.getAttribute('href').slice(1), a]));
-  const ALIAS = { strengths: 'character', internships: 'experience', education: 'experience', contact: 'skills' };
+  const ALIAS = { strengths: 'realm', internships: 'experience', education: 'experience', contact: 'skills' };
   const navIO = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -2892,5 +3000,1051 @@ setSpin(spin);
 resize();
 syncRunning();
 </script>
+<!-- ================= the realm ================= -->
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import { clone as cloneSkinned } from 'three/addons/utils/SkeletonUtils.js';
+
+const $ = id => document.getElementById(id);
+const stageEl = $('realm-stage');
+const loadingEl = $('realm-loading');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const coarse = matchMedia('(pointer: coarse)').matches;
+const fail = msg => { loadingEl.textContent = msg; loadingEl.classList.add('is-error'); };
+
+// The realm has its own WebGL context and a 3 MB bundle, so it only starts when the section comes near.
+// (No top-level await: that would hold the page's load event until someone scrolls here.)
+const nearIO = new IntersectionObserver(es => {
+  if (!es.some(e => e.isIntersecting)) return;
+  nearIO.disconnect();
+  boot().catch(err => { fail('The realm couldn’t start in this browser. Everything else on the page works.'); throw err; });
+}, { rootMargin: '900px 0px' });
+nearIO.observe(stageEl);
+// the bestiary's buttons fly the camera to a creature; before the realm has started they just remember the request
+let pendingFocus = null;
+document.querySelectorAll('[data-beast]').forEach(b => b.addEventListener('click', () => {
+  stageEl.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
+  if (window.__realmFocus) window.__realmFocus(b.dataset.beast);
+  else pendingFocus = b.dataset.beast;
+}));
+
+function loadScript(src, global) {
+  return new Promise(resolve => {
+    if (window[global]) return resolve(window[global]);
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = () => resolve(window[global] || null);
+    s.onerror = () => resolve(null);
+    document.head.append(s);
+  });
+}
+const b64ToBuf = b64 => {
+  const bin = atob(b64), u = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+  return u.buffer;
+};
+
+// ---------------------------------------------------------------- time of day
+const C = hex => new THREE.Color(hex);
+const TOD = {
+  dawn: { sun: [-0.75, 0.22, 0.55], sunCol: C(0xffb487), sunI: 2.4, hemiSky: C(0xf6c7b5), hemiGnd: C(0x3b2c46), hemiI: 0.75,
+          top: C(0x30487e), hor: C(0xf0a58e), bot: C(0x2a2440), fog: C(0xc99a9a), deep: C(0x0b2c4a), shallow: C(0x2f8c94), env: 0.55, night: 0, exposure: 1.0 },
+  day: { sun: [-0.45, 0.85, 0.35], sunCol: C(0xfff3e0), sunI: 2.3, hemiSky: C(0xc4dcff), hemiGnd: C(0x40502f), hemiI: 0.7,
+         top: C(0x2f69c4), hor: C(0xa9d2f2), bot: C(0x3a5a78), fog: C(0xa9c8e4), deep: C(0x08406a), shallow: C(0x26a3a8), env: 0.7, night: 0, exposure: 0.92 },
+  dusk: { sun: [0.82, 0.16, -0.35], sunCol: C(0xff9a5a), sunI: 2.6, hemiSky: C(0xb49ae8), hemiGnd: C(0x2a1d3a), hemiI: 0.8,
+          top: C(0x221a52), hor: C(0xe88a6e), bot: C(0x1c1430), fog: C(0x8a6890), deep: C(0x0a1e44), shallow: C(0x2a6f8a), env: 0.55, night: 0.35, exposure: 1.05 },
+  night: { sun: [0.35, 0.75, -0.55], sunCol: C(0x9fb8ff), sunI: 0.55, hemiSky: C(0x34417a), hemiGnd: C(0x0b0a16), hemiI: 0.45,
+           top: C(0x050818), hor: C(0x1a2450), bot: C(0x05060f), fog: C(0x141a36), deep: C(0x03101f), shallow: C(0x10324a), env: 0.25, night: 1, exposure: 1.15 },
+};
+const TOD_NAMES = { dawn: 'Dawn', day: 'Day', dusk: 'Dusk', night: 'Night' };
+const FOCUS = {
+  overview: { pos: [10.5, 17.5, 26.5], target: [0, 0, -1.5], caption: 'The Realm · 291 Unreal actors built from 50 KayKit tiles, re-graded and baked in Unreal Engine 5.8' },
+  dragon: { follow: true, caption: 'The dragon · a Quaternius base re-made in Unreal: obsidian scales, a molten belly, burning eyes' },
+  horses: { pos: [12.5, 5.2, 13.5], target: [6, 0.2, 5.2], caption: 'Wild horses on the southern plain · three coats, all from one refined mesh' },
+  army: { pos: [-2.2, 5.6, -9.6], target: [-2.8, 0.5, -1.2], caption: 'The skeleton host marches on the ford, falls to dragonfire, and rises again' },
+  castle: { pos: [12.5, 6.5, 2.5], target: [5.6, 1.4, -2.8], caption: 'The castle district · stone, slate-blue roofs and banners, re-graded from one atlas' },
+  lake: { pos: [-12, 5.5, 8.5], target: [-5.5, 0, 0.4], caption: 'River, lake and sea · one animated water shader with shoreline foam and sun glints' },
+};
+const TOUR = ['overview', 'dragon', 'army', 'horses', 'castle', 'lake'];
+
+async function boot() {
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' });
+  } catch (err) {
+    fail('WebGL is switched off in this browser, so the realm can’t be shown. Everything else on the page works.');
+    return;
+  }
+  loadingEl.textContent = 'Raising the realm…';
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.info.autoReset = false;
+  stageEl.prepend(renderer.domElement);
+
+  const A = await loadScript('assets/realm-assets.js', 'REALM_ASSETS');
+  if (!A) { fail('The realm couldn’t load (assets/realm-assets.js is missing). Everything else on the page works.'); return; }
+  const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+  const parse = b64 => new Promise((res, rej) => loader.parse(b64ToBuf(b64), '', res, rej));
+  const names = Object.keys(A).filter(k => k !== 'layout');
+  const G = Object.fromEntries(await Promise.all(names.map(async k => [k, await parse(A[k])])));
+  const layout = A.layout;
+
+  // ---------------------------------------------------------------- scene, sky, lights
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0x8a6890, 48, 175);
+  const camera = new THREE.PerspectiveCamera(34, 16 / 9, 0.1, 900);
+  const U = { time: { value: 0 } };
+
+  const skyU = {
+    top: { value: new THREE.Color() }, horizon: { value: new THREE.Color() }, bottom: { value: new THREE.Color() },
+    sunDir: { value: new THREE.Vector3() }, sunCol: { value: new THREE.Color() }, night: { value: 0 },
+  };
+  const skyMat = new THREE.ShaderMaterial({
+    uniforms: skyU, side: THREE.BackSide, depthWrite: false,
+    vertexShader: 'varying vec3 vDir; void main() { vDir = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); gl_Position.z = gl_Position.w; }',
+    fragmentShader: `uniform vec3 top, horizon, bottom, sunDir, sunCol; uniform float night; varying vec3 vDir;
+      void main() {
+        vec3 d = normalize(vDir);
+        vec3 c = d.y > 0.0 ? mix(horizon, top, pow(min(d.y * 1.7, 1.0), 0.6)) : mix(horizon, bottom, min(-d.y * 5.0, 1.0));
+        float s = max(dot(d, normalize(sunDir)), 0.0);
+        float disc = night > 0.5 ? 2.5 : 8.0;
+        c += sunCol * (smoothstep(0.9993, 0.9997, s) * disc + pow(s, 14.0) * 0.32 * (1.0 - night) + pow(s, 3.0) * 0.1);
+        gl_FragColor = vec4(c, 1.0);
+      }`,
+  });
+  const sky = new THREE.Mesh(new THREE.SphereGeometry(500, 32, 16), skyMat);
+  sky.frustumCulled = false;
+  sky.renderOrder = -10;
+  scene.add(sky);
+
+  const stars = (() => {
+    const n = 1400, p = new Float32Array(n * 3);
+    for (let i = 0; i < n; i++) {
+      const u = Math.random() * 2 - 1, a = Math.random() * Math.PI * 2, y = Math.abs(u) * 0.95 + 0.05, r = Math.sqrt(1 - y * y);
+      p.set([Math.cos(a) * r * 480, y * 480, Math.sin(a) * r * 480], i * 3);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.BufferAttribute(p, 3));
+    const pts = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xdfe6ff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: 0, depthWrite: false, fog: false }));
+    pts.frustumCulled = false;
+    pts.renderOrder = -9;
+    return pts;
+  })();
+  scene.add(stars);
+
+  const hemi = new THREE.HemisphereLight(0xffffff, 0x222222, 0.8);
+  scene.add(hemi);
+  const sun = new THREE.DirectionalLight(0xffffff, 2.5);
+  sun.castShadow = true;
+  sun.shadow.mapSize.set(2048, 2048);
+  Object.assign(sun.shadow.camera, { left: -21, right: 21, top: 21, bottom: -21, near: 1, far: 140 });
+  sun.shadow.camera.updateProjectionMatrix();
+  sun.shadow.bias = -0.0006;
+  sun.shadow.normalBias = 0.03;
+  scene.add(sun, sun.target);
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const envScene = new THREE.Scene();
+  envScene.add(new THREE.Mesh(new THREE.SphereGeometry(10, 32, 16), skyMat));
+  let envRT = null;
+  const refreshEnv = () => { const rt = pmrem.fromScene(envScene, 0, 0.1, 100); scene.environment = rt.texture; envRT?.dispose(); envRT = rt; };
+
+  // ---------------------------------------------------------------- the world (one Unreal level export)
+  const float = attr => {
+    const a = new Float32Array(attr.count * attr.itemSize);
+    for (let i = 0; i < attr.count; i++) for (let k = 0; k < attr.itemSize; k++) a[i * attr.itemSize + k] = attr.getComponent(i, k);
+    return new THREE.BufferAttribute(a, attr.itemSize);
+  };
+  const worldGeo = mesh => {
+    const g = new THREE.BufferGeometry();
+    for (const n of ['position', 'normal', 'uv']) g.setAttribute(n, float(mesh.geometry.attributes[n]));
+    g.setIndex(mesh.geometry.index ? Array.from(mesh.geometry.index.array) : [...Array(g.attributes.position.count).keys()]);
+    g.applyMatrix4(mesh.matrixWorld);
+    return g;
+  };
+  // water surfaces in the hex atlas: swatch 9, facing up, below the grass line
+  const isWater = (g, a, b, c) => {
+    const P = g.attributes.position, UV = g.attributes.uv;
+    const u = (UV.getX(a) + UV.getX(b) + UV.getX(c)) / 3, v = (UV.getY(a) + UV.getY(b) + UV.getY(c)) / 3;
+    const id = Math.floor((v - Math.floor(v)) * 4) * 8 + Math.floor((u - Math.floor(u)) * 8);
+    if (id !== 9) return false;
+    const y = (P.getY(a) + P.getY(b) + P.getY(c)) / 3;
+    const e1 = new THREE.Vector3().fromBufferAttribute(P, b).sub(new THREE.Vector3().fromBufferAttribute(P, a));
+    const e2 = new THREE.Vector3().fromBufferAttribute(P, c).sub(new THREE.Vector3().fromBufferAttribute(P, a));
+    return Math.abs(e1.cross(e2).normalize().y) > 0.9 && y < -0.04;
+  };
+  const split = g => {
+    const idx = g.index.array, land = [], water = [];
+    for (let i = 0; i < idx.length; i += 3) (isWater(g, idx[i], idx[i + 1], idx[i + 2]) ? water : land).push(idx[i], idx[i + 1], idx[i + 2]);
+    const make = list => { if (!list.length) return null; const s = g.clone(); s.setIndex(list); return s; };
+    return [make(land), make(water)];
+  };
+  const W = G.world;
+  W.scene.updateMatrixWorld(true);
+  const landGeos = [], riverGeos = [];
+  let landMat = null, fanMesh = null, actors = 0;
+  W.scene.traverse(o => {
+    if (!o.isMesh) return;
+    actors++;
+    if (/^hex_water@/.test(o.name)) return; // open sea and lake tiles: the ocean surface replaces them
+    if (/windmill_top_fan/.test(o.name)) { fanMesh = o; return; }
+    landMat = landMat || o.material;
+    const g = worldGeo(o);
+    if (/^water(lily|plant)/.test(o.name)) g.translate(0, -0.19, 0); // they float on the lake
+    const [land, water] = split(g);
+    if (land) landGeos.push(land);
+    if (water) riverGeos.push(water);
+  });
+  const land = new THREE.Mesh(mergeGeometries(landGeos), landMat);
+  land.castShadow = land.receiveShadow = true;
+  landMat.envMapIntensity = 0.6;
+  // trees sway: vertices on the foliage swatch (17) lean with a slow wind, more the higher they are
+  landMat.onBeforeCompile = sh => {
+    sh.uniforms.uTime = U.time;
+    sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nuniform float uTime;')
+      .replace('#include <begin_vertex>', `#include <begin_vertex>
+        vec2 sw = floor(fract(uv) * vec2(8.0, 4.0));
+        if (sw.x == 1.0 && sw.y == 2.0) {
+          float k = max(transformed.y, 0.0);
+          transformed.x += sin(uTime * 1.6 + transformed.x * 0.8 + transformed.z * 0.5) * 0.03 * k;
+          transformed.z += cos(uTime * 1.2 + transformed.z * 0.9) * 0.022 * k;
+        }`);
+  };
+  scene.add(land);
+  let fan = null;
+  if (fanMesh) {
+    const g = worldGeo(fanMesh);
+    g.computeBoundingBox();
+    const hub = g.boundingBox.getCenter(new THREE.Vector3()), size = g.boundingBox.getSize(new THREE.Vector3());
+    g.translate(-hub.x, -hub.y, -hub.z);
+    fan = new THREE.Mesh(g, landMat);
+    fan.position.copy(hub);
+    fan.castShadow = true;
+    fan.userData.axis = size.x < size.z ? new THREE.Vector3(1, 0, 0) : new THREE.Vector3(0, 0, 1);
+    scene.add(fan);
+  }
+
+  // ---------------------------------------------------------------- water: ocean plane + river surfaces
+  const EXT = 24;
+  const shoreTex = (() => {
+    const N = 256, c = document.createElement('canvas');
+    c.width = c.height = N;
+    const g = c.getContext('2d');
+    g.fillStyle = '#000';
+    g.fillRect(0, 0, N, N);
+    g.fillStyle = '#fff';
+    const s = N / (2 * EXT);
+    for (const t of layout.tiles) {
+      if (t.kind === 'sea' || t.kind === 'lake') continue;
+      g.beginPath();
+      for (let i = 0; i < 6; i++) {
+        const a = Math.PI / 180 * (30 + 60 * i);
+        const x = (t.x + Math.cos(a) * 1.16 + EXT) * s, z = (t.z + Math.sin(a) * 1.16 + EXT) * s;
+        i ? g.lineTo(x, z) : g.moveTo(x, z);
+      }
+      g.fill();
+    }
+    const src = g.getImageData(0, 0, N, N).data;
+    let a = new Float32Array(N * N), b = new Float32Array(N * N);
+    for (let i = 0; i < N * N; i++) a[i] = src[i * 4] / 255;
+    const R = 5;
+    for (let pass = 0; pass < 3; pass++) {
+      for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+        let sum = 0, n = 0;
+        for (let k = -R; k <= R; k++) { const xx = x + k; if (xx >= 0 && xx < N) { sum += a[y * N + xx]; n++; } }
+        b[y * N + x] = sum / n;
+      }
+      for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+        let sum = 0, n = 0;
+        for (let k = -R; k <= R; k++) { const yy = y + k; if (yy >= 0 && yy < N) { sum += b[yy * N + x]; n++; } }
+        a[y * N + x] = sum / n;
+      }
+    }
+    const out = new Uint8Array(N * N * 4);
+    for (let i = 0; i < N * N; i++) { const v = Math.round(a[i] * 255); out.set([v, v, v, 255], i * 4); }
+    const tex = new THREE.DataTexture(out, N, N);
+    tex.magFilter = tex.minFilter = THREE.LinearFilter;
+    tex.needsUpdate = true;
+    return tex;
+  })();
+  const waterU = {
+    uTime: U.time, uShore: { value: shoreTex }, uExt: { value: EXT }, uRiver: { value: 0 },
+    uSunDir: { value: new THREE.Vector3() }, uSunCol: { value: new THREE.Color() }, uSkyTop: { value: new THREE.Color() },
+    uSkyHor: { value: new THREE.Color() }, uDeep: { value: new THREE.Color() }, uShallow: { value: new THREE.Color() },
+    uFoam: { value: new THREE.Color(0xe8f4ff) }, uNight: { value: 0 },
+  };
+  const waterMat = river => new THREE.ShaderMaterial({
+    uniforms: { ...THREE.UniformsUtils.clone(THREE.UniformsLib.fog), ...waterU, uRiver: { value: river ? 1 : 0 } },
+    fog: true,
+    vertexShader: `varying vec3 vW;
+      #include <fog_pars_vertex>
+      void main() {
+        vec4 w = modelMatrix * vec4(position, 1.0); vW = w.xyz;
+        vec4 mvPosition = viewMatrix * w; gl_Position = projectionMatrix * mvPosition;
+        #include <fog_vertex>
+      }`,
+    fragmentShader: `uniform float uTime, uRiver, uExt, uNight; uniform sampler2D uShore;
+      uniform vec3 uSunDir, uSunCol, uSkyTop, uSkyHor, uDeep, uShallow, uFoam;
+      varying vec3 vW;
+      #include <common>
+      #include <fog_pars_fragment>
+      float hsh(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+      float vnoise(vec2 p) { vec2 i = floor(p), f = fract(p); vec2 u = f * f * (3.0 - 2.0 * f);
+        return mix(mix(hsh(i), hsh(i + vec2(1.0, 0.0)), u.x), mix(hsh(i + vec2(0.0, 1.0)), hsh(i + 1.0), u.x), u.y); }
+      float field(vec2 p) {
+        vec2 flow = uRiver * vec2(-0.45, 0.85) * uTime * 0.9;
+        float t = uTime;
+        return vnoise(p * 1.1 + vec2(t * 0.22, t * 0.15) + flow) * 0.5 + vnoise(p * 2.6 - vec2(t * 0.3, -t * 0.21) + flow * 1.6) * 0.32
+             + vnoise(p * 6.3 + vec2(-t * 0.55, t * 0.42) + flow * 2.4) * 0.18;
+      }
+      void main() {
+        vec2 p = vW.xz;
+        float dist = length(cameraPosition - vW);
+        float calm = 1.0 - smoothstep(18.0, 90.0, dist);       // fine ripples fade out with distance (no glitter noise)
+        float e = 0.06, h = field(p);
+        float amp = 0.32 * (0.25 + 0.75 * calm);
+        vec3 n = normalize(vec3((h - field(p + vec2(e, 0.0))) / e * amp, 1.0, (h - field(p + vec2(0.0, e))) / e * amp));
+        vec3 V = normalize(cameraPosition - vW);
+        float shore = texture2D(uShore, (p + uExt) / (2.0 * uExt)).r * (1.0 - uRiver);
+        vec3 col = mix(uDeep, uShallow, smoothstep(0.12, 0.62, shore) + uRiver * 0.45);
+        vec3 R = reflect(-V, n);
+        vec3 sky = mix(uSkyHor, uSkyTop, clamp(R.y * 1.8, 0.0, 1.0));
+        float fres = 0.02 + 0.98 * pow(1.0 - max(dot(n, V), 0.0), 5.0);
+        col = mix(col, sky, fres * 0.9);
+        vec3 L = normalize(uSunDir);
+        float s = max(dot(R, L), 0.0);
+        col += uSunCol * (pow(s, 260.0) * 3.0 * (0.35 + 0.65 * calm) + pow(s, 28.0) * 0.16) * smoothstep(-0.05, 0.1, L.y) * (1.0 - 0.6 * uNight) * (1.0 - 0.5 * uRiver);
+        float band = 0.5 + 0.5 * sin(shore * 28.0 - uTime * 1.7 + vnoise(p * 2.5) * 6.0);
+        float foam = smoothstep(0.5, 0.72, shore) * smoothstep(0.72, 0.98, band) + smoothstep(0.8, 0.93, shore) * 0.6;
+        foam *= 0.55 + 0.45 * vnoise(p * 5.0 + uTime * 0.4);
+        foam += uRiver * smoothstep(0.62, 0.9, vnoise(p * 3.0 + vec2(-0.45, 0.85) * uTime * 1.4)) * 0.35; // flecks carried downstream
+        col = mix(col, uFoam * (1.0 - uNight * 0.6), clamp(foam, 0.0, 1.0) * 0.85);
+        gl_FragColor = vec4(col, 1.0);
+        #include <tonemapping_fragment>
+        #include <colorspace_fragment>
+        #include <fog_fragment>
+      }`,
+  });
+  const ocean = new THREE.Mesh(new THREE.PlaneGeometry(900, 900).rotateX(-Math.PI / 2), waterMat(false));
+  ocean.position.y = -0.2;
+  ocean.receiveShadow = false;
+  scene.add(ocean);
+  if (riverGeos.length) scene.add(new THREE.Mesh(mergeGeometries(riverGeos), waterMat(true)));
+
+  // ---------------------------------------------------------------- particles
+  const glowTex = (() => {
+    const c = document.createElement('canvas');
+    c.width = c.height = 64;
+    const g = c.getContext('2d'), gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gr.addColorStop(0, 'rgba(255,255,255,1)');
+    gr.addColorStop(0.35, 'rgba(255,255,255,0.55)');
+    gr.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = gr;
+    g.fillRect(0, 0, 64, 64);
+    return new THREE.CanvasTexture(c);
+  })();
+  const pointScale = { value: 400 };
+  class Particles {
+    constructor(max, additive, style) {
+      Object.assign(this, { max, style, head: 0 });
+      this.pos = new Float32Array(max * 3); this.vel = new Float32Array(max * 3);
+      this.col = new Float32Array(max * 4); this.size = new Float32Array(max);
+      this.age = new Float32Array(max).fill(1e9); this.life = new Float32Array(max).fill(1); this.base = new Float32Array(max);
+      const g = new THREE.BufferGeometry();
+      g.setAttribute('position', new THREE.BufferAttribute(this.pos, 3).setUsage(THREE.DynamicDrawUsage));
+      g.setAttribute('pcol', new THREE.BufferAttribute(this.col, 4).setUsage(THREE.DynamicDrawUsage));
+      g.setAttribute('psize', new THREE.BufferAttribute(this.size, 1).setUsage(THREE.DynamicDrawUsage));
+      this.points = new THREE.Points(g, new THREE.ShaderMaterial({
+        uniforms: { map: { value: glowTex }, uScale: pointScale },
+        vertexShader: `attribute vec4 pcol; attribute float psize; uniform float uScale; varying vec4 vC;
+          void main() { vC = pcol; vec4 mv = modelViewMatrix * vec4(position, 1.0); gl_PointSize = psize * uScale / max(-mv.z, 0.1); gl_Position = projectionMatrix * mv; }`,
+        fragmentShader: 'uniform sampler2D map; varying vec4 vC; void main() { float a = texture2D(map, gl_PointCoord).a * vC.a; if (a < 0.003) discard; gl_FragColor = vec4(vC.rgb * (vC.a > 0.0 ? 1.0 : 0.0), a); }',
+        transparent: true, depthWrite: false, blending: additive ? THREE.AdditiveBlending : THREE.NormalBlending,
+      }));
+      this.points.frustumCulled = false;
+      scene.add(this.points);
+    }
+    emit(p, v, life, size) {
+      const i = this.head = (this.head + 1) % this.max;
+      this.pos.set(p, i * 3); this.vel.set(v, i * 3);
+      this.age[i] = 0; this.life[i] = life; this.base[i] = size;
+    }
+    update(dt) {
+      for (let i = 0; i < this.max; i++) {
+        const t = (this.age[i] += dt) / this.life[i];
+        if (t >= 1) { this.col[i * 4 + 3] = 0; this.size[i] = 0; continue; }
+        this.style(this, i, t, dt);
+        this.pos[i * 3] += this.vel[i * 3] * dt; this.pos[i * 3 + 1] += this.vel[i * 3 + 1] * dt; this.pos[i * 3 + 2] += this.vel[i * 3 + 2] * dt;
+      }
+      const g = this.points.geometry;
+      g.attributes.position.needsUpdate = g.attributes.pcol.needsUpdate = g.attributes.psize.needsUpdate = true;
+    }
+  }
+  const setC = (P, i, r, g, b, a) => P.col.set([r, g, b, a], i * 4);
+  const fire = new Particles(420, true, (P, i, t, dt) => {
+    const k = 1 - Math.min(dt * 2.2, 0.5);
+    P.vel[i * 3] *= k; P.vel[i * 3 + 2] *= k; P.vel[i * 3 + 1] = P.vel[i * 3 + 1] * k + dt * 1.2;
+    const hot = Math.max(0, 1 - t * 3);
+    setC(P, i, 1.5 + hot * 1.1, 0.42 + hot * 0.9, 0.06 + hot * 0.4, (1 - t) * (1 - t) * 0.6);
+    P.size[i] = P.base[i] * (0.4 + t * 1.6);
+  });
+  const smoke = new Particles(160, false, (P, i, t, dt) => {
+    P.vel[i * 3 + 1] += dt * 0.15; P.vel[i * 3] += dt * 0.08;
+    const night = state.night;
+    setC(P, i, 0.32 - night * 0.2, 0.3 - night * 0.19, 0.33 - night * 0.18, Math.sin(Math.PI * t) * 0.32);
+    P.size[i] = P.base[i] * (0.6 + t * 1.8);
+  });
+  const dust = new Particles(220, false, (P, i, t, dt) => {
+    P.vel[i * 3 + 1] -= dt * 0.25;
+    setC(P, i, 0.66, 0.55, 0.4, (1 - t) * 0.42);
+    P.size[i] = P.base[i] * (0.5 + t * 1.5);
+  });
+  const magic = new Particles(260, true, (P, i, t) => {
+    const f = 1 - t;
+    setC(P, i, 0.9 + 0.5 * f, 0.35 + 1.4 * f * f, 2.4, f * 0.9);
+    P.size[i] = P.base[i] * (1.2 - t * 0.7);
+  });
+  const sparks = new Particles(160, true, (P, i, t, dt) => {
+    P.vel[i * 3 + 1] -= dt * 3.5;
+    const flick = 0.6 + 0.4 * Math.sin((P.age[i] + i) * 40);
+    setC(P, i, 3.2 * flick, 1.2 * flick, 0.2, 1 - t);
+    P.size[i] = P.base[i];
+  });
+  const flies = new Particles(70, true, (P, i, t, dt) => {
+    const a = P.age[i] * 1.3 + i;
+    P.vel[i * 3] = Math.sin(a) * 0.25; P.vel[i * 3 + 2] = Math.cos(a * 0.8) * 0.25; P.vel[i * 3 + 1] = Math.sin(a * 1.7) * 0.08;
+    const blink = Math.max(0, Math.sin(P.age[i] * 2.2 + i * 1.7));
+    setC(P, i, 1.6, 2.4, 0.7, blink * Math.sin(Math.PI * t) * state.night);
+    P.size[i] = P.base[i];
+  });
+  const systems = [fire, smoke, dust, magic, sparks, flies];
+
+  // ---------------------------------------------------------------- creatures
+  const findBone = (root, re) => { let b = null; root.traverse(o => { if (!b && o.isBone && re.test(o.name)) b = o; }); return b; };
+  function template(gltf, { height, span, level = 0 }) {
+    const root = gltf.scene;
+    root.updateMatrixWorld(true);
+    root.traverse(o => {
+      if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.frustumCulled = false; }
+      if (o.isSkinnedMesh) o.skeleton.update(); // skinned bounds need the bone matrices
+    });
+    const box = new THREE.Box3().setFromObject(root, true), size = box.getSize(new THREE.Vector3());
+    const scale = height ? height / size.y : span / Math.max(size.x, size.z);
+    const head = findBone(root, /head/i), center = box.getCenter(new THREE.Vector3());
+    let fwd = 0, pitch = 0;
+    const handR = findBone(root, /^handslot[._]r$/), handL = findBone(root, /^handslot[._]l$/);
+    if (handR && handL) { // humanoids: forward is up x (left hand -> right hand)
+      const r = handR.getWorldPosition(new THREE.Vector3()).sub(handL.getWorldPosition(new THREE.Vector3()));
+      fwd = Math.atan2(-r.z, r.x) + Math.PI;
+    } else if (head && span) { // creatures: the head is forward of the body
+      const h = head.getWorldPosition(new THREE.Vector3()).sub(center);
+      fwd = Math.atan2(h.x, h.z);
+      pitch = Math.atan2(h.y, Math.hypot(h.x, h.z)) * level; // tip an upright flier forward into level flight
+    }
+    return { root, scale, fwd, pitch, center, minY: box.min.y, centred: !!level };
+  }
+  function instance(tpl, clips) {
+    const holder = new THREE.Group(), pivot = new THREE.Group(), model = cloneSkinned(tpl.root);
+    model.scale.setScalar(tpl.scale);
+    if (tpl.centred) model.position.copy(tpl.center).multiplyScalar(-tpl.scale);
+    else model.position.y = -tpl.minY * tpl.scale;
+    pivot.rotation.set(tpl.pitch, -tpl.fwd, 0, 'XYZ');
+    pivot.add(model);
+    holder.add(pivot);
+    scene.add(holder);
+    const mixer = new THREE.AnimationMixer(model);
+    const actions = {};
+    for (const [k, clip] of Object.entries(clips)) actions[k] = mixer.clipAction(clip);
+    const me = { holder, model, mixer, actions, current: null };
+    me.play = (k, { fade = 0.25, once = false, speed = 1 } = {}) => {
+      const a = actions[k];
+      if (!a || (me.current === a && !once)) { if (a) a.timeScale = speed; return; }
+      a.reset().setLoop(once ? THREE.LoopOnce : THREE.LoopRepeat, Infinity);
+      a.clampWhenFinished = once;
+      a.timeScale = speed;
+      a.fadeIn(fade).play();
+      if (me.current && me.current !== a) me.current.fadeOut(fade);
+      me.current = a;
+    };
+    me.face = (dx, dz, dt, rate = 6) => {
+      const want = Math.atan2(dx, dz);
+      let d = want - holder.rotation.y;
+      d = Math.atan2(Math.sin(d), Math.cos(d));
+      holder.rotation.y += d * Math.min(1, dt * rate);
+    };
+    return me;
+  }
+  // animation clips bind by node name; keep only the tracks a model actually has (the skeletons and heroes share a rig)
+  const clipsFor = (root, map) => Object.fromEntries(Object.entries(map).map(([k, g]) => {
+    const c = g.animations[0].clone();
+    c.tracks = c.tracks.filter(t => root.getObjectByName(THREE.PropertyBinding.parseTrackName(t.name).nodeName)?.isBone);
+    return [k, c];
+  }));
+  const pick = (prefix, keys) => Object.fromEntries(keys.map(k => [k, G[`${prefix}_anim_${k}`]]));
+  const SK_KEYS = ['idle', 'run', 'chop', 'slice', 'block', 'taunt', 'cheer', 'cast', 'summon', 'rise', 'collapse', 'resurrect'];
+
+  // the dragon, with its eyes (a separate model in the source) fixed to the head bone
+  const dragonTpl = template(G.dragon, { span: 4.2, level: 0.85 });
+  const dragon = instance(dragonTpl, clipsFor(dragonTpl.root, pick('dragon', ['fly', 'attack', 'breath', 'hit'])));
+  {
+    const eyes = G.dragon_eyes.scene;
+    eyes.traverse(o => { if (o.isMesh) o.frustumCulled = false; });
+    dragon.model.add(eyes);
+    dragon.model.updateMatrixWorld(true);
+    const head = findBone(dragon.model, /head/i);
+    if (head) head.attach(eyes);
+    dragon.head = head;
+  }
+  dragon.model.traverse(o => {
+    if (o.isMesh && o.material?.emissive) {
+      const n = o.material.name;
+      o.material = o.material.clone();
+      if (/Belly/.test(n)) o.material.emissiveIntensity = 1.8;
+      if (/Eyes/.test(n)) o.material.emissiveIntensity = 7;
+      if (/Wings/.test(n)) o.material.side = THREE.DoubleSide;
+    }
+  });
+  dragon.play('fly');
+  const fireLight = new THREE.PointLight(0xff7a2a, 0, 9, 1.6);
+  scene.add(fireLight);
+
+  // horses: three coats exported from one refined mesh
+  const horses = [];
+  {
+    const coats = ['chestnut', 'grey', 'black', 'chestnut', 'grey'];
+    const tpls = {};
+    for (const c of ['chestnut', 'grey', 'black']) tpls[c] = template(G[`horse_${c}`], { span: 0.95 });
+    const clips = clipsFor(tpls.chestnut.root, pick('horse', ['run', 'walk', 'idle']));
+    coats.forEach((c, i) => {
+      const h = instance(tpls[c], clips);
+      h.phase = i / coats.length;
+      h.lane = (i % 2 ? 0.35 : -0.3);
+      h.play('run', { speed: 1.05 + (i % 3) * 0.06 });
+      horses.push(h);
+    });
+    // two grazing by the lake shore
+    for (const [c, x, z, ry] of [['black', -2.6, 2.9, 0.6], ['grey', -1.6, 3.3, 2.4]]) {
+      const h = instance(tpls[c], clips);
+      h.holder.position.set(x, 0, z);
+      h.holder.rotation.y = ry;
+      h.play('idle');
+      h.mixer.setTime(Math.random() * 5);
+    }
+  }
+  const HORSE_LOOP = new THREE.CatmullRomCurve3([[2.8, 5.0], [4.2, 2.9], [7.4, 2.7], [10.2, 4.1], [9.6, 6.6], [6.8, 7.6], [3.9, 7.0]].map(([x, z]) => new THREE.Vector3(x, 0, z)), true, 'catmullrom', 0.5);
+  const horseLen = HORSE_LOOP.getLength();
+
+  // the skeleton host (all share one rig with the heroes), and two heroes holding the ford
+  const skTpl = { warrior: template(G.skeleton_warrior, { height: 0.44 }), minion: template(G.skeleton_minion, { height: 0.42 }), mage: template(G.skeleton_mage, { height: 0.46 }) };
+  const skClips = Object.fromEntries(Object.entries(skTpl).map(([k, t]) => [k, clipsFor(t.root, pick('skeleton', SK_KEYS))]));
+  for (const t of Object.values(skTpl)) t.root.traverse(o => { if (o.isMesh && /Glow/.test(o.material.name)) { o.material.emissiveIntensity = 5; } });
+  const army = [];
+  const FORM = [[0, 0], [0.42, -0.36], [0.42, 0.36], [0.86, -0.62], [0.86, 0], [0.86, 0.62], [1.3, -0.4], [1.3, 0.4], [1.72, 0]];
+  FORM.forEach(([back, side], i) => {
+    const kind = i % 3 === 1 ? 'minion' : 'warrior';
+    const s = instance(skTpl[kind], skClips[kind]);
+    Object.assign(s, { back, side, jitter: (i * 0.137) % 0.35 });
+    army.push(s);
+  });
+  const mage = instance(skTpl.mage, skClips.mage);
+  mage.holder.position.set(10.3, 0, 2.2);
+  mage.holder.rotation.y = -1.9;
+  const heroes = [];
+  for (const [k, x, z] of [['knight', -3.75, -1.35], ['barbarian', -3.95, -2.15]]) {
+    const tpl = template(G[`hero_${k}`], { height: 0.44 });
+    const h = instance(tpl, clipsFor(tpl.root, pick('skeleton', ['idle', 'chop', 'slice', 'block', 'cheer', 'taunt'])));
+    h.holder.position.set(x, 0, z);
+    h.holder.rotation.y = Math.PI / 2;
+    h.play('idle');
+    heroes.push(h);
+  }
+  // the march: rise east of the plain, cross open ground, meet the heroes at the ford
+  const MARCH = new THREE.CatmullRomCurve3([[8.6, 2.4], [6.2, 2.3], [3.6, 1.5], [1.2, 0.2], [-0.9, -1.2], [-2.15, -1.75]].map(([x, z]) => new THREE.Vector3(x, 0, z)), false, 'catmullrom', 0.5);
+  const T = 36; // one battle cycle, seconds
+
+  // summon rings under the skeletons as they rise or resurrect
+  const ringTex = (() => {
+    const c = document.createElement('canvas');
+    c.width = c.height = 128;
+    const g = c.getContext('2d');
+    const gr = g.createRadialGradient(64, 64, 18, 64, 64, 62);
+    gr.addColorStop(0, 'rgba(255,255,255,0)'); gr.addColorStop(0.55, 'rgba(255,255,255,0.9)'); gr.addColorStop(0.7, 'rgba(255,255,255,0.35)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, 128, 128);
+    return new THREE.CanvasTexture(c);
+  })();
+  const rings = new THREE.InstancedMesh(new THREE.PlaneGeometry(0.9, 0.9).rotateX(-Math.PI / 2),
+    new THREE.MeshBasicMaterial({ map: ringTex, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, color: 0xffffff }), army.length + 1);
+  rings.instanceColor = new THREE.InstancedBufferAttribute(new Float32Array((army.length + 1) * 3), 3);
+  rings.frustumCulled = false;
+  scene.add(rings);
+
+  // ---------------------------------------------------------------- ambient life: clouds, birds, torches, chimneys
+  const cloudTex = (() => {
+    const c = document.createElement('canvas');
+    c.width = 256; c.height = 128;
+    const g = c.getContext('2d');
+    for (let i = 0; i < 26; i++) {
+      const x = 40 + Math.random() * 176, y = 50 + Math.random() * 40, r = 18 + Math.random() * 30;
+      const gr = g.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, 'rgba(255,255,255,0.55)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+      g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2);
+    }
+    return new THREE.CanvasTexture(c);
+  })();
+  const clouds = [];
+  for (let i = 0; i < 9; i++) {
+    const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: cloudTex, transparent: true, depthWrite: false, fog: true, opacity: 0.85 }));
+    const w = 9 + Math.random() * 8;
+    s.scale.set(w, w * 0.45, 1);
+    const a = (i / 9) * Math.PI * 2 + Math.random() * 0.4, r = 30 + Math.random() * 14;
+    s.position.set(Math.cos(a) * r, 11 + Math.random() * 6, Math.sin(a) * r - 6);
+    s.material.opacity = 0.6;
+    s.userData.speed = 0.35 + Math.random() * 0.35;
+    clouds.push(s);
+    scene.add(s);
+  }
+  const birdWing = new THREE.BufferGeometry();
+  birdWing.setAttribute('position', new THREE.Float32BufferAttribute([0, 0, -0.05, 0, 0, 0.07, 0.24, 0, -0.02], 3));
+  birdWing.computeVertexNormals();
+  const birdMat = new THREE.MeshBasicMaterial({ color: 0x1a1424, side: THREE.DoubleSide });
+  const wingsL = new THREE.InstancedMesh(birdWing, birdMat, 9), wingsR = new THREE.InstancedMesh(birdWing, birdMat, 9);
+  wingsL.frustumCulled = wingsR.frustumCulled = false;
+  scene.add(wingsL, wingsR);
+  const torches = [[5.2, 0.55, -2.1], [6.8, 0.55, -2.1], [11.6, 0.35, -1.1], [12.4, 0.35, -2.6], [-5.6, 0.45, -1.2]].map(p => {
+    const l = new THREE.PointLight(0xff8a3a, 0, 4.5, 1.8);
+    l.position.set(...p);
+    scene.add(l);
+    return l;
+  });
+  const chimneys = layout.tiles.filter(t => t.kind === 'town' && t.x < 0).slice(0, 5).map(t => new THREE.Vector3(t.x + 0.2, 1.3, t.z - 0.1));
+  const lilyZone = layout.tiles.filter(t => ['forest', 'lake', 'coast'].includes(t.kind) && t.x < 1).map(t => [t.x, t.z]);
+
+  // ---------------------------------------------------------------- post: MSAA HDR target, bloom, grade
+  const composer = new EffectComposer(renderer, new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: 4 }));
+  composer.addPass(new RenderPass(scene, camera));
+  const bloom = new UnrealBloomPass(new THREE.Vector2(1, 1), 0.5, 0.55, 0.95);
+  composer.addPass(bloom);
+  const grade = new ShaderPass(new THREE.ShaderMaterial({
+    uniforms: { tDiffuse: { value: null }, uVig: { value: 0.32 } },
+    vertexShader: 'varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+    fragmentShader: `uniform sampler2D tDiffuse; uniform float uVig; varying vec2 vUv;
+      void main() { vec4 c = texture2D(tDiffuse, vUv); vec2 d = vUv - 0.5; c.rgb *= 1.0 - uVig * pow(dot(d, d) * 2.2, 1.3); gl_FragColor = c; }`,
+  }));
+  composer.addPass(grade);
+  composer.addPass(new OutputPass());
+  let pixelCap = Math.min(window.devicePixelRatio, 1.75);
+  const degrade = [
+    () => { bloom.enabled = false; },
+    () => { pixelCap = 1; resize(); },
+    () => { sun.castShadow = false; land.material.needsUpdate = true; },
+    () => { for (const rt of [composer.renderTarget1, composer.renderTarget2]) { rt.samples = 0; rt.dispose(); } },
+  ];
+
+  // ---------------------------------------------------------------- camera and controls
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.07;
+  controls.enablePan = false;
+  controls.minDistance = 3;
+  controls.maxDistance = 70;
+  controls.maxPolarAngle = Math.PI * 0.46;
+  controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.DOLLY };
+  stageEl.addEventListener('wheel', e => { if (!e.altKey) e.stopPropagation(); }, { capture: true });
+  camera.position.set(...FOCUS.overview.pos);
+  controls.target.set(...FOCUS.overview.target);
+
+  // ---------------------------------------------------------------- state
+  const state = { tod: 'dusk', night: TOD.dusk.night, focus: 'overview', tour: !reduceMotion, tourT: 0, follow: false, view: 'live', fly: null };
+  const cur = {}; // the live, blended time-of-day values
+  const blend = { from: null, to: TOD.dusk, t: 1 };
+  const lerpTod = (a, b, t) => {
+    for (const k of Object.keys(b)) {
+      if (b[k].isColor) (cur[k] ||= new THREE.Color()).copy(a[k]).lerp(b[k], t);
+      else if (Array.isArray(b[k])) cur[k] = a[k].map((v, i) => v + (b[k][i] - v) * t);
+      else cur[k] = a[k] + (b[k] - a[k]) * t;
+    }
+  };
+  const applyTod = () => {
+    const d = new THREE.Vector3(...cur.sun).normalize();
+    sun.position.copy(d).multiplyScalar(60);
+    sun.color.copy(cur.sunCol);
+    sun.intensity = cur.sunI;
+    hemi.color.copy(cur.hemiSky); hemi.groundColor.copy(cur.hemiGnd); hemi.intensity = cur.hemiI;
+    skyU.top.value.copy(cur.top); skyU.horizon.value.copy(cur.hor); skyU.bottom.value.copy(cur.bot);
+    skyU.sunDir.value.copy(d); skyU.sunCol.value.copy(cur.sunCol); skyU.night.value = cur.night;
+    scene.fog.color.copy(cur.fog);
+    waterU.uSunDir.value.copy(d); waterU.uSunCol.value.copy(cur.sunCol).multiplyScalar(cur.sunI / 2.6);
+    waterU.uSkyTop.value.copy(cur.top); waterU.uSkyHor.value.copy(cur.hor);
+    waterU.uDeep.value.copy(cur.deep); waterU.uShallow.value.copy(cur.shallow); waterU.uNight.value = cur.night;
+    scene.environmentIntensity = cur.env;
+    renderer.toneMappingExposure = cur.exposure;
+    stars.material.opacity = Math.max(0, cur.night - 0.3) / 0.7;
+    state.night = cur.night;
+    for (const c of clouds) c.material.color.copy(cur.hor).lerp(cur.sunCol, 0.25).multiplyScalar(0.55 + 0.45 * (1 - cur.night));
+  };
+  lerpTod(TOD.dusk, TOD.dusk, 1);
+  applyTod();
+  refreshEnv();
+  const setTod = name => {
+    blend.from = { ...cur, ...Object.fromEntries(Object.entries(cur).map(([k, v]) => [k, v?.isColor ? v.clone() : Array.isArray(v) ? [...v] : v])) };
+    blend.to = TOD[name];
+    blend.t = 0;
+    state.tod = name;
+    document.querySelectorAll('[data-tod]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.tod === name)));
+    $('rh-tod').textContent = TOD_NAMES[name];
+    renderIfIdle();
+  };
+
+  // narrow (portrait) viewports pull each preset camera back so its subject still fits across
+  const presetPos = f => {
+    const t = new THREE.Vector3(...f.target), k = Math.pow(Math.max(1, 1.3 / camera.aspect), 0.75);
+    return new THREE.Vector3(...f.pos).sub(t).multiplyScalar(k).add(t);
+  };
+  const caption = $('realm-caption');
+  let captionTimer = 0;
+  function focus(name, { fromTour = false } = {}) {
+    state.focus = name;
+    const f = FOCUS[name];
+    state.follow = !!f.follow;
+    if (!f.follow) state.fly = { t: 0, p0: camera.position.clone(), t0: controls.target.clone(), p1: presetPos(f), t1: new THREE.Vector3(...f.target) };
+    else state.fly = { t: 0, p0: camera.position.clone(), t0: controls.target.clone(), follow: true };
+    caption.textContent = f.caption;
+    caption.classList.add('is-on');
+    clearTimeout(captionTimer);
+    captionTimer = setTimeout(() => caption.classList.remove('is-on'), 5200); // a title card, then out of the way
+    $('rh-focus').textContent = state.tour ? 'Tour' : name[0].toUpperCase() + name.slice(1);
+    document.querySelectorAll('[data-focus]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.focus === name)));
+    if (!fromTour) setTour(false);
+    renderIfIdle();
+  }
+  const tourBtn = $('realm-tour');
+  function setTour(on) {
+    state.tour = on;
+    state.tourT = 0;
+    tourBtn.setAttribute('aria-pressed', String(on));
+    $('rh-focus').textContent = on ? 'Tour' : state.focus[0].toUpperCase() + state.focus.slice(1);
+  }
+  document.querySelectorAll('[data-tod]').forEach(b => b.addEventListener('click', () => setTod(b.dataset.tod)));
+  document.querySelectorAll('[data-focus]').forEach(b => b.addEventListener('click', () => focus(b.dataset.focus)));
+  tourBtn.addEventListener('click', () => { setTour(!state.tour); if (state.tour) focus(TOUR[0], { fromTour: true }); });
+  const renderImg = $('realm-render');
+  function setView(v) {
+    state.view = v;
+    renderImg.hidden = v !== 'render';
+    stageEl.classList.toggle('is-render', v === 'render');
+    document.querySelectorAll('[data-rview]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.rview === v)));
+    syncRunning();
+  }
+  document.querySelectorAll('[data-rview]').forEach(b => b.addEventListener('click', () => setView(b.dataset.rview)));
+  controls.addEventListener('start', () => { state.fly = null; state.follow = false; if (state.tour) setTour(false); stageEl.classList.add('is-grabbing'); });
+  controls.addEventListener('end', () => stageEl.classList.remove('is-grabbing'));
+  const interactBtn = $('realm-interact');
+  function setInteract(on) {
+    controls.enabled = on;
+    renderer.domElement.style.touchAction = on ? 'none' : 'pan-y';
+    interactBtn.setAttribute('aria-pressed', String(on));
+    stageEl.classList.toggle('is-locked', !on);
+  }
+  if (coarse) {
+    interactBtn.hidden = false;
+    setInteract(false);
+    interactBtn.addEventListener('click', () => setInteract(!controls.enabled));
+  }
+
+  // ---------------------------------------------------------------- the dragon's flight: a loop over the peaks, a dive on the ford
+  const FLIGHT = new THREE.CatmullRomCurve3([
+    [-2.4, 3.1, -1.4], [-7.5, 4.8, 2.0], [-10, 7.2, -3.5], [-6, 9.4, -10.5], [1, 10.2, -13.5], [8.5, 9.4, -10],
+    [12.5, 7.6, -3.5], [11.5, 6.6, 4.5], [6, 5.0, 6.5], [1.8, 3.6, 2.0],
+  ].map(p => new THREE.Vector3(...p)), true, 'catmullrom', 0.5);
+  const FIRE_AT = 19.2; // seconds into the cycle when the dragon is over the ford
+  const dPos = new THREE.Vector3(), dAhead = new THREE.Vector3(), dPrev = new THREE.Vector3();
+  let dRoll = 0, breathT = -1;
+  const headPos = new THREE.Vector3(), tmpV = new THREE.Vector3(), up = new THREE.Vector3(0, 1, 0);
+  const cycleU = t => ((t / T) + 1) % 1;
+
+  // ---------------------------------------------------------------- simulation
+  let clock = 0;
+  const marchLen = MARCH.getLength();
+  function simulate(dt) {
+    clock += dt;
+    U.time.value = clock;
+    const ct = clock % T;
+
+    // dragon
+    const u = (1 - cycleU(ct - FIRE_AT)) % 1; // flown backwards along the curve: the dive comes in from the lake, heading east
+    FLIGHT.getPointAt(u, dPos);
+    FLIGHT.getPointAt((u + 0.996) % 1, dAhead);
+    const dir = tmpV.copy(dAhead).sub(dPos).normalize();
+    dragon.holder.position.copy(dPos);
+    const yaw = Math.atan2(dir.x, dir.z);
+    let dy = yaw - (dragon.yaw ?? yaw);
+    dy = Math.atan2(Math.sin(dy), Math.cos(dy));
+    dragon.yaw = yaw;
+    dRoll += ((-dy / Math.max(dt, 1e-3)) * 0.35 - dRoll) * Math.min(1, dt * 2.5);
+    dragon.holder.rotation.set(0, 0, 0);
+    dragon.holder.rotateY(yaw);
+    dragon.holder.rotateX(-Math.asin(THREE.MathUtils.clamp(dir.y, -0.6, 0.6)) * 0.8);
+    dragon.holder.rotateZ(THREE.MathUtils.clamp(dRoll, -0.7, 0.7));
+    if (ct > FIRE_AT - 1.4 && ct < FIRE_AT - 1.3 && breathT < 0) { dragon.play('breath', { once: true, fade: 0.2 }); breathT = 0; }
+    if (breathT >= 0) {
+      breathT += dt;
+      if (breathT > 1.75) { breathT = -1; dragon.play('fly', { fade: 0.35 }); }
+    }
+    const breathing = breathT > 0.35 && breathT < 1.6;
+    if (dragon.head) {
+      dragon.head.getWorldPosition(headPos);
+      const fw = tmpV.set(Math.sin(yaw), -0.95, Math.cos(yaw)).normalize();
+      if (breathing) {
+        const mouth = headPos.clone().addScaledVector(fw, 0.45);
+        for (let i = 0; i < 5; i++) {
+          const v = fw.clone().multiplyScalar(5.5 + Math.random() * 2.5).add(new THREE.Vector3((Math.random() - 0.5) * 1.6, (Math.random() - 0.5) * 1.2, (Math.random() - 0.5) * 1.6));
+          fire.emit(mouth.toArray(), v.toArray(), 0.55 + Math.random() * 0.35, 0.32 + Math.random() * 0.3);
+        }
+        if (Math.random() < 0.6) sparks.emit(mouth.toArray(), fw.clone().multiplyScalar(4).add(new THREE.Vector3(Math.random() - 0.5, Math.random(), Math.random() - 0.5)).toArray(), 1.2, 0.05);
+        fireLight.position.copy(mouth).addScaledVector(fw, 1.4);
+        fireLight.intensity = 9 + Math.random() * 6;
+      } else {
+        fireLight.intensity *= Math.max(0, 1 - dt * 6);
+      }
+      // embers drifting off the molten belly
+      if (Math.random() < dt * 6) sparks.emit([dPos.x, dPos.y - 0.2, dPos.z], [(Math.random() - 0.5) * 0.4, -0.6, (Math.random() - 0.5) * 0.4], 1.6, 0.045);
+    }
+
+    // horses
+    for (const h of horses) {
+      const s = ((clock * 2.3) / horseLen + h.phase) % 1;
+      const p = HORSE_LOOP.getPointAt(s), tan = HORSE_LOOP.getTangentAt(s);
+      const side = new THREE.Vector3(tan.z, 0, -tan.x).multiplyScalar(h.lane);
+      h.holder.position.copy(p).add(side);
+      h.face(tan.x, tan.z, dt, 10);
+      if (Math.random() < dt * 9) dust.emit([h.holder.position.x - tan.x * 0.3, 0.05, h.holder.position.z - tan.z * 0.3], [(Math.random() - 0.5) * 0.3, 0.25, (Math.random() - 0.5) * 0.3], 1.1, 0.35);
+    }
+
+    // the skeleton host's cycle
+    const front = MARCH.getPointAt(1), frontTan = MARCH.getTangentAt(1);
+    army.forEach((s, i) => {
+      const t = ct - s.jitter;
+      let along, pose;
+      if (t < 3.6) { along = 0; pose = 'rise'; }
+      else if (t < 12) { along = (t - 3.6) / 8.4; pose = 'run'; }
+      else if (t < 19.4) { along = 1; pose = 'fight'; }
+      else if (t < 24) { along = 1; pose = 'collapse'; }
+      else if (t < 26.7) { along = 1; pose = 'resurrect'; }
+      else if (t < 27.7) { along = 1; pose = 'taunt'; }
+      else if (t < 34) { along = 1 - (t - 27.7) / 6.3; pose = 'retreat'; }
+      else { along = 0; pose = 'sink'; }
+      const a = THREE.MathUtils.clamp(along, 0, 1);
+      const p = MARCH.getPointAt(a), tan = MARCH.getTangentAt(a);
+      const back = s.back * (1 - 0.35 * (a === 1 ? 1 : 0));
+      const n = new THREE.Vector3(tan.z, 0, -tan.x);
+      s.holder.position.set(p.x - tan.x * back + n.x * s.side, 0, p.z - tan.z * back + n.z * s.side);
+      if (pose === 'run') { s.face(tan.x, tan.z, dt); s.play('run', { speed: 0.85 }); }
+      else if (pose === 'retreat') { s.face(-tan.x, -tan.z, dt); s.play('run', { speed: 0.95 }); }
+      else if (pose === 'fight') {
+        s.face(-1, 0.05, dt);
+        const beat = Math.floor((t - 12) / 1.1 + i) % 4;
+        s.play(['chop', 'slice', 'block', 'chop'][beat], { fade: 0.15 });
+      } else if (pose === 'rise' && s.pose !== 'rise') s.play('rise', { once: true, fade: 0.05 });
+      else if (pose === 'collapse' && s.pose !== 'collapse') s.play('collapse', { once: true, fade: 0.12 });
+      else if (pose === 'resurrect' && s.pose !== 'resurrect') s.play('resurrect', { once: true, fade: 0.1 });
+      else if (pose === 'taunt' && s.pose !== 'taunt') s.play('taunt', { once: true });
+      else if (pose === 'sink' && s.pose !== 'sink') s.play('collapse', { once: true, fade: 0.2 });
+      s.pose = pose;
+      // violet summoning glow while rising or resurrecting
+      const glow = pose === 'rise' ? Math.sin(Math.min(t / 3.6, 1) * Math.PI) : pose === 'resurrect' ? Math.sin((t - 24) / 2.7 * Math.PI) : pose === 'sink' ? Math.sin((t - 34) / 2 * Math.PI) * 0.7 : 0;
+      const m = new THREE.Matrix4().makeTranslation(s.holder.position.x, 0.02, s.holder.position.z);
+      rings.setMatrixAt(i, m);
+      rings.setColorAt(i, new THREE.Color(0.55, 0.25, 1.6).multiplyScalar(Math.max(0, glow)));
+      if (glow > 0.2 && Math.random() < dt * 14) magic.emit([s.holder.position.x + (Math.random() - 0.5) * 0.4, 0.05, s.holder.position.z + (Math.random() - 0.5) * 0.4], [0, 0.5 + Math.random() * 0.6, 0], 1.1, 0.12);
+      // scorched: embers on the host when the fire lands
+      if (pose === 'collapse' && t < 20.6 && Math.random() < dt * 10) sparks.emit([s.holder.position.x, 0.25, s.holder.position.z], [(Math.random() - 0.5), 1.4, (Math.random() - 0.5)], 0.9, 0.06);
+    });
+    rings.instanceMatrix.needsUpdate = true;
+    rings.instanceColor.needsUpdate = true;
+    // the mage summons as the host rises, then keeps casting
+    if (ct < 4.3) { if (mage.pose !== 'summon') mage.play('summon', { once: true }); mage.pose = 'summon'; }
+    else { mage.play('cast'); mage.pose = 'cast'; }
+    {
+      const glow = ct < 4.3 ? 1 : 0.35;
+      rings.setMatrixAt(army.length, new THREE.Matrix4().makeTranslation(mage.holder.position.x, 0.02, mage.holder.position.z).scale(new THREE.Vector3(1.8, 1, 1.8)));
+      rings.setColorAt(army.length, new THREE.Color(0.55, 0.25, 1.6).multiplyScalar(glow * (0.7 + 0.3 * Math.sin(clock * 3))));
+      if (Math.random() < dt * (ct < 4.3 ? 40 : 10)) {
+        const a = Math.random() * Math.PI * 2;
+        magic.emit([mage.holder.position.x + Math.cos(a) * 0.5, 0.1, mage.holder.position.z + Math.sin(a) * 0.5], [-Math.cos(a) * 0.2, 0.7 + Math.random() * 0.5, -Math.sin(a) * 0.2], 1.4, 0.1);
+      }
+    }
+    // the heroes hold the ford
+    heroes.forEach((h, i) => {
+      if (ct > 12.4 && ct < 19.4) {
+        const beat = Math.floor((ct - 12.4) / 1.2 + i * 2) % 3;
+        h.play(['chop', 'block', 'slice'][beat], { fade: 0.15 });
+      } else if (ct >= 20.2 && ct < 22.6) h.play('cheer');
+      else h.play('idle');
+    });
+
+    // ambient: windmill, clouds, birds, torches, chimneys, fireflies
+    if (fan) fan.quaternion.setFromAxisAngle(fan.userData.axis, clock * 0.9);
+    for (const c of clouds) { c.position.x += c.userData.speed * dt; if (c.position.x > 52) c.position.x = -52; }
+    const bm = new THREE.Matrix4(), wq = new THREE.Quaternion(), bq = new THREE.Quaternion(), one = new THREE.Vector3(1, 1, 1);
+    for (let i = 0; i < 9; i++) {
+      const a = clock * 0.16 + i * 0.22, r = 13 + Math.sin(i * 1.7) * 1.5;
+      const bp = new THREE.Vector3(Math.cos(a) * r, 7.2 + Math.sin(clock * 0.7 + i) * 0.4, Math.sin(a) * r - 2);
+      bq.setFromAxisAngle(up, -a);
+      const flap = Math.sin(clock * 10 + i * 1.3) * 0.7;
+      wq.setFromAxisAngle(new THREE.Vector3(0, 0, 1), flap);
+      bm.compose(bp, bq.clone().multiply(wq), one.clone().multiplyScalar(1.4));
+      wingsR.setMatrixAt(i, bm);
+      wq.setFromAxisAngle(new THREE.Vector3(0, 0, 1), Math.PI - flap);
+      bm.compose(bp, bq.clone().multiply(wq), one.clone().multiplyScalar(1.4));
+      wingsL.setMatrixAt(i, bm);
+    }
+    wingsL.instanceMatrix.needsUpdate = wingsR.instanceMatrix.needsUpdate = true;
+    const torchOn = Math.max(0, state.night - 0.2) / 0.8;
+    torches.forEach((l, i) => {
+      l.intensity = torchOn * (7 + Math.sin(clock * 13 + i) * 1.5 + Math.sin(clock * 29 + i * 3) * 1);
+      if (torchOn > 0.05 && Math.random() < dt * 18) fire.emit([l.position.x + (Math.random() - 0.5) * 0.06, l.position.y - 0.1, l.position.z + (Math.random() - 0.5) * 0.06], [0, 0.6, 0], 0.45, 0.13);
+    });
+    for (const c of chimneys) if (Math.random() < dt * 3) smoke.emit([c.x, c.y, c.z], [0.05, 0.35, 0], 4.5, 0.5);
+    if (state.night > 0.25 && Math.random() < dt * 14 && lilyZone.length) {
+      const [x, z] = lilyZone[Math.floor(Math.random() * lilyZone.length)];
+      flies.emit([x + (Math.random() - 0.5) * 2, 0.2 + Math.random() * 0.6, z + (Math.random() - 0.5) * 2], [0, 0, 0], 5 + Math.random() * 4, 0.12);
+    }
+
+    dragon.mixer.update(dt);
+    for (const c of [...horses, ...army, mage, ...heroes]) c.mixer.update(dt);
+    for (const s of systems) s.update(dt);
+  }
+
+  // ---------------------------------------------------------------- camera flights and the tour
+  const camGoal = new THREE.Vector3(), tgtGoal = new THREE.Vector3();
+  function updateCamera(dt) {
+    if (state.tour) {
+      state.tourT += dt;
+      if (state.tourT > (state.focus === 'dragon' ? 11 : 8.5)) {
+        state.tourT = 0;
+        focus(TOUR[(TOUR.indexOf(state.focus) + 1) % TOUR.length], { fromTour: true });
+      }
+    }
+    if (state.follow) {
+      const yaw = dragon.yaw ?? 0;
+      camGoal.set(dPos.x - Math.sin(yaw) * 10 + Math.cos(yaw) * 3.5, dPos.y + 4.2, dPos.z - Math.cos(yaw) * 10 - Math.sin(yaw) * 3.5);
+      tgtGoal.copy(dPos).add(new THREE.Vector3(Math.sin(yaw) * 1.5, -0.6, Math.cos(yaw) * 1.5));
+    }
+    if (state.fly) {
+      const f = state.fly;
+      f.t = Math.min(1, f.t + dt / 2.2);
+      const e = f.t < 0.5 ? 4 * f.t ** 3 : 1 - (-2 * f.t + 2) ** 3 / 2;
+      if (f.follow) { camera.position.lerpVectors(f.p0, camGoal, e); controls.target.lerpVectors(f.t0, tgtGoal, e); }
+      else { camera.position.lerpVectors(f.p0, f.p1, e); controls.target.lerpVectors(f.t0, f.t1, e); }
+      if (f.t === 1) state.fly = null;
+    } else if (state.follow) {
+      camera.position.lerp(camGoal, Math.min(1, dt * 3));
+      controls.target.lerp(tgtGoal, Math.min(1, dt * 4));
+    } else if (state.tour && !reduceMotion) {
+      // slow drift around the current subject
+      const off = camera.position.clone().sub(controls.target);
+      off.applyAxisAngle(up, dt * 0.05);
+      camera.position.copy(controls.target).add(off);
+    }
+    controls.update();
+  }
+
+  // ---------------------------------------------------------------- render loop
+  const hud = { fps: $('rh-fps'), tris: $('rh-tris'), calls: $('rh-calls'), actors: $('rh-actors') };
+  hud.actors.textContent = String(actors + horses.length + 2 + army.length + 1 + heroes.length + 1);
+  let running = false, raf = 0, last = 0, fps = 60, fpsT = 0, inView = false, ready = false, perfN = 0, perfAcc = 0, perfSkip = 2;
+  const nf = new Intl.NumberFormat('en-US');
+  function render() {
+    sky.position.copy(camera.position);
+    stars.position.copy(camera.position);
+    renderer.info.reset();
+    composer.render();
+    if (!ready) {
+      ready = true;
+      window.__realmReady = true;
+      stageEl.classList.add('is-ready');
+      document.querySelectorAll('#realm [data-tod], #realm [data-focus], #realm [data-rview], #realm-tour').forEach(b => { b.disabled = false; });
+    }
+  }
+  function renderIfIdle() { if (!running && ready) { updateCamera(0); render(); } }
+  function tick(now) {
+    raf = requestAnimationFrame(tick);
+    const raw = (now - last) / 1000 || 1 / 60, dt = Math.min(0.1, raw);
+    last = now;
+    if (perfSkip > 0) perfSkip -= raw;
+    else if ((perfAcc += raw, ++perfN) && perfAcc > 2) {
+      if (perfAcc / perfN > 1 / 30 && degrade.length) degrade.shift()();
+      perfN = perfAcc = 0;
+    }
+    if (blend.t < 1) {
+      blend.t = Math.min(1, blend.t + dt / 1.6);
+      const e = blend.t * blend.t * (3 - 2 * blend.t);
+      lerpTod(blend.from, blend.to, e);
+      applyTod();
+      if (blend.t === 1) refreshEnv();
+    }
+    simulate(dt);
+    updateCamera(dt);
+    render();
+    fps += (1 / Math.max(dt, 1e-3) - fps) * 0.08;
+    if ((fpsT += dt) > 0.5) {
+      fpsT = 0;
+      hud.fps.textContent = fps.toFixed(0);
+      hud.tris.textContent = nf.format(renderer.info.render.triangles);
+      hud.calls.textContent = renderer.info.render.calls;
+    }
+  }
+  function setRunning(on) {
+    if (on === running) return;
+    running = on;
+    if (on) { last = performance.now(); perfSkip = 1; perfN = perfAcc = 0; raf = requestAnimationFrame(tick); }
+    else cancelAnimationFrame(raf);
+  }
+  const syncRunning = () => setRunning(inView && !document.hidden && state.view === 'live');
+  new IntersectionObserver(([e]) => { inView = e.isIntersecting; syncRunning(); }, { threshold: 0.01 }).observe(stageEl);
+  document.addEventListener('visibilitychange', syncRunning);
+
+  function resize() {
+    const w = stageEl.clientWidth, h = stageEl.clientHeight;
+    if (!w || !h) return;
+    renderer.setPixelRatio(pixelCap);
+    renderer.setSize(w, h, false);
+    composer.setPixelRatio(pixelCap);
+    composer.setSize(w, h);
+    bloom.resolution.set(w * pixelCap * 0.5, h * pixelCap * 0.5);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    pointScale.value = h * pixelCap / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)));
+    renderIfIdle();
+  }
+  new ResizeObserver(resize).observe(stageEl);
+
+  // warm up: settle the creatures into their first poses and compile every shader before the veil lifts
+  simulate(0.016);
+  focus('overview', { fromTour: true });
+  setTour(state.tour);
+  state.fly = null;
+  resize();
+  camera.position.copy(presetPos(FOCUS.overview));
+  controls.target.set(...FOCUS.overview.target);
+  await Promise.race([renderer.compileAsync(scene, camera).catch(() => {}), new Promise(r => setTimeout(r, 4000))]);
+  render();
+  syncRunning();
+  renderImg.loading = 'eager'; // fetch the Unreal still in the background now that the live view is up
+  window.__realmFocus = focus;
+  window.__realmCycle = () => clock % T; // read-only, for the automated checks
+}
+</script>
+
 </body>
 </html>

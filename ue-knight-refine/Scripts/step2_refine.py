@@ -18,69 +18,8 @@ import characters  # noqa: E402
 
 PROJECT = unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir())
 EXPORT = os.path.join(PROJECT, 'Export')
-MEL = unreal.MaterialEditingLibrary
-assets = unreal.AssetToolsHelpers.get_asset_tools()
 sub = unreal.get_editor_subsystem(unreal.SkeletalMeshEditorSubsystem)
-
-# ---------------------------------------------------------------- materials
-OUTPUTS = [
-    ('Base', 'return base;', unreal.CustomMaterialOutputType.CMOT_FLOAT3, unreal.MaterialProperty.MP_BASE_COLOR),
-    ('Metal', 'return metal;', unreal.CustomMaterialOutputType.CMOT_FLOAT1, unreal.MaterialProperty.MP_METALLIC),
-    ('Rough', 'return rough;', unreal.CustomMaterialOutputType.CMOT_FLOAT1, unreal.MaterialProperty.MP_ROUGHNESS),
-    ('Glow', 'return emi;', unreal.CustomMaterialOutputType.CMOT_FLOAT3, unreal.MaterialProperty.MP_EMISSIVE_COLOR),
-]
-
-
-def build_material(out_dir, name, texture, code):
-    path = f'{out_dir}/{name}'
-    if unreal.EditorAssetLibrary.does_asset_exist(path):
-        unreal.EditorAssetLibrary.delete_asset(path)
-    mat = assets.create_asset(name, out_dir, unreal.Material, unreal.MaterialFactoryNew())
-    mat.set_editor_property('two_sided', True)
-    mat.set_editor_property('used_with_skeletal_mesh', True)  # compile the skinned permutations up front
-    uv = MEL.create_material_expression(mat, unreal.MaterialExpressionTextureCoordinate, -1100, 0)
-    tex = MEL.create_material_expression(mat, unreal.MaterialExpressionTextureSample, -850, 0)
-    tex.set_editor_property('texture', texture)
-    MEL.connect_material_expressions(uv, '', tex, 'UVs')
-    for i, (label, ret, otype, prop) in enumerate(OUTPUTS):
-        node = MEL.create_material_expression(mat, unreal.MaterialExpressionCustom, -450, -300 + i * 200)
-        node.set_editor_property('description', f'Swatch grade: {label}')
-        node.set_editor_property('output_type', otype)
-        pins = []
-        for pin in ('UV', 'C'):
-            ci = unreal.CustomInput()
-            ci.set_editor_property('input_name', pin)
-            pins.append(ci)
-        node.set_editor_property('inputs', pins)
-        node.set_editor_property('code', code + ret)
-        MEL.connect_material_expressions(uv, '', node, 'UV')
-        MEL.connect_material_expressions(tex, 'RGB', node, 'C')
-        MEL.connect_material_property(node, '', prop)
-    MEL.recompile_material(mat)
-    unreal.EditorAssetLibrary.save_loaded_asset(mat)
-    return mat
-
-
-def mesh_export_options(report):
-    opts = unreal.GLTFExportOptions()
-    opts.set_editor_property('bake_material_inputs', unreal.GLTFMaterialBakeMode.SIMPLE)
-    try:
-        size = opts.get_editor_property('default_material_bake_size')
-        for field, value in (('x', 512), ('y', 512), ('auto_detect', False), ('b_auto_detect', False)):
-            try:
-                size.set_editor_property(field, value)
-            except Exception:
-                pass
-        opts.set_editor_property('default_material_bake_size', size)
-    except Exception as exc:
-        report['notes'].append(f'bake size not set: {exc}')
-    for prop, value in (('export_vertex_skin_weights', True), ('export_emissive_strength', True), ('export_morph_targets', False),
-                        ('texture_image_format', unreal.GLTFTextureImageFormat.PNG)):
-        try:
-            opts.set_editor_property(prop, value)
-        except Exception as exc:
-            report['notes'].append(f'{prop}: {exc}')
-    return opts
+from lookdev import build_material, mesh_export_options, anim_export_options  # noqa: E402
 
 
 def refine(cfg):
@@ -134,11 +73,7 @@ def refine(cfg):
         result = unreal.GLTFExporter.export_to_gltf(skm, path, opts, set())
         report['exports'][f'lod{lod}'] = [str(result), os.path.exists(path) and os.path.getsize(path)]
 
-    anim_opts = unreal.GLTFExportOptions()
-    anim_opts.set_editor_property('bake_material_inputs', unreal.GLTFMaterialBakeMode.DISABLED)
-    anim_opts.set_editor_property('default_level_of_detail', 2)
-    anim_opts.set_editor_property('export_vertex_skin_weights', True)
-    anim_opts.set_editor_property('export_animation_sequences', True)
+    anim_opts = anim_export_options(lod=2)
     for key, anim_name in cfg['anims'].items():
         anim = unreal.EditorAssetLibrary.load_asset(f"{folder}/{cfg['asset']}{anim_name}")
         path = os.path.join(EXPORT, f'{prefix}_anim_{key}.glb')

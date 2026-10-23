@@ -1,0 +1,11 @@
+# Unreal Engine: derived-data cache, build intermediates, logs and per-machine state. Every run regenerates them, and
+# Saved/SharedBackup holds a copy of the team's shared editor settings that must stay on this machine.
+# (Files committed before this .gitignore stay tracked until they are removed from the index.)
+ue-knight-refine/DerivedDataCache/
+ue-knight-refine/Intermediate/
+ue-knight-refine/Saved/
+
+# raw HDR captures: step3 and step6 regenerate them in seconds; the graded PNGs are kept
+ue-knight-refine/Export/Beauty/*.hdr
+
+__pycache__/

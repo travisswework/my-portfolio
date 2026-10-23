@@ -90,6 +90,31 @@ def grade(tag, exposure=None, out_name=None, mid=0.13, bloom_threshold=1.6, bloo
     return path, exposure, float(fg.mean())
 
 
+def grade_realm(tag='realm_beauty', out_name='realm_beauty_final.png', mid=0.11, bloom_threshold=2.0, bloom_strength=0.45):
+    """The Realm's wide still: metered on the whole frame, dusk sky behind anything the capture left empty."""
+    col = read_hdr(os.path.join(BEAUTY, f'{tag}.hdr'))
+    h, w, _ = col.shape
+    lum = col @ np.array([0.2126, 0.7152, 0.0722], np.float32)
+    fg = lum > 1e-6
+    exposure = mid / max(1e-6, float(np.median(lum[fg])))
+    img = col * exposure
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    v = (yy / h)[..., None]
+    sky = np.array([0.10, 0.06, 0.22]) * (1 - v) + np.array([0.75, 0.36, 0.30]) * v
+    img = np.where(fg[..., None], img, sky.astype(np.float32))
+    bright = np.clip(img - bloom_threshold, 0, None)
+    small = Image.fromarray(np.clip(bright / 4.0 * 255, 0, 255).astype(np.uint8)).resize((w // 8, h // 8), Image.BILINEAR)
+    blur = sum(np.asarray(small.filter(ImageFilter.GaussianBlur(r)).resize((w, h), Image.BILINEAR), np.float32) / 255 * 4.0 * wgt
+               for r, wgt in ((2, 0.5), (6, 0.35), (16, 0.25)))
+    img = img + blur * bloom_strength
+    vig = 1 - 0.32 * (((xx - w / 2) / (w / 2)) ** 2 + ((yy - h / 2) / (h / 2)) ** 2) ** 1.4
+    img = to_srgb(aces(img * vig[..., None]))
+    out = Image.fromarray(np.clip(img * 255 + 0.5, 0, 255).astype(np.uint8)).resize((w // 2, h // 2), Image.LANCZOS)
+    path = os.path.join(BEAUTY, out_name)
+    out.save(path)
+    return path, exposure, float(fg.mean())
+
+
 def contact_sheet(prefix):
     """Grade the preview frames of one character (step3 with -Preview) side by side, labelled, for picking a pose."""
     from PIL import ImageDraw
@@ -119,8 +144,11 @@ if __name__ == '__main__':
     # <character>_beauty.hdr from step3 -> <character>_beauty_final.png (the site's assets/<character>-ue-render.webp,
     # resized to 800 x 1000)
     for f in sorted(os.listdir(BEAUTY)):
-        if f.endswith('_beauty.hdr') and not f.startswith('preview_'):
+        if f.endswith('_beauty.hdr') and not f.startswith(('preview_', 'realm_')):
             print(grade(f[:-4], out_name=f[:-4] + '_final.png'))
+    # the Realm (step6) has its own wide-shot grade -> realm_beauty_final.png (assets/realm-ue-render.webp at 1600 x 900)
+    if os.path.exists(os.path.join(BEAUTY, 'realm_beauty.hdr')):
+        print(grade_realm())
     # the knight's still from the first, knight-only version of step3
     if os.path.exists(os.path.join(BEAUTY, 'beauty_right.hdr')) and not os.path.exists(os.path.join(BEAUTY, 'knight_beauty.hdr')):
         print(grade('beauty_right', out_name='knight_beauty_final.png'))
