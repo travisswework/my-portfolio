@@ -1,0 +1,14 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.8",
+	"Category": "",
+	"Description": "Isolated look-dev project for the portfolio knight. Self-contained: uses its own derived-data cache inside this folder. Safe to delete.",
+	"Plugins": [
+		{ "Name": "PythonScriptPlugin", "Enabled": true },
+		{ "Name": "EditorScriptingUtilities", "Enabled": true },
+		{ "Name": "GLTFExporter", "Enabled": true },
+		{ "Name": "Interchange", "Enabled": true },
+		{ "Name": "SkeletalReduction", "Enabled": true },
+		{ "Name": "GeometryScripting", "Enabled": true }
+	]
+}

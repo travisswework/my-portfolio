@@ -1,0 +1,310 @@
+{
+ "Barbarian": {
+  "pipeline": {
+   "set": [
+    "force_all_mesh_as_type",
+    "import_static_meshes"
+   ],
+   "failed": [
+    "combine_skeletal_meshes: InterchangeGenericMeshPipeline: Failed to find property 'combine_skeletal_meshes' for attribute 'combine_skeletal_meshes' on 'InterchangeGenericMeshPipeline'"
+   ]
+  },
+  "imported": [
+   "/Game/Barbarian/barbarian_texture.barbarian_texture",
+   "/Game/Barbarian/Barbarian_Loadout_Skeleton.Barbarian_Loadout_Skeleton",
+   "/Game/Barbarian/barbarian_texture1.barbarian_texture1",
+   "/Game/Barbarian/barbarian_weapon.barbarian_weapon",
+   "/Game/Barbarian/Barbarian_Loadout.Barbarian_Loadout",
+   "/Game/Barbarian/Barbarian_Loadout_PhysicsAsset.Barbarian_Loadout_PhysicsAsset",
+   "/Game/Barbarian/Barbarian_Loadout2H_Melee_Attack_Chop.Barbarian_Loadout2H_Melee_Attack_Chop",
+   "/Game/Barbarian/Barbarian_Loadout2H_Melee_Attack_Spin.Barbarian_Loadout2H_Melee_Attack_Spin",
+   "/Game/Barbarian/Barbarian_Loadout2H_Melee_Idle.Barbarian_Loadout2H_Melee_Idle",
+   "/Game/Barbarian/Barbarian_LoadoutCheer.Barbarian_LoadoutCheer"
+  ],
+  "assets": [
+   {
+    "path": "/Game/Barbarian/Barbarian_Loadout.Barbarian_Loadout",
+    "class": "SkeletalMesh",
+    "lods": 1,
+    "verts_lod0": 5426,
+    "sections_lod0": 2,
+    "materials": [
+     "barbarian_texture",
+     "barbarian_weapon"
+    ],
+    "bounds_extent": [
+     123.70832061767578,
+     92.51294898986816,
+     119.89004400372505
+    ]
+   },
+   {
+    "path": "/Game/Barbarian/Barbarian_Loadout2H_Melee_Attack_Chop.Barbarian_Loadout2H_Melee_Attack_Chop",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Barbarian/Barbarian_Loadout2H_Melee_Attack_Spin.Barbarian_Loadout2H_Melee_Attack_Spin",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Barbarian/Barbarian_Loadout2H_Melee_Idle.Barbarian_Loadout2H_Melee_Idle",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Barbarian/Barbarian_Loadout_PhysicsAsset.Barbarian_Loadout_PhysicsAsset",
+    "class": "PhysicsAsset"
+   },
+   {
+    "path": "/Game/Barbarian/Barbarian_Loadout_Skeleton.Barbarian_Loadout_Skeleton",
+    "class": "Skeleton"
+   },
+   {
+    "path": "/Game/Barbarian/Barbarian_LoadoutCheer.Barbarian_LoadoutCheer",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Barbarian/barbarian_texture.barbarian_texture",
+    "class": "Texture2D"
+   },
+   {
+    "path": "/Game/Barbarian/barbarian_texture1.barbarian_texture1",
+    "class": "Material"
+   },
+   {
+    "path": "/Game/Barbarian/barbarian_weapon.barbarian_weapon",
+    "class": "Material"
+   }
+  ]
+ },
+ "Mage": {
+  "pipeline": {
+   "set": [
+    "force_all_mesh_as_type",
+    "import_static_meshes"
+   ],
+   "failed": [
+    "combine_skeletal_meshes: InterchangeGenericMeshPipeline: Failed to find property 'combine_skeletal_meshes' for attribute 'combine_skeletal_meshes' on 'InterchangeGenericMeshPipeline'"
+   ]
+  },
+  "imported": [
+   "/Game/Mage/mage_texture.mage_texture",
+   "/Game/Mage/Mage_Loadout_Skeleton.Mage_Loadout_Skeleton",
+   "/Game/Mage/mage_texture1.mage_texture1",
+   "/Game/Mage/mage_weapon.mage_weapon",
+   "/Game/Mage/Mage_Loadout.Mage_Loadout",
+   "/Game/Mage/Mage_Loadout_PhysicsAsset.Mage_Loadout_PhysicsAsset",
+   "/Game/Mage/Mage_LoadoutCheer.Mage_LoadoutCheer",
+   "/Game/Mage/Mage_LoadoutIdle.Mage_LoadoutIdle",
+   "/Game/Mage/Mage_LoadoutSpellcast_Shoot.Mage_LoadoutSpellcast_Shoot",
+   "/Game/Mage/Mage_LoadoutSpellcasting.Mage_LoadoutSpellcasting"
+  ],
+  "assets": [
+   {
+    "path": "/Game/Mage/Mage_Loadout.Mage_Loadout",
+    "class": "SkeletalMesh",
+    "lods": 1,
+    "verts_lod0": 4960,
+    "sections_lod0": 2,
+    "materials": [
+     "mage_texture",
+     "mage_weapon"
+    ],
+    "bounds_extent": [
+     108.7482795715332,
+     113.57013320922852,
+     135.78373602032661
+    ]
+   },
+   {
+    "path": "/Game/Mage/Mage_Loadout_PhysicsAsset.Mage_Loadout_PhysicsAsset",
+    "class": "PhysicsAsset"
+   },
+   {
+    "path": "/Game/Mage/Mage_Loadout_Skeleton.Mage_Loadout_Skeleton",
+    "class": "Skeleton"
+   },
+   {
+    "path": "/Game/Mage/Mage_LoadoutCheer.Mage_LoadoutCheer",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Mage/Mage_LoadoutIdle.Mage_LoadoutIdle",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Mage/Mage_LoadoutSpellcast_Shoot.Mage_LoadoutSpellcast_Shoot",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Mage/Mage_LoadoutSpellcasting.Mage_LoadoutSpellcasting",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Mage/mage_texture.mage_texture",
+    "class": "Texture2D"
+   },
+   {
+    "path": "/Game/Mage/mage_texture1.mage_texture1",
+    "class": "Material"
+   },
+   {
+    "path": "/Game/Mage/mage_weapon.mage_weapon",
+    "class": "Material"
+   }
+  ]
+ },
+ "Rogue": {
+  "pipeline": {
+   "set": [
+    "force_all_mesh_as_type",
+    "import_static_meshes"
+   ],
+   "failed": [
+    "combine_skeletal_meshes: InterchangeGenericMeshPipeline: Failed to find property 'combine_skeletal_meshes' for attribute 'combine_skeletal_meshes' on 'InterchangeGenericMeshPipeline'"
+   ]
+  },
+  "imported": [
+   "/Game/Rogue/rogue_texture.rogue_texture",
+   "/Game/Rogue/Rogue_Loadout_Skeleton.Rogue_Loadout_Skeleton",
+   "/Game/Rogue/rogue_texture1.rogue_texture1",
+   "/Game/Rogue/rogue_weapon.rogue_weapon",
+   "/Game/Rogue/Rogue_Loadout.Rogue_Loadout",
+   "/Game/Rogue/Rogue_Loadout_PhysicsAsset.Rogue_Loadout_PhysicsAsset",
+   "/Game/Rogue/Rogue_LoadoutCheer.Rogue_LoadoutCheer",
+   "/Game/Rogue/Rogue_LoadoutDualwield_Melee_Attack_Slice.Rogue_LoadoutDualwield_Melee_Attack_Slice",
+   "/Game/Rogue/Rogue_LoadoutDualwield_Melee_Attack_Stab.Rogue_LoadoutDualwield_Melee_Attack_Stab",
+   "/Game/Rogue/Rogue_LoadoutIdle.Rogue_LoadoutIdle"
+  ],
+  "assets": [
+   {
+    "path": "/Game/Rogue/Rogue_Loadout.Rogue_Loadout",
+    "class": "SkeletalMesh",
+    "lods": 1,
+    "verts_lod0": 4600,
+    "sections_lod0": 2,
+    "materials": [
+     "rogue_texture",
+     "rogue_weapon"
+    ],
+    "bounds_extent": [
+     100.33012390136719,
+     73.86186981201172,
+     109.35024145245552
+    ]
+   },
+   {
+    "path": "/Game/Rogue/Rogue_Loadout_PhysicsAsset.Rogue_Loadout_PhysicsAsset",
+    "class": "PhysicsAsset"
+   },
+   {
+    "path": "/Game/Rogue/Rogue_Loadout_Skeleton.Rogue_Loadout_Skeleton",
+    "class": "Skeleton"
+   },
+   {
+    "path": "/Game/Rogue/Rogue_LoadoutCheer.Rogue_LoadoutCheer",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Rogue/Rogue_LoadoutDualwield_Melee_Attack_Slice.Rogue_LoadoutDualwield_Melee_Attack_Slice",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Rogue/Rogue_LoadoutDualwield_Melee_Attack_Stab.Rogue_LoadoutDualwield_Melee_Attack_Stab",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Rogue/Rogue_LoadoutIdle.Rogue_LoadoutIdle",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/Rogue/rogue_texture.rogue_texture",
+    "class": "Texture2D"
+   },
+   {
+    "path": "/Game/Rogue/rogue_texture1.rogue_texture1",
+    "class": "Material"
+   },
+   {
+    "path": "/Game/Rogue/rogue_weapon.rogue_weapon",
+    "class": "Material"
+   }
+  ]
+ },
+ "RogueHooded": {
+  "pipeline": {
+   "set": [
+    "force_all_mesh_as_type",
+    "import_static_meshes"
+   ],
+   "failed": [
+    "combine_skeletal_meshes: InterchangeGenericMeshPipeline: Failed to find property 'combine_skeletal_meshes' for attribute 'combine_skeletal_meshes' on 'InterchangeGenericMeshPipeline'"
+   ]
+  },
+  "imported": [
+   "/Game/RogueHooded/rogue_texture.rogue_texture",
+   "/Game/RogueHooded/RogueHooded_Loadout_Skeleton.RogueHooded_Loadout_Skeleton",
+   "/Game/RogueHooded/rogue_texture1.rogue_texture1",
+   "/Game/RogueHooded/roguehooded_weapon.roguehooded_weapon",
+   "/Game/RogueHooded/RogueHooded_Loadout.RogueHooded_Loadout",
+   "/Game/RogueHooded/RogueHooded_Loadout_PhysicsAsset.RogueHooded_Loadout_PhysicsAsset",
+   "/Game/RogueHooded/RogueHooded_Loadout1H_Ranged_Reload.RogueHooded_Loadout1H_Ranged_Reload",
+   "/Game/RogueHooded/RogueHooded_Loadout1H_Ranged_Shoot.RogueHooded_Loadout1H_Ranged_Shoot",
+   "/Game/RogueHooded/RogueHooded_LoadoutCheer.RogueHooded_LoadoutCheer",
+   "/Game/RogueHooded/RogueHooded_LoadoutIdle.RogueHooded_LoadoutIdle"
+  ],
+  "assets": [
+   {
+    "path": "/Game/RogueHooded/rogue_texture.rogue_texture",
+    "class": "Texture2D"
+   },
+   {
+    "path": "/Game/RogueHooded/rogue_texture1.rogue_texture1",
+    "class": "Material"
+   },
+   {
+    "path": "/Game/RogueHooded/RogueHooded_Loadout.RogueHooded_Loadout",
+    "class": "SkeletalMesh",
+    "lods": 1,
+    "verts_lod0": 4804,
+    "sections_lod0": 2,
+    "materials": [
+     "rogue_texture",
+     "roguehooded_weapon"
+    ],
+    "bounds_extent": [
+     136.30005645751953,
+     77.41933250427246,
+     112.56335332989693
+    ]
+   },
+   {
+    "path": "/Game/RogueHooded/RogueHooded_Loadout1H_Ranged_Reload.RogueHooded_Loadout1H_Ranged_Reload",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/RogueHooded/RogueHooded_Loadout1H_Ranged_Shoot.RogueHooded_Loadout1H_Ranged_Shoot",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/RogueHooded/RogueHooded_Loadout_PhysicsAsset.RogueHooded_Loadout_PhysicsAsset",
+    "class": "PhysicsAsset"
+   },
+   {
+    "path": "/Game/RogueHooded/RogueHooded_Loadout_Skeleton.RogueHooded_Loadout_Skeleton",
+    "class": "Skeleton"
+   },
+   {
+    "path": "/Game/RogueHooded/RogueHooded_LoadoutCheer.RogueHooded_LoadoutCheer",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/RogueHooded/RogueHooded_LoadoutIdle.RogueHooded_LoadoutIdle",
+    "class": "AnimSequence"
+   },
+   {
+    "path": "/Game/RogueHooded/roguehooded_weapon.roguehooded_weapon",
+    "class": "Material"
+   }
+  ]
+ }
+}

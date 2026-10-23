@@ -1,0 +1,1363 @@
+Failed to load 'aqProf.dll' (GetLastError=126)
+File 'aqProf.dll' does not exist
+Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
+Failed to load 'VtuneApi.dll' (GetLastError=126)
+File 'VtuneApi.dll' does not exist
+Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+File 'VtuneApi32e.dll' does not exist
+Started CrashReportClient (pid=14964)
+Custom abort handler registered for crash reporting.
+Running DelayedAutoRegister Phase StartOfEnginePreInit
+Running engine for game: KnightRefine
+Initializing trace...
+Requested channels: 'cpu,gpu,frame,log,bookmark,screenshot,region'
+No trace connection. Tracing to in-memory cache.
+Control listening on port 1985
+Finished trace initialization.
+Metadata set : platform="Windows"
+Metadata set : config="Development"
+Metadata set : buildversion="++UE5+Release-5.8-CL-58210709"
+Metadata set : engineversion="5.8.3-58210709+++UE5+Release-5.8"
+Metadata set : enginereleaseversion="5.8.3"
+Metadata set : os="Windows 10 (22H2) [10.0.19045.6466] "
+Metadata set : cpu="GenuineIntel|11th Gen Intel(R) Core(TM) i9-11900F @ 2.50GHz"
+Metadata set : pgoenabled="0"
+Metadata set : pgoprofilingenabled="0"
+Metadata set : ltoenabled="0"
+Metadata set : asan="0"
+Metadata set : mergedmodules="0"
+Metadata set : compacttset="0"
+Metadata set : commandline="" "D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/KnightRefine.uproject" -run=pythonscript -script="D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Scripts/step3_beauty.py" -DDC=KnightIsolated -AllowCommandletRendering -NoTextureStreaming -notraceserver -unattended -nop4 -nosplash -NoSound -stdout -FullStdOutLogOutput""
+Metadata set : loginid="e4ed8740d150467c9e3fdf39de553e16"
+Metadata set : llm="0"
+InternalLoadLibrary: 'StorageServerClient' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-StorageServerClient.dll')
+InternalLoadLibrary: 'CookOnTheFly' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-CookOnTheFly.dll')
+InternalLoadLibrary: 'StreamingFile' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-StreamingFile.dll')
+InternalLoadLibrary: 'NetworkFile' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-NetworkFile.dll')
+InternalLoadLibrary: 'PakFile' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-PakFile.dll')
+InternalLoadLibrary: 'RSA' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-RSA.dll')
+InternalLoadLibrary: 'SandboxFile' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SandboxFile.dll')
+Metadata set : zenstreaming="0"
+Running DelayedAutoRegister Phase FileSystemReady
+Running DelayedAutoRegister Phase TaskGraphSystemReady
+Stats thread started at 0.281364
+Running DelayedAutoRegister Phase StatSystemReady
+InternalLoadLibrary: 'CoreUObject' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-CoreUObject.dll')
+Metadata set : systemresolution.resx="1280"
+Metadata set : systemresolution.resy="720"
+InternalLoadLibrary: 'Engine' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Engine.dll')
+InternalLoadLibrary: 'UniversalObjectLocator' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-UniversalObjectLocator.dll')
+InternalLoadLibrary: 'Renderer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Renderer.dll')
+InternalLoadLibrary: 'AnimGraphRuntime' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AnimGraphRuntime.dll')
+InternalLoadLibrary: 'SlateRHIRenderer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SlateRHIRenderer.dll')
+InternalLoadLibrary: 'Landscape' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Landscape.dll')
+InternalLoadLibrary: 'RHICore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-RHICore.dll')
+InternalLoadLibrary: 'RenderCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-RenderCore.dll')
+InternalLoadLibrary: 'TextureCompressor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureCompressor.dll')
+InternalLoadLibrary: 'OpenColorIOWrapper' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-OpenColorIOWrapper.dll')
+InternalLoadLibrary: 'Virtualization' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Virtualization.dll')
+InternalLoadLibrary: 'MessageLog' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MessageLog.dll')
+InternalLoadLibrary: 'AudioEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioEditor.dll')
+InternalLoadLibrary: 'PropertyEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-PropertyEditor.dll')
+InternalLoadLibrary: 'AudioExtensions' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioExtensions.dll')
+InternalLoadLibrary: 'SignalProcessing' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SignalProcessing.dll')
+InternalLoadLibrary: 'AudioMixerCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioMixerCore.dll')
+InternalLoadLibrary: 'AnimationModifiers' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AnimationModifiers.dll')
+ICU TimeZone Detection - Raw Offset: +1:00, Platform Override: ''
+Session CrashGUID >====================================================
+         Session CrashGUID >   UECC-Windows-AAAB1730425BC2D93BA0918F2D296424
+         Session CrashGUID >====================================================
+No local boot hotfix file found at: [D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Saved/PersistentDownloadDir/HotfixForNextBoot.txt]
+Running DelayedAutoRegister Phase IniSystemReady
+InternalLoadLibrary: 'TargetPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TargetPlatform.dll')
+InternalLoadLibrary: 'DesktopPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-DesktopPlatform.dll')
+Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.8/Engine/Build/BatchFiles/Build.bat -Mode=ValidatePlatforms -OutputSDKs  -AllPlatforms  -project="D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/KnightRefine.uproject" -log="D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Saved/Logs/AutoSDKInfo.txt" -verbose -timestamps]
+Audio Device Manager not initializing due to all audio being disabled. If this is not intentional, please check command line arguments for "-nosound".
+InternalLoadLibrary: 'TelemetryUtils' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TelemetryUtils.dll')
+Looking for build plugins target receipt
+Unable to find target receipt in path: D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Binaries/Win64/*.target
+Loading VulkanPC ini files took 0.06 seconds
+Loading Mac ini files took 0.06 seconds
+Loading Android ini files took 0.06 seconds
+Loading IOS ini files took 0.06 seconds
+Loading TVOS ini files took 0.07 seconds
+Loading Windows ini files took 0.08 seconds
+Loading Unix ini files took 0.08 seconds
+Loading VisionOS ini files took 0.08 seconds
+Loading Linux ini files took 0.08 seconds
+Found matching target receipt: ../../../Engine/Binaries/Win64/UnrealEditor.target
+Looking for enabled plugins target receipt
+Unable to find target receipt in path: D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Binaries/Win64/*.target
+Found matching target receipt: ../../../Engine/Binaries/Win64/UnrealEditor.target
+Mounting Engine plugin AudioInsights
+Mounting Engine plugin AudioInsightsRuntime
+Mounting Engine plugin AudioModulationInsights
+Mounting Engine plugin BaseMaterial
+Mounting Engine plugin Bridge
+Mounting Engine plugin ChaosCloth
+Mounting Engine plugin ChaosInsights
+Mounting Engine plugin ChaosVD
+Mounting Engine plugin CmdLinkServer
+Mounting Engine plugin Dataflow
+Mounting Engine plugin DerivedDataBuildController
+Mounting Engine plugin EnhancedInput
+Mounting Engine plugin Fab
+Mounting Engine plugin IoStoreInsights
+Mounting Engine plugin MassInsights
+Mounting Engine plugin MeshPainting
+Mounting Engine plugin Mutable
+Mounting Engine plugin PCG
+Mounting Engine plugin RenderGraphInsights
+Mounting Engine plugin RenderTraceInsights
+Mounting Engine plugin TraceUtilities
+Mounting Engine plugin UbaController
+Mounting Engine plugin WorldMetrics
+Mounting Engine plugin XGEController
+Mounting Engine plugin AnimationSharing
+Mounting Engine plugin OodleNetwork
+Mounting Engine plugin CLionSourceCodeAccess
+Mounting Engine plugin CodeLiteSourceCodeAccess
+Mounting Engine plugin DumpGPUServices
+Mounting Engine plugin GitSourceControl
+Mounting Engine plugin GPUReshape
+Mounting Engine plugin KDevelopSourceCodeAccess
+Mounting Engine plugin N10XSourceCodeAccess
+Mounting Engine plugin NamingTokens
+Mounting Engine plugin NullSourceCodeAccess
+Mounting Engine plugin PerforceSourceControl
+Mounting Engine plugin PixWinPlugin
+Mounting Engine plugin PlasticSourceControl
+Mounting Engine plugin PluginUtils
+Mounting Engine plugin ProjectLauncher
+Mounting Engine plugin RenderDocPlugin
+Mounting Engine plugin PropertyAccessNode
+Mounting Engine plugin RiderSourceCodeAccess
+Mounting Engine plugin SubversionSourceControl
+Mounting Engine plugin UObjectPlugin
+Mounting Engine plugin VisualStudioCodeSourceCodeAccess
+Mounting Engine plugin VisualStudioSourceCodeAccess
+Mounting Engine plugin XCodeSourceCodeAccess
+Mounting Engine plugin AdvancedRenamer
+Mounting Engine plugin AutomationUtils
+Mounting Engine plugin BackChannel
+Mounting Engine plugin Buoyancy
+Mounting Engine plugin ChaosCaching
+Mounting Engine plugin ChaosEditor
+Mounting Engine plugin ChaosSolverPlugin
+Mounting Engine plugin ChaosNiagara
+Mounting Engine plugin ChaosUserDataPT
+Mounting Engine plugin CharacterAI
+Mounting Engine plugin ControlRigPhysics
+Mounting Engine plugin EditorPerformance
+Mounting Engine plugin EditorDataStorage
+Mounting Engine plugin EditorTelemetry
+Mounting Engine plugin EditorDataStorageFeatures
+Mounting Engine plugin EditorTRSGizmo
+Mounting Engine plugin Fracture
+Mounting Engine plugin FullBodyIK
+Mounting Engine plugin GeometryCollectionPlugin
+Mounting Engine plugin GeometryFlow
+Mounting Engine plugin GizmoFramework
+Mounting Engine plugin GlobalConfigurationData
+Mounting Engine plugin GeometryDataflow
+Mounting Engine plugin HttpInsights
+Mounting Engine plugin Landmass
+Mounting Engine plugin LevelSequenceNavigatorBridge
+Mounting Engine plugin LocalizableMessage
+Mounting Engine plugin LowLevelNetTrace
+Mounting Engine plugin MeshModelingToolsetExp
+Mounting Engine plugin MutableAssetUserData
+Mounting Engine plugin NFORDenoise
+Mounting Engine plugin PlanarCut
+Mounting Engine plugin PlatformCrypto
+Mounting Engine plugin PythonScriptPlugin
+Mounting Engine plugin RuntimeTelemetry
+Mounting Engine plugin SequenceNavigator
+Mounting Engine plugin SkeletalReduction
+Mounting Engine plugin ToolPresets
+Mounting Engine plugin Water
+Mounting Engine plugin LevelSequenceEditor
+Mounting Engine plugin ActorSequence
+Mounting Engine plugin TemplateSequence
+Mounting Engine plugin EOSShared
+Mounting Engine plugin SequenceValidator
+Mounting Engine plugin SequencerScripting
+Mounting Engine plugin OnlineServices
+Mounting Engine plugin OnlineSubsystemNull
+Mounting Engine plugin OnlineSubsystemUtils
+Mounting Engine plugin LauncherChunkInstaller
+Mounting Engine plugin InterchangeTests
+Mounting Engine plugin OnlineSubsystem
+Mounting Engine plugin OnlineBase
+Mounting Engine plugin Takes
+Mounting Engine plugin InterchangeAssets
+Mounting Engine plugin InterchangeEditor
+Mounting Engine plugin Interchange
+Mounting Engine plugin AndroidMedia
+Mounting Engine plugin AvfMedia
+Mounting Engine plugin ImgMedia
+Mounting Engine plugin MediaCompositing
+Mounting Engine plugin MediaPlate
+Mounting Engine plugin MediaPlayerEditor
+Mounting Engine plugin MP4Utilities
+Mounting Engine plugin TmvMedia
+Mounting Engine plugin WebMMedia
+Mounting Engine plugin WmfMedia
+Mounting Engine plugin MetaHumanSDK
+Mounting Engine plugin AutomatedPerfTestTools
+Mounting Engine plugin EnvironmentQueryEditor
+Mounting Engine plugin Paper2D
+Mounting Engine plugin AISupport
+Mounting Engine plugin AnimationData
+Mounting Engine plugin AnimationModifierLibrary
+Mounting Engine plugin ACLPlugin
+Mounting Engine plugin BlendSpaceMotionAnalysis
+Mounting Engine plugin AnimatorKit
+Mounting Engine plugin ControlRig
+Mounting Engine plugin ControlRigSpline
+Mounting Engine plugin ControlRigModules
+Mounting Engine plugin GameplayInsights
+Mounting Engine plugin EaseCurveTool
+Mounting Engine plugin IKRig
+Mounting Engine plugin PhysicsControl
+Mounting Engine plugin RigLogic
+Mounting Engine plugin SkeletalMeshModelingTools
+Mounting Engine plugin CameraShakePreviewer
+Mounting Engine plugin EngineCameras
+Mounting Engine plugin GameplayCameras
+Mounting Engine plugin TweeningUtils
+Mounting Engine plugin CompositeCore
+Mounting Engine plugin AssetManagerEditor
+Mounting Engine plugin BlueprintHeaderView
+Mounting Engine plugin BlueprintMaterialTextureNodes
+Mounting Engine plugin ColorGrading
+Mounting Engine plugin ConsoleVariables
+Mounting Engine plugin ChangelistReview
+Mounting Engine plugin CurveEditorTools
+Mounting Engine plugin CryptoKeys
+Mounting Engine plugin EditorDebugTools
+Mounting Engine plugin DataValidation
+Mounting Engine plugin GameplayTagsEditor
+Mounting Engine plugin EditorScriptingUtilities
+Mounting Engine plugin GeometryMode
+Mounting Engine plugin EngineAssetDefinitions
+Mounting Engine plugin MacGraphicsSwitching
+Mounting Engine plugin MaterialAssetWizard
+Mounting Engine plugin MaterialAnalyzer
+Mounting Engine plugin MeshLODToolset
+Mounting Engine plugin ModelingToolsEditorMode
+Mounting Engine plugin MobileLauncherProfileWizard
+Mounting Engine plugin ProxyLODPlugin
+Mounting Engine plugin PluginBrowser
+Mounting Engine plugin SequencerAnimTools
+Mounting Engine plugin SpeedTreeImporter
+Mounting Engine plugin StylusInput
+Mounting Engine plugin UMGWidgetPreview
+Mounting Engine plugin WorldPartitionHLODUtilities
+Mounting Engine plugin UVEditor
+Mounting Engine plugin DatasmithContent
+Mounting Engine plugin GLTFExporter
+Mounting Engine plugin Cascade
+Mounting Engine plugin VariantManagerContent
+Mounting Engine plugin VariantManager
+Mounting Engine plugin NiagaraInsights
+Mounting Engine plugin NiagaraPreviewContent
+Mounting Engine plugin FacialAnimation
+Mounting Engine plugin AlembicImporter
+Mounting Engine plugin TcpMessaging
+Mounting Engine plugin NiagaraSimCaching
+Mounting Engine plugin UdpMessaging
+Mounting Engine plugin NNERuntimeORT
+Mounting Engine plugin Niagara
+Mounting Engine plugin NNEDenoiser
+Mounting Engine plugin AndroidDeviceProfileSelector
+Mounting Engine plugin ActorLayerUtilities
+Mounting Engine plugin DeformerGraph
+Mounting Engine plugin AppleImageUtils
+Mounting Engine plugin AndroidPermission
+Mounting Engine plugin AudioCapture
+Mounting Engine plugin AssetTags
+Mounting Engine plugin ArchVisCharacter
+Mounting Engine plugin AndroidMoviePlayer
+Mounting Engine plugin AudioWidgets
+Mounting Engine plugin AppleMoviePlayer
+Mounting Engine plugin ChunkDownloader
+Mounting Engine plugin CableComponent
+Mounting Engine plugin AudioSynesthesia
+Mounting Engine plugin CustomMeshComponent
+Mounting Engine plugin ComputeFramework
+Mounting Engine plugin AndroidFileServer
+Mounting Engine plugin GeometryCache
+Mounting Engine plugin ExampleDeviceProfileSelector
+Mounting Engine plugin GeometryScripting
+Mounting Engine plugin GoogleCloudMessaging
+Mounting Engine plugin GooglePAD
+Mounting Engine plugin GeometryProcessing
+Mounting Engine plugin HairStrands
+Mounting Engine plugin InputDebugging
+Mounting Engine plugin IOSDeviceProfileSelector
+Mounting Engine plugin LinuxDeviceProfileSelector
+Mounting Engine plugin LocationServicesBPLibrary
+Mounting Engine plugin MeshModelingToolset
+Mounting Engine plugin Metasound
+Mounting Engine plugin MsQuic
+Mounting Engine plugin ModelViewViewModel
+Mounting Engine plugin ProceduralMeshComponent
+Mounting Engine plugin PropertyAccessEditor
+Mounting Engine plugin PropertyBindingUtils
+Mounting Engine plugin ResonanceAudio
+Mounting Engine plugin RigVM
+Mounting Engine plugin SignificanceManager
+Mounting Engine plugin SkeletalMerging
+Mounting Engine plugin MobilePatchingUtils
+Mounting Engine plugin SoundFields
+Mounting Engine plugin Synthesis
+Mounting Engine plugin WaveTable
+Mounting Engine plugin WebMMoviePlayer
+Mounting Engine plugin WindowsMoviePlayer
+Mounting Engine plugin WindowsDeviceProfileSelector
+Mounting Engine plugin StateTree
+Mounting Engine plugin ConcertMain
+Mounting Engine plugin FileSandbox
+Mounting Engine plugin Scribble
+Mounting Engine plugin BaseCharacterFXEditor
+Mounting Engine plugin PortableObjectFileDataSource
+Mounting Engine plugin OnlineSubsystemIOS
+Mounting Engine plugin SQLiteCore
+Mounting Engine plugin LightMixer
+Mounting Engine plugin XInputDevice
+Mounting Engine plugin OnlineSubsystemGooglePlay
+Mounting Engine plugin ContentBrowserClassDataSource
+Mounting Engine plugin ObjectMixer
+Mounting Engine plugin ContentBrowserAssetDataSource
+Mounting Engine plugin ContentBrowserFileDataSource
+Mounting Engine plugin InterchangeAxfAssets
+Mounting Engine plugin ConcertSyncClient
+Mounting Engine plugin ConcertSyncCore
+Mounting Engine plugin ConcertSharedSlate
+InternalLoadLibrary: 'DerivedDataBuildController' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/DerivedDataBuildController/Binaries/Win64/UnrealEditor-DerivedDataBuildController.dll')
+InternalLoadLibrary: 'UbaController' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/UbaController/Binaries/Win64/UnrealEditor-UbaController.dll')
+InternalLoadLibrary: 'XGEController' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/XGEController/Binaries/Win64/UnrealEditor-XGEController.dll')
+InternalLoadLibrary: 'PerforceSourceControl' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/PerforceSourceControl/Binaries/Win64/UnrealEditor-PerforceSourceControl.dll')
+InternalLoadLibrary: 'SourceControl' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SourceControl.dll')
+Revision control is disabled
+Revision control is disabled
+InternalLoadLibrary: 'PlasticSourceControl' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/PlasticSourceControl/Binaries/Win64/UnrealEditor-PlasticSourceControl.dll')
+Revision control is disabled
+InternalLoadLibrary: 'PlatformCrypto' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/PlatformCrypto/Binaries/Win64/UnrealEditor-PlatformCrypto.dll')
+InternalLoadLibrary: 'PlatformCryptoTypes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/PlatformCrypto/Binaries/Win64/UnrealEditor-PlatformCryptoTypes.dll')
+InternalLoadLibrary: 'PlatformCryptoContext' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/PlatformCrypto/Binaries/Win64/UnrealEditor-PlatformCryptoContext.dll')
+InternalLoadLibrary: 'PythonScriptPluginPreload' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/PythonScriptPlugin/Binaries/Win64/UnrealEditor-PythonScriptPluginPreload.dll')
+Running DelayedAutoRegister Phase EarliestPossiblePluginsLoaded
+InternalLoadLibrary: 'ChaosCloth' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/ChaosCloth/Binaries/Win64/UnrealEditor-ChaosCloth.dll')
+InternalLoadLibrary: 'PCGCompute' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/PCG/Binaries/Win64/UnrealEditor-PCGCompute.dll')
+InternalLoadLibrary: 'GPUReshape' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/GPUReshape/Binaries/Win64/UnrealEditor-GPUReshape.dll')
+InternalLoadLibrary: 'PixWinPlugin' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/PixWinPlugin/Binaries/Win64/UnrealEditor-PixWinPlugin.dll')
+Failed to load 'WinPixGpuCapturer.dll' (GetLastError=126)
+File 'WinPixGpuCapturer.dll' does not exist
+PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+InternalLoadLibrary: 'RenderDocPlugin' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/RenderDocPlugin/Binaries/Win64/UnrealEditor-RenderDocPlugin.dll')
+Applying CVar settings from Section [/Script/RenderDocPlugin.RenderDocPluginSettings] File [Engine]
+RenderDoc plugin will not be loaded. Use '-AttachRenderDoc' on the cmd line or enable 'renderdoc.AutoAttach' in the plugin settings.
+InternalLoadLibrary: 'Buoyancy' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/Buoyancy/Binaries/Win64/UnrealEditor-Buoyancy.dll')
+InternalLoadLibrary: 'EditorPerformance' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorPerformance/Binaries/Win64/UnrealEditor-EditorPerformance.dll')
+InternalLoadLibrary: 'StallLogSubsystem' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorPerformance/Binaries/Win64/UnrealEditor-StallLogSubsystem.dll')
+InternalLoadLibrary: 'CrashDiagnostics' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorPerformance/Binaries/Win64/UnrealEditor-CrashDiagnostics.dll')
+InternalLoadLibrary: 'EditorTelemetry' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorTelemetry/Binaries/Win64/UnrealEditor-EditorTelemetry.dll')
+Provider StudioTelemetry.Provider.Log is disabled for this application
+Provider StudioTelemetry.Provider.CSV is disabled for this application
+Provider StudioTelemetry.Provider.Horde is disabled for this application
+InternalLoadLibrary: 'Analytics' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Analytics.dll')
+Started StudioTelemetry Session
+InternalLoadLibrary: 'NFORDenoise' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/NFORDenoise/Binaries/Win64/UnrealEditor-NFORDenoise.dll')
+NFORDenoise function starting up
+InternalLoadLibrary: 'RuntimeTelemetry' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/RuntimeTelemetry/Binaries/Win64/UnrealEditor-RuntimeTelemetry.dll')
+Provider StudioTelemetry.Provider.Log is disabled for this application
+Provider StudioTelemetry.Provider.CSV is disabled for this application
+Provider StudioTelemetry.Provider.Horde is disabled for this application
+Started StudioTelemetry Session
+InternalLoadLibrary: 'Water' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/Water/Binaries/Win64/UnrealEditor-Water.dll')
+InternalLoadLibrary: 'EOSShared' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/EOSShared/Binaries/Win64/UnrealEditor-EOSShared.dll')
+Loaded "C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/EOSSDK-Win64-Shipping.dll"
+FEOSSDKManager::Initialize Initializing EOSSDK Version:1.19.1.2-53289219
+InternalLoadLibrary: 'OnlineServicesInterface' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/OnlineServices/Binaries/Win64/UnrealEditor-OnlineServicesInterface.dll')
+InternalLoadLibrary: 'OnlineServicesCommon' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/OnlineServices/Binaries/Win64/UnrealEditor-OnlineServicesCommon.dll')
+InternalLoadLibrary: 'OnlineServicesCommonEngineUtils' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/OnlineServices/Binaries/Win64/UnrealEditor-OnlineServicesCommonEngineUtils.dll')
+InternalLoadLibrary: 'OnlineSubsystemUtils' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/OnlineSubsystemUtils/Binaries/Win64/UnrealEditor-OnlineSubsystemUtils.dll')
+InternalLoadLibrary: 'OnlineBlueprintSupport' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/OnlineSubsystemUtils/Binaries/Win64/UnrealEditor-OnlineBlueprintSupport.dll')
+InternalLoadLibrary: 'LauncherChunkInstaller' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Portal/LauncherChunkInstaller/Binaries/Win64/UnrealEditor-LauncherChunkInstaller.dll')
+InternalLoadLibrary: 'OnlineSubsystem' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/OnlineSubsystem/Binaries/Win64/UnrealEditor-OnlineSubsystem.dll')
+InternalLoadLibrary: 'HTTP' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-HTTP.dll')
+InternalLoadLibrary: 'SSL' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SSL.dll')
+Using libcurl 8.15.0
+ - built for Windows
+ - supports SSL with OpenSSL/1.1.1t
+ - supports HTTP deflate (compression) using libz 1.3
+ - other features:
+     CURL_VERSION_SSL
+     CURL_VERSION_LIBZ
+     CURL_VERSION_IPV6
+     CURL_VERSION_ASYNCHDNS
+     CURL_VERSION_LARGEFILE
+     CURL_VERSION_TLSAUTH_SRP
+     CURL_VERSION_HTTP2
+ CurlRequestOptions (configurable via config and command line):
+ - bVerifyPeer = true  - Libcurl will verify peer certificate
+ - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+ - CVarHttpReuseConnectionEnabled = true  - Libcurl will reuse connections
+ - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+ - LocalHostAddr = Default
+ - BufferSize = 65536
+CreateHttpThread using FCurlMultiPollEventLoopHttpThread
+Creating http thread with maximum 251 concurrent requests
+InternalLoadLibrary: 'XMPP' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-XMPP.dll')
+InternalLoadLibrary: 'WebSockets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WebSockets.dll')
+InternalLoadLibrary: 'OnlineSubsystemNULL' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Online/OnlineSubsystemNull/Binaries/Win64/UnrealEditor-OnlineSubsystemNull.dll')
+InternalLoadLibrary: 'Sockets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Sockets.dll')
+WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+OSS: Created online subsystem instance for: NULL
+OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+InternalLoadLibrary: 'InterchangeAssets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Interchange/Assets/Binaries/Win64/UnrealEditor-InterchangeAssets.dll')
+InternalLoadLibrary: 'ExrReaderGpu' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Media/ImgMedia/Binaries/Win64/UnrealEditor-ExrReaderGpu.dll')
+InternalLoadLibrary: 'TmvMediaShaders' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Media/TmvMedia/Binaries/Win64/UnrealEditor-TmvMediaShaders.dll')
+InternalLoadLibrary: 'WmfMedia' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Media/WmfMedia/Binaries/Win64/UnrealEditor-WmfMedia.dll')
+InternalLoadLibrary: 'Media' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Media.dll')
+InternalLoadLibrary: 'AISupportModule' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/AI/AISupport/Binaries/Win64/UnrealEditor-AISupportModule.dll')
+InternalLoadLibrary: 'ACLPlugin' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/ACLPlugin/Binaries/Win64/UnrealEditor-ACLPlugin.dll')
+InternalLoadLibrary: 'CompositeCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Compositing/CompositeCore/Binaries/Win64/UnrealEditor-CompositeCore.dll')
+Applying CVar settings from Section [/Script/CompositeCore.CompositeCorePluginSettings] File [Engine]
+InternalLoadLibrary: 'DatasmithContent' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Enterprise/DatasmithContent/Binaries/Win64/UnrealEditor-DatasmithContent.dll')
+InternalLoadLibrary: 'GLTFExporter' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Enterprise/GLTFExporter/Binaries/Win64/UnrealEditor-GLTFExporter.dll')
+InternalLoadLibrary: 'VariantManagerContent' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Enterprise/VariantManagerContent/Binaries/Win64/UnrealEditor-VariantManagerContent.dll')
+InternalLoadLibrary: 'NiagaraShader' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/Niagara/Binaries/Win64/UnrealEditor-NiagaraShader.dll')
+InternalLoadLibrary: 'NiagaraVertexFactories' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/Niagara/Binaries/Win64/UnrealEditor-NiagaraVertexFactories.dll')
+InternalLoadLibrary: 'NNEDenoiserShaders' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/NNE/NNEDenoiser/Binaries/Win64/UnrealEditor-NNEDenoiserShaders.dll')
+InternalLoadLibrary: 'OptimusSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/DeformerGraph/Binaries/Win64/UnrealEditor-OptimusSettings.dll')
+InternalLoadLibrary: 'ChunkDownloader' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/ChunkDownloader/Binaries/Win64/UnrealEditor-ChunkDownloader.dll')
+InternalLoadLibrary: 'ComputeFramework' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/ComputeFramework/Binaries/Win64/UnrealEditor-ComputeFramework.dll')
+InternalLoadLibrary: 'HairStrandsCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/HairStrands/Binaries/Win64/UnrealEditor-HairStrandsCore.dll')
+MemorySharingInfo: UsedMemory=326MiB, MaxMemoryAvailable=81684MiB
+InternalLoadLibrary: 'InterchangeAxFAssets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/InterchangeAxF/Assets/Binaries/Win64/UnrealEditor-InterchangeAxFAssets.dll')
+ExecutableName: UnrealEditor-Cmd.exe
+Build: ++UE5+Release-5.8-CL-58210709
+Platform=WindowsEditor
+MachineId=e4ed8740d150467c9e3fdf39de553e16
+DeviceId=
+Engine Version: 5.8.3-58210709+++UE5+Release-5.8
+Compatible Engine Version: 5.8.0-55116800+++UE5+Release-5.8
+Net CL: 55116800
+OS: Windows 10 (22H2) [10.0.19045.6466] (), CPU: 11th Gen Intel(R) Core(TM) i9-11900F @ 2.50GHz, GPU: NVIDIA GeForce GTX 1660
+CPU Model ID: 6a71, microcode revision: 4c
+Compiled (64-bit): Sep 17 2026 19:10:46
+Architecture: x64
+Compiled with Visual C++: 19.44.35229.00
+Build Configuration: Development
+Branch Name: ++UE5+Release-5.8
+Command Line:  "D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/KnightRefine.uproject" -run=pythonscript -script="D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Scripts/step3_beauty.py" -DDC=KnightIsolated -AllowCommandletRendering -NoTextureStreaming -notraceserver -unattended -nop4 -nosplash -NoSound -stdout -FullStdOutLogOutput
+Base Directory: C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/
+Allocator: Mimalloc
+Installed Engine Build: 1
+This binary is optimized with LTO: no, PGO: no, instrumented for PGO data collection: no
+Number of dev versions registered: 36
+  Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+  Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+  Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+  Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+  Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+  Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+  Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+  Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+  Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 20
+  Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+  Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 49
+  Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+  Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+  Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+  Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+  Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+  Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+  Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+  Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+  FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 268
+  FortniteValkyrie (8DBC2C5B-54A7-43E0-A768-FCBB7DA29060): 8
+  FortniteSeason (5B4C06B7-2463-4AF8-805B-BF70CDF5D0DD): 15
+  FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 20
+  Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 11
+  Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+  Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+  Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+  Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+  Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+  Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+  UE5-Main (697DD581-E64F-41AB-AA4A-51ECBEB7B628): 123
+  UE5-Release (D89B5E42-24BD-4D46-8412-ACA8DF641779): 68
+  UE5-SpecialProject (59DA5D52-1232-4948-B878-597870B8E98B): 9
+  Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+  Dev-NaniteResearch (30D58BE3-95EA-4282-A6E3-B159D8EBB06A): 1
+  Dev-ComputeFramework (6304A3E7-0059-4F59-8CFC-21BD7721FD4E): 0
+Presizing for max 25165824 objects, including 0 objects not considered by GC.
+AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+Object subsystem initialized
+Set CVar [[con.DebugEarlyDefault:1]]
+CVar [[con.DebugLateDefault:1]] deferred - dummy variable created
+CVar [[con.DebugLateCheat:1]] deferred - dummy variable created
+CVar [[LogNamedEventFilters:Frame *]] deferred - dummy variable created
+Set CVar [[r.setres:1280x720]]
+CVar [[framepro.ScopeMinTimeMicroseconds:10]] deferred - dummy variable created
+Set CVar [[fx.NiagaraAllowRuntimeScalabilityChanges:1]]
+CVar [[QualityLevelMapping:high]] deferred - dummy variable created
+CVar [[r.Occlusion.SingleRHIThreadStall:1]] deferred - dummy variable created
+Set CVar [[r.Nanite.Streaming.ReservedResources:1]]
+CVar [[D3D12.Bindless.ResourceDescriptorHeapSize:32768]] deferred - dummy variable created
+CVar [[D3D12.Bindless.SamplerDescriptorHeapSize:2048]] deferred - dummy variable created
+Set CVar [[r.PSOPrecache.GlobalShaders:1]]
+Set CVar [[r.VRS.EnableSoftware:1]]
+Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
+CVar [[con.DebugLateDefault:1]] deferred - dummy variable created
+CVar [[con.DebugLateCheat:1]] deferred - dummy variable created
+CVar [[LogNamedEventFilters:Frame *]] deferred - dummy variable created
+CVar [[framepro.ScopeMinTimeMicroseconds:10]] deferred - dummy variable created
+CVar [[QualityLevelMapping:high]] deferred - dummy variable created
+CVar [[r.Occlusion.SingleRHIThreadStall:1]] deferred - dummy variable created
+CVar [[D3D12.Bindless.ResourceDescriptorHeapSize:32768]] deferred - dummy variable created
+CVar [[D3D12.Bindless.SamplerDescriptorHeapSize:2048]] deferred - dummy variable created
+Applying CVar settings from Section [/Script/Engine.RendererSettings] File [Engine]
+CVar [[VisualizeCalibrationColorMaterialPath:/Engine/EngineMaterials/PPM_DefaultCalibrationColor.PPM_DefaultCalibrationColor]] deferred - dummy variable created
+CVar [[VisualizeCalibrationGrayscaleMaterialPath:/Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale.PPM_DefaultCalibrationGrayscale]] deferred - dummy variable created
+Set CVar [[r.GPUCrashDebugging:0]]
+CVar [[MaxSkinBones:(Default=65536,PerPlatform=(("Mobile", 256)))]] deferred - dummy variable created
+Set CVar [[r.Shaders.RemoveUnusedInterpolators:1]]
+Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
+Set CVar [[r.Substrate.RoughDiffuse:1]]
+Set CVar [[r.Substrate.ShadingQuality:1]]
+Set CVar [[r.Substrate.TileCoord8bits:0]]
+Set CVar [[r.Substrate.Glints:1]]
+Set CVar [[r.Substrate.ClosuresPerPixel:4]]
+Set CVar [[r.Refraction.Blur:1]]
+Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [Engine]
+Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [Engine]
+Set CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+Set CVar [[s.AsyncLoadingThreadEnabled:1]]
+Set CVar [[s.EventDrivenLoaderEnabled:1]]
+Set CVar [[s.WarnIfTimeLimitExceeded:0]]
+Set CVar [[s.TimeLimitExceededMultiplier:1.5]]
+Set CVar [[s.TimeLimitExceededMinTime:0.005]]
+Set CVar [[s.UseBackgroundLevelStreaming:1]]
+Set CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+Set CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+Set CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+Set CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+Set CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+Set CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+CVar [[s.MaxPackageSummarySize:16384]] deferred - dummy variable created
+Set CVar [[s.FlushStreamingOnExit:1]]
+CVar [[FixedBootOrder:/Script/Engine/Default__SoundBase]] deferred - dummy variable created
+CVar [[FixedBootOrder:/Script/Engine/Default__MaterialInterface]] deferred - dummy variable created
+CVar [[FixedBootOrder:/Script/Engine/Default__DeviceProfileManager]] deferred - dummy variable created
+Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [Engine]
+Set CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+Set CVar [[gc.NumRetriesBeforeForcingGC:10]]
+Set CVar [[gc.AllowParallelGC:1]]
+Set CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+Set CVar [[gc.MaxObjectsInEditor:25165824]]
+Set CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+Set CVar [[gc.CreateGCClusters:1]]
+Set CVar [[gc.MinGCClusterSize:5]]
+Set CVar [[gc.AssetClustreringEnabled:0]]
+Set CVar [[gc.ActorClusteringEnabled:0]]
+Set CVar [[gc.VerifyUObjectsAreNotFGCObjects:0]]
+Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [Engine]
+CVar [[NetworkEmulationProfiles:(ProfileName="Average",ToolTip="Simulates average internet conditions")]] deferred - dummy variable created
+CVar [[NetworkEmulationProfiles:(ProfileName="Bad",ToolTip="Simulates laggy internet conditions")]] deferred - dummy variable created
+CVar [[NetworkEmulationProfiles:(ProfileName="BufferBloat",ToolTip="Simulates a connection affected by buffer bloat (in and out)")]] deferred - dummy variable created
+Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [Engine]
+CVar [[DefaultASTCQualityBySpeed:2]] deferred - dummy variable created
+CVar [[DefaultASTCQualityBySize:3]] deferred - dummy variable created
+CVar [[DefaultASTCQualityBySizeHQ:4]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:WidgetBlueprint]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:GroupActor]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:MetaData]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:ObjectRedirector]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:NavMeshRenderingComponent]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:ReflectionCaptureComponent]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:TextRenderComponent]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:Font]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:InterpCurveEdSetup]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:MaterialExpression]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:NiagaraEmitter]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:NiagaraScript]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:ParticleEmitter]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:ParticleLODLevel]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:ParticleModule]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:SubUVAnimation]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:SoundNode]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:GameplayEffectUIData]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedServer:AmbientSound]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedClient:WidgetBlueprint]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedClient:GroupActor]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedClient:MetaData]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedClient:ObjectRedirector]] deferred - dummy variable created
+CVar [[ClassesExcludedOnDedicatedClient:InterpCurveEdSetup]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.AllowStaticLighting]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.MaterialEditor.LWCTruncateMode]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.VelocityOutputPass]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.SelectiveBasePassOutputs]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.DBuffer]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.Mobile.DBuffer]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.Shaders.Symbols]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.Shaders.GenerateSymbols]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.Shaders.WriteSymbols]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.Shaders.AllowUniqueSymbols]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.Shaders.ExtraData]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.Shaders.Optimize]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.CompileShadersForDevelopment]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.MobileHDR]] deferred - dummy variable created
+CVar [[VersionedIntRValues:r.UsePreExposure]] deferred - dummy variable created
+Applying CVar settings from Section [ViewDistanceQuality@3] File [Scalability]
+Set CVar [[r.SkeletalMeshLODBias:0]]
+Set CVar [[r.ViewDistanceScale:1.0]]
+Applying CVar settings from Section [AntiAliasingQuality@3] File [Scalability]
+Set CVar [[r.FXAA.Quality:4]]
+Set CVar [[r.TemporalAA.Quality:2]]
+Set CVar [[r.TSR.History.R11G11B10:1]]
+Set CVar [[r.TSR.History.ScreenPercentage:200]]
+Set CVar [[r.TSR.History.UpdateQuality:3]]
+Set CVar [[r.TSR.ShadingRejection.Flickering:1]]
+Set CVar [[r.TSR.RejectionAntiAliasingQuality:2]]
+Set CVar [[r.TSR.ReprojectionField:1]]
+Set CVar [[r.TSR.Resurrection:1]]
+Applying CVar settings from Section [ShadowQuality@3] File [Scalability]
+Set CVar [[r.LightFunctionQuality:1]]
+Set CVar [[r.ShadowQuality:5]]
+Set CVar [[r.Shadow.CSM.MaxCascades:10]]
+Set CVar [[r.Shadow.MaxResolution:2048]]
+Set CVar [[r.Shadow.MaxCSMResolution:2048]]
+Set CVar [[r.Shadow.RadiusThreshold:0.01]]
+Set CVar [[r.Shadow.DistanceScale:1.0]]
+Set CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+Set CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+Set CVar [[r.DistanceFieldShadowing:1]]
+Set CVar [[r.VolumetricFog:1]]
+Set CVar [[r.VolumetricFog.GridPixelSize:8]]
+Set CVar [[r.VolumetricFog.GridSizeZ:128]]
+Set CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+Set CVar [[r.LightMaxDrawDistanceScale:1]]
+Set CVar [[r.CapsuleShadows:1]]
+Set CVar [[r.Shadow.Virtual.MaxPhysicalPages:4096]]
+Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectional:-1.5]]
+Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectionalMoving:-1.5]]
+Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocal:0.0]]
+Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocalMoving:1.0]]
+Set CVar [[r.Shadow.Virtual.SMRT.RayCountDirectional:8]]
+Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayDirectional:4]]
+Set CVar [[r.Shadow.Virtual.SMRT.RayCountLocal:8]]
+Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayLocal:4]]
+Set CVar [[r.Shadow.Virtual.MarkCoarsePagesLocal:1]]
+Set CVar [[r.MegaLights.NumSamplesPerPixel:4]]
+Set CVar [[r.MegaLights.DownsampleMode:2]]
+Set CVar [[r.MegaLights.ScreenTraces.Quality:1]]
+Set CVar [[r.MegaLights.FrontLayerTranslucency.Allow:1]]
+Set CVar [[r.MegaLights.FrontLayerTranslucency.SpecularOnly:1]]
+Set CVar [[r.MegaLights.FrontLayerTranslucency.SoftShadows:0]]
+Set CVar [[r.MegaLights.FrontLayerTranslucency.TexturedRectLights:0]]
+Set CVar [[r.MegaLights.Spatial.UseHistorySpatialVariance:1]]
+Set CVar [[r.MegaLights.Volume.GridPixelSize:8]]
+Set CVar [[r.MegaLights.Volume.GridSizeZ:128]]
+Applying CVar settings from Section [GlobalIlluminationQuality@3] File [Scalability]
+Set CVar [[r.DistanceFieldAO:1]]
+Set CVar [[r.SkylightIntensityMultiplier:1.0]]
+Set CVar [[r.AOQuality:2]]
+Set CVar [[r.Lumen.DiffuseIndirect.Allow:1]]
+Set CVar [[r.Lumen.FinalGatherMethod:1]]
+Set CVar [[r.LumenScene.SurfaceCache.AtlasSize:4096]]
+Set CVar [[r.LumenScene.SurfaceCache.CardTexelDensityScale:100]]
+Set CVar [[r.LumenScene.SurfaceCache.CardMinResolution:2]]
+Set CVar [[r.LumenScene.SurfaceCache.CardMaxResolution:512]]
+Set CVar [[r.LumenScene.DirectLighting.MaxLightsPerTile:8]]
+Set CVar [[r.LumenScene.DirectLighting.UpdateFactor:32]]
+Set CVar [[r.LumenScene.Radiosity.UpdateFactor:64]]
+Set CVar [[r.LumenScene.Radiosity.ProbeSpacing:4]]
+Set CVar [[r.LumenScene.Radiosity.HemisphereProbeResolution:4]]
+Set CVar [[r.Lumen.TraceMeshSDFs.Allow:1]]
+Set CVar [[r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution:32]]
+Set CVar [[r.Lumen.ScreenProbeGather.RadianceCache.NumProbesToTraceBudget:150]]
+Set CVar [[r.Lumen.ScreenProbeGather.DownsampleFactor:16]]
+Set CVar [[r.Lumen.ScreenProbeGather.NumAdaptiveProbes:8]]
+Set CVar [[r.Lumen.ScreenProbeGather.TracingOctahedronResolution:8]]
+Set CVar [[r.Lumen.ScreenProbeGather.IrradianceFormat:0]]
+Set CVar [[r.Lumen.ScreenProbeGather.StochasticInterpolation:0]]
+Set CVar [[r.Lumen.ScreenProbeGather.FullResolutionJitterWidth:1]]
+Set CVar [[r.Lumen.ScreenProbeGather.TwoSidedFoliageBackfaceDiffuse:1]]
+Set CVar [[r.Lumen.ScreenProbeGather.ScreenTraces.HZBTraversal.FullResDepth:1]]
+Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.DownsampleFactor:1]]
+Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.HorizonSearch.SliceCount:2]]
+Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.BentNormal:1]]
+Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.HorizonSearch.HZB:0]]
+Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.HorizonSearch.ForegroundSampleRejectPower:1]]
+Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.FoliageOcclusionStrength:.7]]
+Set CVar [[r.Lumen.TranslucencyVolume.GridPixelSize:32]]
+Set CVar [[r.Lumen.TranslucencyVolume.TraceFromVolume:1]]
+Set CVar [[r.Lumen.TranslucencyVolume.ShareRadianceCacheWithOpaque:0]]
+Set CVar [[r.Lumen.TranslucencyVolume.SpatialFilter:1]]
+Set CVar [[r.Lumen.TranslucencyVolume.TracingOctahedronResolution:3]]
+Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.ProbeResolution:8]]
+Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.GridResolution:24]]
+Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.NumProbesToTraceBudget:100]]
+Set CVar [[r.Lumen.HardwareRayTracing.HitLighting.Allowed:1]]
+Set CVar [[r.RayTracing.Scene.BuildMode:1]]
+Set CVar [[r.RayTracing.Geometry.SkeletalMeshes:1]]
+Set CVar [[r.MeshCardRepresentation.SkeletalMesh:1]]
+Set CVar [[r.RayTracing.DynamicGeometry.MaxUpdatePrimitivesPerFrame:-1]]
+Applying CVar settings from Section [ReflectionQuality@3] File [Scalability]
+Set CVar [[r.SSR.Quality:3]]
+Set CVar [[r.SSR.HalfResSceneColor:0]]
+Set CVar [[r.Lumen.Reflections.Allow:1]]
+Set CVar [[r.Lumen.Reflections.DownsampleFactor:1]]
+Set CVar [[r.Lumen.Reflections.MaxRoughnessToTraceForFoliage:0.4]]
+Set CVar [[r.Lumen.ScreenProbeGather.MaxRoughnessToEvaluateRoughSpecularForFoliage:0.8]]
+Set CVar [[r.Lumen.Reflections.ScreenSpaceReconstruction.NumSamples:5]]
+Set CVar [[r.Lumen.Reflections.ScreenSpaceReconstruction.MinWeight:0]]
+Set CVar [[r.Lumen.TranslucencyReflections.FrontLayer.Allow:1]]
+Set CVar [[r.Lumen.TranslucencyReflections.FrontLayer.Enable:0]]
+Applying CVar settings from Section [PostProcessQuality@3] File [Scalability]
+Set CVar [[r.MotionBlurQuality:4]]
+Set CVar [[r.MotionBlur.HalfResGather:0]]
+Set CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+Set CVar [[r.AmbientOcclusionMaxQuality:100]]
+Set CVar [[r.AmbientOcclusionLevels:-1]]
+Set CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+Set CVar [[r.DepthOfFieldQuality:2]]
+Set CVar [[r.RenderTargetPoolMin:400]]
+Set CVar [[r.LensFlareQuality:2]]
+Set CVar [[r.SceneColorFringeQuality:1]]
+Set CVar [[r.EyeAdaptationQuality:2]]
+Set CVar [[r.BloomQuality:5]]
+Set CVar [[r.Bloom.ScreenPercentage:50.000]]
+Set CVar [[r.FastBlurThreshold:100]]
+Set CVar [[r.Upscale.Quality:3]]
+Set CVar [[r.LightShaftQuality:1]]
+Set CVar [[r.Filter.SizeScale:1]]
+Set CVar [[r.LUT.Shaper:0]]
+Set CVar [[r.LUT.Size:32]]
+Set CVar [[r.Tonemapper.Quality:5]]
+Set CVar [[r.DOF.Gather.ResolutionDivisor:2         ; lower gathering resolution]]
+Set CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+Set CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+Set CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+Set CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+Set CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+Set CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+Set CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+Set CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+Set CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+Set CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+Set CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+Set CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+Set CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+Applying CVar settings from Section [TextureQuality@3] File [Scalability]
+Set CVar [[r.Streaming.MipBias:0]]
+Set CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+Set CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+Set CVar [[r.Streaming.Boost:1]]
+Set CVar [[r.MaxAnisotropy:8]]
+Set CVar [[r.VT.MaxAnisotropy:8]]
+Set CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+Set CVar [[r.Streaming.PoolSize:1000]]
+Set CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+Applying CVar settings from Section [EffectsQuality@3] File [Scalability]
+Set CVar [[r.TranslucencyLightingVolume.Dim:64]]
+Set CVar [[r.RefractionQuality:2]]
+Set CVar [[r.SceneColorFormat:4]]
+Set CVar [[r.DetailMode:3]]
+Set CVar [[r.TranslucencyLightingVolume.Blur:1]]
+Set CVar [[r.MaterialQualityLevel:1 ; High quality]]
+Set CVar [[r.SSS.Scale:1]]
+Set CVar [[r.SSS.SampleSet:2]]
+Set CVar [[r.SSS.Quality:1]]
+Set CVar [[r.SSS.HalfRes:0]]
+Set CVar [[r.SSGI.Quality:3]]
+Set CVar [[r.EmitterSpawnRateScale:1.0]]
+Set CVar [[r.ParticleLightQuality:2]]
+Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+Set CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+Set CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+Set CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+Set CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+Set CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+Set CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+Set CVar [[r.Fog.SeparateComposition:-1	; Allow fog separate composition when FSSS is enabled.]]
+Set CVar [[fx.Niagara.QualityLevel:3]]
+Set CVar [[r.Refraction.OffsetQuality:1]]
+Set CVar [[r.HeterogeneousVolumes.Allowed:1]]
+Set CVar [[r.HeterogeneousVolumes.DownsampleFactor:2]]
+Set CVar [[r.HeterogeneousVolumes.MaxStepCount:256]]
+Set CVar [[r.HeterogeneousVolumes.Shadows.Resolution:512]]
+Set CVar [[r.HeterogeneousVolumes.Shadows.Precision:0]]
+Set CVar [[r.HeterogeneousVolumes.UseExistenceMask:0]]
+Applying CVar settings from Section [FoliageQuality@3] File [Scalability]
+Set CVar [[foliage.DensityScale:1.0]]
+Set CVar [[grass.DensityScale:1.0]]
+CVar [[pcg.Quality:3]] deferred - dummy variable created
+Applying CVar settings from Section [ShadingQuality@3] File [Scalability]
+Set CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+Set CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+Set CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+Set CVar [[r.AnisotropicMaterials:1]]
+Applying CVar settings from Section [LandscapeQuality@3] File [Scalability]
+InternalLoadLibrary: 'WindowsDeviceProfileSelector' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/WindowsDeviceProfileSelector/Binaries/Win64/UnrealEditor-WindowsDeviceProfileSelector.dll')
+Selected Device Profile: [WindowsEditor]
+Platform has ~ 32 GB [34113179648 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+Going up to parent DeviceProfile [Windows]
+Going up to parent DeviceProfile []
+Pushing Device Profile CVar: [[UI.SlateSDFText.RasterizationMode:Bitmap -> Msdf]]
+Pushing Device Profile CVar: [[UI.SlateSDFText.ResolutionLevel:2 -> 2]]
+Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+Set CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+Set CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+Applying CVar settings from Section [Startup_Windows] File [../../../Engine/Config/ConsoleVariables.ini]
+Applying CVar settings from Section [ConsoleVariables] File [Engine]
+Set CVar [[WindowsApplication.UseWorkerThreadForRawInput:0]]
+Set CVar [[r.PSOPrecache.KeepInMemoryForActiveMaterials:1]]
+Applying CVar settings from Section [ConsoleVariables] File [D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Saved/Config/WindowsEditor/Editor.ini]
+Set CVar [[SplineComponent.OnlyUpdateActiveSpline:0]]
+Computer: DESKTOP-21EU8CB
+User: Administrator
+CPU Page size=4096, Cores=8
+High frequency timer resolution =10.000000 MHz
+Gaming Handheld Device: 0
+Memory total: Physical=31.8GB (32GB approx) Virtual=79.8GB
+Platform Memory Stats for WindowsEditor
+Process Physical Memory: 593.04 MB used, 593.05 MB peak
+Process Virtual Memory: 577.61 MB used, 577.61 MB peak
+Physical Memory: 23490.25 MB used,  9042.61 MB free, 32532.86 MB total
+Virtual Memory: 52988.16 MB used,  28696.71 MB free, 81684.86 MB total
+Metadata set : extradevelopmentmemorymb="0"
+InternalLoadLibrary: 'IoStoreOnDemandCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-IoStoreOnDemandCore.dll')
+InternalLoadLibrary: 'BandwidthDebugDelegates' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-BandwidthDebugDelegates.dll')
+InternalLoadLibrary: 'ClientBandwidthDebugVisualizer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ClientBandwidthDebugVisualizer.dll')
+InternalLoadLibrary: 'BandwidthMeasurementTool' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-BandwidthMeasurementTool.dll')
+InternalLoadLibrary: 'DownlinkBandwidthManager' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-DownlinkBandwidthManager.dll')
+Attempting to load config data for Default__DownlinkBandwidthManagerConfig before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+WindowsPlatformFeatures enabled
+InternalLoadLibrary: 'WindowsPlatformFeatures' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WindowsPlatformFeatures.dll')
+InternalLoadLibrary: 'GameplayMediaEncoder' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-GameplayMediaEncoder.dll')
+InternalLoadLibrary: 'AVEncoder' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AVEncoder.dll')
+InternalLoadLibrary: 'Chaos' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Chaos.dll')
+InternalLoadLibrary: 'GeometryCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-GeometryCore.dll')
+Registered spline type: TypeId=0x54E3AD22, Impl=MultiSpline, Value=Vector
+InternalLoadLibrary: 'ChaosSolverEngine' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ChaosSolverEngine.dll')
+Chaos Debug Draw Startup
+Physics initialised using underlying interface: Chaos
+Using OS detected language (en-US).
+Using OS detected locale (en-US).
+No specific localization for 'en-US' exists, so 'en' will be used for the language.
+Attempting to load config data for Default__SlateThemeManager before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+Running DelayedAutoRegister Phase PreRHIInit
+Using Default RHI: D3D12
+Using Highest Feature Level of D3D12: SM5
+Loading RHI module D3D12RHI
+InternalLoadLibrary: 'D3D12RHI' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-D3D12RHI.dll')
+Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
+Checking if RHI D3D12 with Feature Level SM5 is supported by your system.
+Found D3D12 adapter 0: NVIDIA GeForce GTX 1660 (VendorId: 10de, DeviceId: 2184, SubSysId: 7377, Revision: 00a1
+  Max supported Feature Level 12_1, shader model 6.7, binding tier 3, wave ops supported, atomic64 supported
+  Adapter has 5966MB of dedicated video memory, 0MB of dedicated system memory, and 16266MB of shared system memory, 2 output[s], TileBased:false UMA:false CacheCoherentUMA:false GPU Upload Heaps:false
+  Driver Version: 560.94 (internal:32.0.15.6094, unified:560.94)
+     Driver Date: 8-14-2024
+Found D3D12 adapter 1: Microsoft Basic Render Driver (VendorId: 1414, DeviceId: 008c, SubSysId: 0000, Revision: 0000
+  Max supported Feature Level 12_1, shader model 6.2, binding tier 3, wave ops supported, atomic64 unsupported
+  Adapter has 0MB of dedicated video memory, 0MB of dedicated system memory, and 16266MB of shared system memory, 0 output[s], TileBased:false UMA:true CacheCoherentUMA:true GPU Upload Heaps:false
+  D3D10Warp Version: 10.0.19041.5794
+DirectX Agility SDK runtime found.
+Chosen D3D12 Adapter Id = 0
+RHI D3D12 with Feature Level SM5 is supported and will be used.
+Integrated GPU (iGPU): false
+Creating D3D12 RHI with Max Feature Level SM5
+NVIDIA Architecture=352
+Timeout Detection and Recovery (TDR) summary: 
+	- TDR settings OK - Level: Recover, Delay: 2, DdiDelay: 5
+Attached monitors:
+    resolution: 1920x1080, work area: (0, 0) -> (1920, 1040), device: '\\.\DISPLAY1' [PRIMARY]
+    resolution: 1920x1080, work area: (1920, 0) -> (3840, 1040), device: '\\.\DISPLAY2'
+Found 2 attached monitors.
+Gathering driver information using Windows Setup API
+RHI Adapter Info:
+            Name: NVIDIA GeForce GTX 1660
+  Driver Version: 560.94 (internal:32.0.15.6094, unified:560.94)
+     Driver Date: 8-14-2024
+Performing driver check for denylisted drivers.
+    GPU DeviceId: 0x2184 (for the marketing name, search the web for "GPU Device Id")
+InitD3DDevice: -D3DDebug = off -D3D12GPUValidation = off
+Aftermath initialized
+Emitting draw events for PIX profiling.
+Aftermath enabled. Active feature flags: 
+ID3D12Device1 is supported.
+ID3D12Device2 is supported.
+ID3D12Device3 is supported.
+ID3D12Device4 is supported.
+ID3D12Device5 is supported.
+ID3D12Device6 is supported.
+ID3D12Device7 is supported.
+ID3D12Device8 is supported.
+ID3D12Device9 is supported.
+ID3D12Device10 is supported.
+ID3D12Device11 is supported.
+ID3D12Device12 is supported.
+Bindless is supported. MaxNonSamplerDescriptors: 1000000, MaxSamplerDescriptors: 2048
+Stencil ref from pixel shader is not supported
+Raster order views are supported
+Wave Operations are supported (wave size: min=32 max=32).
+     Legacy Barriers Present in Build: Yes
+   Enhanced Barriers Present in Build: Yes
+     Enhanced Barriers Driver Support: Yes
+Preferred Barrier Implementation Type: Legacy
+        Chosen Barrier Implementation: D3D12LegacyBarriers
+Mesh shader tier 1.0 is supported
+AtomicInt64OnTypedResource is supported
+AtomicInt64OnGroupShared is supported
+AtomicInt64OnDescriptorHeapResource is supported
+Shader Model 6.6 atomic64 is supported
+[GPUBreadCrumb] Successfully setup breadcrumb resource for DiagnosticBuffer (Queue: 0x000002E620658400)
+[GPUBreadCrumb] Successfully setup breadcrumb resource for DiagnosticBuffer (Queue: 0x000002E6206586C0)
+[GPUBreadCrumb] Successfully setup breadcrumb resource for DiagnosticBuffer (Queue: 0x000002E620658980)
+Not using pipeline state disk cache per r.D3D12.PSO.DiskCache=0
+Not using driver-optimized pipeline state disk cache per r.D3D12.PSO.DriverOptimizedDiskCache=0
+Skipped NVAPI RT queries since we the feature level is below SM6
+Batched command list execution is disabled for async queues due to known bugs in the current driver.
+TSR 16-bit VALU is disabled on NVIDIA due to known compiler bugs in drivers older than 610.00.
+Texture pool is 3274 MB (70% of 4678 MB)
+Async texture creation enabled
+RHI has support for 64 bit atomics
+Current RHI supports per-draw and screenspace Variable Rate Shading
+Render tracing channels set: 'Submission' -> 0xf
+Metadata set : verbatimrhiname="D3D12"
+Metadata set : rhiname="D3D12"
+Metadata set : rhifeaturelevel="SM5"
+Metadata set : shaderplatform="PCD3D_SM5"
+Metadata set : gpu="NVIDIA GeForce GTX 1660"
+Metadata set : gpudriver="560.94"
+Initializing FReadOnlyCVARCache
+InternalLoadLibrary: 'TurnkeySupport' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TurnkeySupport.dll')
+UBT AutoSDK ReturnCode: 0
+InternalLoadLibrary: 'TextureFormat' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureFormat.dll')
+InternalLoadLibrary: 'TextureFormatASTC' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureFormatASTC.dll')
+InternalLoadLibrary: 'TextureFormatDXT' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureFormatDXT.dll')
+InternalLoadLibrary: 'TextureFormatETC2' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureFormatETC2.dll')
+InternalLoadLibrary: 'TextureFormatIntelISPCTexComp' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureFormatIntelISPCTexComp.dll')
+InternalLoadLibrary: 'TextureFormatOodle' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureFormatOodle.dll')
+InternalLoadLibrary: 'TextureFormatUncompressed' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TextureFormatUncompressed.dll')
+ASTCEnc version 5.0.1 library loaded
+Loaded Base TextureFormat: TextureFormatASTC
+Loaded Base TextureFormat: TextureFormatDXT
+Loaded Base TextureFormat: TextureFormatETC2
+Loaded Base TextureFormat: TextureFormatIntelISPCTexComp
+Oodle Texture TFO init; latest sdk version = 2.9.16
+Oodle Texture loading DLL: oo2tex_win64_2.9.16.dll
+Loaded Base TextureFormat: TextureFormatOodle
+Loaded Base TextureFormat: TextureFormatUncompressed
+InternalLoadLibrary: 'AndroidTargetPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/Android/UnrealEditor-AndroidTargetPlatform.dll')
+InternalLoadLibrary: 'AndroidTargetPlatformSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/Android/UnrealEditor-AndroidTargetPlatformSettings.dll')
+Failed to SetupSDK for platform 'Android'
+InternalLoadLibrary: 'IOSTargetPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/IOS/UnrealEditor-IOSTargetPlatform.dll')
+InternalLoadLibrary: 'IOSTargetPlatformSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/IOS/UnrealEditor-IOSTargetPlatformSettings.dll')
+Failed to SetupSDK for platform 'IOS'
+InternalLoadLibrary: 'LinuxTargetPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/Linux/UnrealEditor-LinuxTargetPlatform.dll')
+InternalLoadLibrary: 'LinuxTargetPlatformSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/Linux/UnrealEditor-LinuxTargetPlatformSettings.dll')
+Failed to SetupSDK for platform 'Linux'
+InternalLoadLibrary: 'MacTargetPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MacTargetPlatform.dll')
+InternalLoadLibrary: 'MacTargetPlatformSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MacTargetPlatformSettings.dll')
+Failed to SetupSDK for platform 'Mac'
+InternalLoadLibrary: 'TVOSTargetPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/IOS/UnrealEditor-TVOSTargetPlatform.dll')
+InternalLoadLibrary: 'TVOSTargetPlatformSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/IOS/UnrealEditor-TVOSTargetPlatformSettings.dll')
+Failed to SetupSDK for platform 'TVOS'
+InternalLoadLibrary: 'WindowsTargetPlatform' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WindowsTargetPlatform.dll')
+InternalLoadLibrary: 'WindowsTargetPlatformSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WindowsTargetPlatformSettings.dll')
+InternalLoadLibrary: 'WindowsTargetPlatformControls' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WindowsTargetPlatformControls.dll')
+Loaded TargetPlatform 'Windows'
+Loaded TargetPlatform 'WindowsEditor'
+Loaded TargetPlatform 'WindowsServer'
+Loaded TargetPlatform 'WindowsClient'
+Building Assets For WindowsEditor
+InternalLoadLibrary: 'AudioFormatOPUS' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioFormatOpus.dll')
+InternalLoadLibrary: 'AudioFormatOGG' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioFormatOgg.dll')
+Lib vorbis DLL was dynamically loaded.
+InternalLoadLibrary: 'AudioFormatADPCM' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioFormatADPCM.dll')
+InternalLoadLibrary: 'AudioFormatBINK' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioFormatBink.dll')
+InternalLoadLibrary: 'AudioFormatRAD' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioFormatRad.dll')
+InternalLoadLibrary: 'ShaderFormatD3D' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ShaderFormatD3D.dll')
+InternalLoadLibrary: 'ShaderFormatOpenGL' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ShaderFormatOpenGL.dll')
+InternalLoadLibrary: 'VulkanShaderFormat' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-VulkanShaderFormat.dll')
+InternalLoadLibrary: 'ShaderFormatVectorVM' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ShaderFormatVectorVM.dll')
+Ray tracing is disabled. Reason: disabled through project setting (r.RayTracing=0).
+InternalLoadLibrary: 'DerivedDataCache' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-DerivedDataCache.dll')
+../../../Engine/DerivedDataCache/Compressed.ddp: Opened pak cache for reading. (1670 MiB)
+EnterprisePak: Pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/DerivedDataCache/Local: Speed tests took 0.00 seconds.
+D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/DerivedDataCache/Local: Performance: Latency=0.01ms. RandomReadSpeed=1425.68MBs, RandomWriteSpeed=268.85MBs. Assigned SpeedClass 'Local'
+Local: Using data cache path D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/DerivedDataCache/Local: Writable
+InternalLoadLibrary: 'ShaderPreprocessor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ShaderPreprocessor.dll')
+Guid format shader working directory is -2 characters bigger than the processId version (D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Intermediate/Shaders/WorkingDirectory/22436/).
+Cleaned the shader compiler working directory 'C:/Users/Administrator/AppData/Local/Temp/UnrealShaderWorkingDir/984B804943D2AB4CDEDBCB9EB97511B9/'.
+Cannot use XGE Controller as Incredibuild is not installed on this machine.
+UBA/Horde Configuration [Uba.Provider.Horde]: Not Enabled
+No distributed shader compiler controller found
+Using 13 local workers for shader compilation
+InternalLoadLibrary: 'MetalShaderFormat' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MetalShaderFormat.dll')
+Compiling shader autogen file: D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush
+Autogen file is unchanged, skipping write.
+Running DelayedAutoRegister Phase ShaderTypesReady
+InternalLoadLibrary: 'NullInstallBundleManager' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-NullInstallBundleManager.dll')
+InternalLoadLibrary: 'AssetRegistry' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AssetRegistry.dll')
+ActiveMountsLoading is disabled.
+FAssetRegistry took 0.0005 seconds to start up
+EditorDomain is Disabled
+Running DelayedAutoRegister Phase PreObjectSystemReady
+Deviceprofile LinuxArm64Editor not found.
+Deviceprofile LinuxArm64 not found.
+Active device profile: [000002E64B991E00][000002E647335000 82] WindowsEditor
+Metadata set : deviceprofile="WindowsEditor"
+Running DelayedAutoRegister Phase DeviceProfileManagerReady
+FlushAsyncLoading(1): 1 QueuedPackages, 0 AsyncPackages
+Texture Encode Speed: Final (cook).
+Oodle Texture Encode Speed settings: Fast: RDO Off Lambda=0, Effort=Normal Final: RDO Off Lambda=0, Effort=Normal
+Shared linear texture encoding: Disabled
+InternalLoadLibrary: 'ImageWrapper' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ImageWrapper.dll')
+InternalLoadLibrary: 'DirectoryWatcher' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-DirectoryWatcher.dll')
+InternalLoadLibrary: 'MeshUtilities' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MeshUtilities.dll')
+InternalLoadLibrary: 'MaterialBaking' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MaterialBaking.dll')
+InternalLoadLibrary: 'MeshMergeUtilities' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MeshMergeUtilities.dll')
+InternalLoadLibrary: 'MeshReductionInterface' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MeshReductionInterface.dll')
+InternalLoadLibrary: 'QuadricMeshReduction' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-QuadricMeshReduction.dll')
+InternalLoadLibrary: 'ProxyLODMeshReduction' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Editor/ProxyLODPlugin/Binaries/Win64/UnrealEditor-ProxyLODMeshReduction.dll')
+InternalLoadLibrary: 'SkeletalMeshReduction' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/SkeletalReduction/Binaries/Win64/UnrealEditor-SkeletalMeshReduction.dll')
+InternalLoadLibrary: 'MeshBoneReduction' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MeshBoneReduction.dll')
+Using QuadricMeshReduction for automatic static mesh reduction
+Using SkeletalMeshReduction for automatic skeletal mesh reduction
+Using ProxyLODMeshReduction for automatic mesh merging
+No distributed automatic mesh merging module available
+No distributed automatic mesh merging module available
+InternalLoadLibrary: 'StaticMeshDescription' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-StaticMeshDescription.dll')
+InternalLoadLibrary: 'GeometryProcessingInterfaces' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-GeometryProcessingInterfaces.dll')
+InternalLoadLibrary: 'NaniteBuilder' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-NaniteBuilder.dll')
+InternalLoadLibrary: 'MeshBuilder' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MeshBuilder.dll')
+InternalLoadLibrary: 'KismetCompiler' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-KismetCompiler.dll')
+InternalLoadLibrary: 'MovieSceneTools' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MovieSceneTools.dll')
+InternalLoadLibrary: 'Sequencer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Sequencer.dll')
+InternalLoadLibrary: 'CurveEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-CurveEditor.dll')
+InternalLoadLibrary: 'SequencerCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SequencerCore.dll')
+InternalLoadLibrary: 'AssetDefinition' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AssetDefinition.dll')
+Applying CVar settings from Section [/Script/CQTest.CQTestSettings] File [Engine]
+VirtualizationSystem name found in ini file: None
+FNullVirtualizationSystem mounted, virtualization will be disabled
+Running DelayedAutoRegister Phase ObjectSystemReady
+StartProcessingNewlyLoadedObjects
+InternalLoadLibrary: 'Core' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Core.dll')
+InternalLoadLibrary: 'Networking' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Networking.dll')
+InternalLoadLibrary: 'LiveCoding' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-LiveCoding.dll')
+InternalLoadLibrary: 'HeadMountedDisplay' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-HeadMountedDisplay.dll')
+InternalLoadLibrary: 'SourceCodeAccess' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SourceCodeAccess.dll')
+InternalLoadLibrary: 'Messaging' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Messaging.dll')
+InternalLoadLibrary: 'MRMesh' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MRMesh.dll')
+InternalLoadLibrary: 'UnrealEd' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-UnrealEd.dll')
+InternalLoadLibrary: 'LandscapeEditorUtilities' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-LandscapeEditorUtilities.dll')
+InternalLoadLibrary: 'SubobjectDataInterface' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SubobjectDataInterface.dll')
+InternalLoadLibrary: 'SlateCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SlateCore.dll')
+InternalLoadLibrary: 'Slate' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Slate.dll')
+InternalLoadLibrary: 'SlateReflector' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SlateReflector.dll')
+InternalLoadLibrary: 'EditorStyle' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-EditorStyle.dll')
+Border
+BreadcrumbButton
+Brushes.Title
+ColorPicker.ColorThemes
+Default
+Icons.Save
+Icons.Toolbar.Settings
+ListView
+SoftwareCursor_CardinalCross
+SoftwareCursor_Grab
+TableView.DarkRow
+TableView.Row
+TreeView
+InternalLoadLibrary: 'UMG' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-UMG.dll')
+InternalLoadLibrary: 'UMGEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-UMGEditor.dll')
+InternalLoadLibrary: 'ScriptableEditorWidgets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ScriptableEditorWidgets.dll')
+InternalLoadLibrary: 'CollisionAnalyzer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-CollisionAnalyzer.dll')
+InternalLoadLibrary: 'WorkspaceMenuStructure' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WorkspaceMenuStructure.dll')
+InternalLoadLibrary: 'FunctionalTesting' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-FunctionalTesting.dll')
+InternalLoadLibrary: 'BehaviorTreeEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-BehaviorTreeEditor.dll')
+InternalLoadLibrary: 'GameplayTasksEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-GameplayTasksEditor.dll')
+InternalLoadLibrary: 'StringTableEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-StringTableEditor.dll')
+InternalLoadLibrary: 'AssetTools' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AssetTools.dll')
+InternalLoadLibrary: 'VREditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-VREditor.dll')
+InternalLoadLibrary: 'Blutility' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Blutility.dll')
+InternalLoadLibrary: 'ToolMenus' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ToolMenus.dll')
+InternalLoadLibrary: 'LevelEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-LevelEditor.dll')
+InternalLoadLibrary: 'MainFrame' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MainFrame.dll')
+InternalLoadLibrary: 'HotReload' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-HotReload.dll')
+InternalLoadLibrary: 'CommonMenuExtensions' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-CommonMenuExtensions.dll')
+InternalLoadLibrary: 'AndroidDeviceProfileSelector' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/AndroidDeviceProfileSelector/Binaries/Win64/UnrealEditor-AndroidDeviceProfileSelector.dll')
+InternalLoadLibrary: 'IOSPreviewDeviceProfileSelector' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/IOSDeviceProfileSelector/Binaries/Win64/UnrealEditor-IOSPreviewDeviceProfileSelector.dll')
+InternalLoadLibrary: 'PixelInspectorModule' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-PixelInspectorModule.dll')
+InternalLoadLibrary: 'MaterialEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MaterialEditor.dll')
+InternalLoadLibrary: 'Settings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Settings.dll')
+InternalLoadLibrary: 'Overlay' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Overlay.dll')
+InternalLoadLibrary: 'OverlayEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-OverlayEditor.dll')
+InternalLoadLibrary: 'MediaAssets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MediaAssets.dll')
+InternalLoadLibrary: 'ClothingSystemRuntimeNv' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ClothingSystemRuntimeNv.dll')
+InternalLoadLibrary: 'ClothingSystemEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ClothingSystemEditor.dll')
+InternalLoadLibrary: 'AnimationDataController' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AnimationDataController.dll')
+InternalLoadLibrary: 'TimeManagement' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TimeManagement.dll')
+InternalLoadLibrary: 'AnimGraph' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AnimGraph.dll')
+InternalLoadLibrary: 'WorldBookmark' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WorldBookmark.dll')
+InternalLoadLibrary: 'WorldPartitionEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-WorldPartitionEditor.dll')
+FWorldPartitionClassDescRegistry::Initialize started...
+FWorldPartitionClassDescRegistry::Initialize took 2.681 ms
+InternalLoadLibrary: 'SceneOutliner' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-SceneOutliner.dll')
+InternalLoadLibrary: 'PacketHandler' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-PacketHandler.dll')
+InternalLoadLibrary: 'NetworkReplayStreaming' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-NetworkReplayStreaming.dll')
+InternalLoadLibrary: 'MassEntity' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MassEntity.dll')
+InternalLoadLibrary: 'MassEntityTestSuite' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MassEntityTestSuite.dll')
+InternalLoadLibrary: 'BlueprintMaterialTextureNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Editor/BlueprintMaterialTextureNodes/Binaries/Win64/UnrealEditor-BlueprintMaterialTextureNodes.dll')
+InternalLoadLibrary: 'AndroidFileServer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/AndroidFileServer/Binaries/Win64/UnrealEditor-AndroidFileServer.dll')
+XR: Instanced Stereo Rendering is Disabled
+XR: Mobile Multiview is Disabled
+InternalLoadLibrary: 'EnhancedInput' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/EnhancedInput/Binaries/Win64/UnrealEditor-EnhancedInput.dll')
+UGameplayTagsManager::InitializeManager -  0.001 s
+InternalLoadLibrary: 'InputBlueprintNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/EnhancedInput/Binaries/Win64/UnrealEditor-InputBlueprintNodes.dll')
+InternalLoadLibrary: 'BlueprintGraph' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-BlueprintGraph.dll')
+InternalLoadLibrary: 'MutableRuntime' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Mutable/Binaries/Win64/UnrealEditor-MutableRuntime.dll')
+InternalLoadLibrary: 'CustomizableObject' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Mutable/Binaries/Win64/UnrealEditor-CustomizableObject.dll')
+InternalLoadLibrary: 'MutableTools' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Mutable/Binaries/Win64/UnrealEditor-MutableTools.dll')
+InternalLoadLibrary: 'MutableValidation' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Mutable/Binaries/Win64/UnrealEditor-MutableValidation.dll')
+InternalLoadLibrary: 'AnimationSharing' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/AnimationSharing/Binaries/Win64/UnrealEditor-AnimationSharing.dll')
+InternalLoadLibrary: 'PropertyAccessNode' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/PropertyAccessNode/Binaries/Win64/UnrealEditor-PropertyAccessNode.dll')
+InternalLoadLibrary: 'ChaosCaching' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ChaosCaching/Binaries/Win64/UnrealEditor-ChaosCaching.dll')
+InternalLoadLibrary: 'ChaosCachingEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ChaosCaching/Binaries/Win64/UnrealEditor-ChaosCachingEditor.dll')
+InternalLoadLibrary: 'TakeRecorder' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/VirtualProduction/Takes/Binaries/Win64/UnrealEditor-TakeRecorder.dll')
+InternalLoadLibrary: 'EditorTRSGizmoTests' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorTRSGizmo/Binaries/Win64/UnrealEditor-EditorTRSGizmoTests.dll')
+InternalLoadLibrary: 'FullBodyIK' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/FullBodyIK/Binaries/Win64/UnrealEditor-FullBodyIK.dll')
+InternalLoadLibrary: 'PBIK' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/FullBodyIK/Binaries/Win64/UnrealEditor-PBIK.dll')
+InternalLoadLibrary: 'PythonScriptPlugin' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/PythonScriptPlugin/Binaries/Win64/UnrealEditor-PythonScriptPlugin.dll')
+InternalLoadLibrary: 'SequenceNavigator' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/SequenceNavigator/Binaries/Win64/UnrealEditor-SequenceNavigator.dll')
+InternalLoadLibrary: 'ActorSequence' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/MovieScene/ActorSequence/Binaries/Win64/UnrealEditor-ActorSequence.dll')
+InternalLoadLibrary: 'InterchangeNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Interchange/Runtime/Binaries/Win64/UnrealEditor-InterchangeNodes.dll')
+InternalLoadLibrary: 'InterchangeFactoryNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Interchange/Runtime/Binaries/Win64/UnrealEditor-InterchangeFactoryNodes.dll')
+InternalLoadLibrary: 'InterchangeImport' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Interchange/Runtime/Binaries/Win64/UnrealEditor-InterchangeImport.dll')
+InternalLoadLibrary: 'InterchangePipelines' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Interchange/Runtime/Binaries/Win64/UnrealEditor-InterchangePipelines.dll')
+InternalLoadLibrary: 'EnvironmentQueryEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/AI/EnvironmentQueryEditor/Binaries/Win64/UnrealEditor-EnvironmentQueryEditor.dll')
+InternalLoadLibrary: 'Paper2D' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/2D/Paper2D/Binaries/Win64/UnrealEditor-Paper2D.dll')
+InternalLoadLibrary: 'AnimationData' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/AnimationData/Binaries/Win64/UnrealEditor-AnimationData.dll')
+InternalLoadLibrary: 'AnimationModifierLibrary' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/AnimationModifierLibrary/Binaries/Win64/UnrealEditor-AnimationModifierLibrary.dll')
+InternalLoadLibrary: 'ControlRig' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/ControlRig/Binaries/Win64/UnrealEditor-ControlRig.dll')
+InternalLoadLibrary: 'Constraints' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Constraints.dll')
+InternalLoadLibrary: 'ControlRigDeveloper' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/ControlRig/Binaries/Win64/UnrealEditor-ControlRigDeveloper.dll')
+InternalLoadLibrary: 'RigLogicLib' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/RigLogic/Binaries/Win64/UnrealEditor-RigLogicLib.dll')
+InternalLoadLibrary: 'RigLogicLibTest' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/RigLogic/Binaries/Win64/UnrealEditor-RigLogicLibTest.dll')
+InternalLoadLibrary: 'RigLogicDeveloper' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/RigLogic/Binaries/Win64/UnrealEditor-RigLogicDeveloper.dll')
+InternalLoadLibrary: 'EngineCameras' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Cameras/EngineCameras/Binaries/Win64/UnrealEditor-EngineCameras.dll')
+InternalLoadLibrary: 'GameplayCameras' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Cameras/GameplayCameras/Binaries/Win64/UnrealEditor-GameplayCameras.dll')
+InternalLoadLibrary: 'AssetManagerEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Editor/AssetManagerEditor/Binaries/Win64/UnrealEditor-AssetManagerEditor.dll')
+InternalLoadLibrary: 'TreeMap' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TreeMap.dll')
+InternalLoadLibrary: 'DataValidation' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Editor/DataValidation/Binaries/Win64/UnrealEditor-DataValidation.dll')
+InternalLoadLibrary: 'GameplayTagsEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Editor/GameplayTagsEditor/Binaries/Win64/UnrealEditor-GameplayTagsEditor.dll')
+InternalLoadLibrary: 'FacialAnimation' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Editor/FacialAnimation/Binaries/Win64/UnrealEditor-FacialAnimation.dll')
+InternalLoadLibrary: 'FacialAnimationEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Editor/FacialAnimation/Binaries/Win64/UnrealEditor-FacialAnimationEditor.dll')
+InternalLoadLibrary: 'TcpMessaging' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Messaging/TcpMessaging/Binaries/Win64/UnrealEditor-TcpMessaging.dll')
+InternalLoadLibrary: 'NiagaraSimCaching' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/NiagaraSimCaching/Binaries/Win64/UnrealEditor-NiagaraSimCaching.dll')
+InternalLoadLibrary: 'NiagaraSimCachingEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/NiagaraSimCaching/Binaries/Win64/UnrealEditor-NiagaraSimCachingEditor.dll')
+InternalLoadLibrary: 'UdpMessaging' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Messaging/UdpMessaging/Binaries/Win64/UnrealEditor-UdpMessaging.dll')
+InternalLoadLibrary: 'NNERuntimeORT' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/NNE/NNERuntimeORT/Binaries/Win64/UnrealEditor-NNERuntimeORT.dll')
+MakeRuntimeORTDml:
+  DirectML:  yes
+  RHI D3D12: yes
+  D3D12:     n/a (checked in CanCreateModelGPU)
+Interface availability:
+  GPU: n/a (checked in CanCreateModelGPU)
+  RDG: yes
+InternalLoadLibrary: 'NNEEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-NNEEditor.dll')
+InternalLoadLibrary: 'NiagaraCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/Niagara/Binaries/Win64/UnrealEditor-NiagaraCore.dll')
+InternalLoadLibrary: 'Niagara' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/Niagara/Binaries/Win64/UnrealEditor-Niagara.dll')
+Niagara Debugger Client Initialized | Session: B009ED0AE25E4F438000000000007F00 | Instance: AFEFC22E4043F9C4709077B4502B7B10 (DESKTOP-21EU8CB-22436).
+InternalLoadLibrary: 'NiagaraEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/Niagara/Binaries/Win64/UnrealEditor-NiagaraEditor.dll')
+InternalLoadLibrary: 'ContentBrowser' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ContentBrowser.dll')
+InternalLoadLibrary: 'ContentBrowserData' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ContentBrowserData.dll')
+InternalLoadLibrary: 'CollectionManager' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-CollectionManager.dll')
+Loaded 0 collections in 0.000998 seconds
+Scanning file cache for directory 'D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Saved/Collections/' took 0.00s
+Scanning file cache for directory 'D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Content/Developers/Administrator/Collections/' took 0.00s
+Scanning file cache for directory 'D:/Uneal Engine AI/malaysia/portfolios/ue-knight-refine/Content/Collections/' took 0.00s
+Fixed up redirectors for 0 collections in 0.000000 seconds (updated 0 objects)
+InternalLoadLibrary: 'LevelSequence' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-LevelSequence.dll')
+InternalLoadLibrary: 'NiagaraAnimNotifies' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/FX/Niagara/Binaries/Win64/UnrealEditor-NiagaraAnimNotifies.dll')
+InternalLoadLibrary: 'OptimusCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/DeformerGraph/Binaries/Win64/UnrealEditor-OptimusCore.dll')
+InternalLoadLibrary: 'OptimusDeveloper' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Animation/DeformerGraph/Binaries/Win64/UnrealEditor-OptimusDeveloper.dll')
+InternalLoadLibrary: 'CableComponent' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/CableComponent/Binaries/Win64/UnrealEditor-CableComponent.dll')
+InternalLoadLibrary: 'AudioSynesthesiaCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/AudioSynesthesia/Binaries/Win64/UnrealEditor-AudioSynesthesiaCore.dll')
+InternalLoadLibrary: 'AudioSynesthesia' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/AudioSynesthesia/Binaries/Win64/UnrealEditor-AudioSynesthesia.dll')
+InternalLoadLibrary: 'AudioAnalyzer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioAnalyzer.dll')
+InternalLoadLibrary: 'CustomMeshComponent' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/CustomMeshComponent/Binaries/Win64/UnrealEditor-CustomMeshComponent.dll')
+InternalLoadLibrary: 'GeometryScriptingCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/GeometryScripting/Binaries/Win64/UnrealEditor-GeometryScriptingCore.dll')
+InternalLoadLibrary: 'HairStrandsDeformer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/HairStrands/Binaries/Win64/UnrealEditor-HairStrandsDeformer.dll')
+InternalLoadLibrary: 'HairStrandsSolver' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/HairStrands/Binaries/Win64/UnrealEditor-HairStrandsSolver.dll')
+InternalLoadLibrary: 'LocationServicesBPLibrary' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/LocationServicesBPLibrary/Binaries/Win64/UnrealEditor-LocationServicesBPLibrary.dll')
+InternalLoadLibrary: 'MetasoundGraphCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Metasound/Binaries/Win64/UnrealEditor-MetasoundGraphCore.dll')
+InternalLoadLibrary: 'MetasoundGenerator' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Metasound/Binaries/Win64/UnrealEditor-MetasoundGenerator.dll')
+InternalLoadLibrary: 'MetasoundFrontend' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Metasound/Binaries/Win64/UnrealEditor-MetasoundFrontend.dll')
+InternalLoadLibrary: 'AudioChannelAgnosticCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AudioChannelAgnosticCore.dll')
+InternalLoadLibrary: 'MetasoundStandardNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Metasound/Binaries/Win64/UnrealEditor-MetasoundStandardNodes.dll')
+InternalLoadLibrary: 'MetasoundEngine' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Metasound/Binaries/Win64/UnrealEditor-MetasoundEngine.dll')
+MetaSound Page Target Initialized to 'Default'
+InternalLoadLibrary: 'WaveTable' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/WaveTable/Binaries/Win64/UnrealEditor-WaveTable.dll')
+Registering Engine Module Parameter Interfaces...
+MetaSound Engine Initialized
+InternalLoadLibrary: 'MetasoundEngineTest' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Metasound/Binaries/Win64/UnrealEditor-MetasoundEngineTest.dll')
+InternalLoadLibrary: 'AudioWidgets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/AudioWidgets/Binaries/Win64/UnrealEditor-AudioWidgets.dll')
+InternalLoadLibrary: 'AdvancedWidgets' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-AdvancedWidgets.dll')
+InternalLoadLibrary: 'MetasoundEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Metasound/Binaries/Win64/UnrealEditor-MetasoundEditor.dll')
+InternalLoadLibrary: 'MsQuicRuntime' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/MsQuic/Binaries/Win64/UnrealEditor-MsQuicRuntime.dll')
+InternalLoadLibrary: 'ProceduralMeshComponent' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/ProceduralMeshComponent/Binaries/Win64/UnrealEditor-ProceduralMeshComponent.dll')
+InternalLoadLibrary: 'PropertyAccessEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/PropertyAccess/Binaries/Win64/UnrealEditor-PropertyAccessEditor.dll')
+InternalLoadLibrary: 'PropertyBindingUtils' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/PropertyBindingUtils/Binaries/Win64/UnrealEditor-PropertyBindingUtils.dll')
+InternalLoadLibrary: 'PropertyBindingUtilsTestSuite' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/PropertyBindingUtils/Binaries/Win64/UnrealEditor-PropertyBindingUtilsTestSuite.dll')
+InternalLoadLibrary: 'ResonanceAudio' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/ResonanceAudio/Binaries/Win64/UnrealEditor-ResonanceAudio.dll')
+InternalLoadLibrary: 'RigVM' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/RigVM/Binaries/Win64/UnrealEditor-RigVM.dll')
+InternalLoadLibrary: 'RigVMDeveloper' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/RigVM/Binaries/Win64/UnrealEditor-RigVMDeveloper.dll')
+InternalLoadLibrary: 'SignificanceManager' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/SignificanceManager/Binaries/Win64/UnrealEditor-SignificanceManager.dll')
+InternalLoadLibrary: 'SoundFields' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/SoundFields/Binaries/Win64/UnrealEditor-SoundFields.dll')
+InternalLoadLibrary: 'Synthesis' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Synthesis/Binaries/Win64/UnrealEditor-Synthesis.dll')
+InternalLoadLibrary: 'StateTreeModule' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/StateTree/Binaries/Win64/UnrealEditor-StateTreeModule.dll')
+InternalLoadLibrary: 'TraceServices' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TraceServices.dll')
+InternalLoadLibrary: 'TraceAnalysis' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TraceAnalysis.dll')
+InternalLoadLibrary: 'StateTreeTestSuite' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/StateTree/Binaries/Win64/UnrealEditor-StateTreeTestSuite.dll')
+InternalLoadLibrary: 'Concert' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/Concert/ConcertMain/Binaries/Win64/UnrealEditor-Concert.dll')
+InternalLoadLibrary: 'ConcertClient' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/Concert/ConcertMain/Binaries/Win64/UnrealEditor-ConcertClient.dll')
+InternalLoadLibrary: 'ConcertTransport' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/Concert/ConcertMain/Binaries/Win64/UnrealEditor-ConcertTransport.dll')
+InternalLoadLibrary: 'ConcertServer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/Concert/ConcertMain/Binaries/Win64/UnrealEditor-ConcertServer.dll')
+InternalLoadLibrary: 'Scribble' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/Animation/Scribble/Binaries/Win64/UnrealEditor-Scribble.dll')
+InternalLoadLibrary: 'SQLiteCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Runtime/Database/SQLiteCore/Binaries/Win64/UnrealEditor-SQLiteCore.dll')
+InternalLoadLibrary: 'ConcertSyncCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/Concert/ConcertSync/ConcertSyncCore/Binaries/Win64/UnrealEditor-ConcertSyncCore.dll')
+InternalLoadLibrary: 'AudioInsights' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/AudioInsights/Binaries/Win64/UnrealEditor-AudioInsights.dll')
+InternalLoadLibrary: 'AudioInsightsRuntime' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/AudioInsightsRuntime/Binaries/Win64/UnrealEditor-AudioInsightsRuntime.dll')
+InternalLoadLibrary: 'AudioModulationInsights' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/AudioModulationInsights/Binaries/Win64/UnrealEditor-AudioModulationInsights.dll')
+InternalLoadLibrary: 'ChaosClothEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/ChaosCloth/Binaries/Win64/UnrealEditor-ChaosClothEditor.dll')
+InternalLoadLibrary: 'ChaosInsightsAnalysis' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/ChaosInsights/Binaries/Win64/UnrealEditor-ChaosInsightsAnalysis.dll')
+InternalLoadLibrary: 'ChaosInsightsUI' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/ChaosInsights/Binaries/Win64/UnrealEditor-ChaosInsightsUI.dll')
+InternalLoadLibrary: 'ChaosVD' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/ChaosVD/Binaries/Win64/UnrealEditor-ChaosVD.dll')
+InternalLoadLibrary: 'ChaosVDRuntime' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-ChaosVDRuntime.dll')
+InternalLoadLibrary: 'ChaosVDBlueprint' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/ChaosVD/Binaries/Win64/UnrealEditor-ChaosVDBlueprint.dll')
+InternalLoadLibrary: 'ChaosVDBuiltInExtensions' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/ChaosVD/Binaries/Win64/UnrealEditor-ChaosVDBuiltInExtensions.dll')
+[FChaosVDExtensionsManager::RegisterExtension] Registering CVD Extension [FChaosVDGenericDebugDrawExtension] ...
+[FChaosVDExtensionsManager::RegisterExtension] Registering CVD Extension [FChaosVDAccelerationStructuresExtension] ...
+[FChaosVDExtensionsManager::RegisterExtension] Registering CVD Extension [FChaosVDCameraTracesExtension] ...
+[FChaosVDExtensionsManager::RegisterExtension] Registering CVD Extension [FChaosVDParticleExtraDataExtension] ...
+[FChaosVDExtensionsManager::RegisterExtension] Registering CVD Extension [FPerformanceMetricsExtension] ...
+InternalLoadLibrary: 'DataflowEnginePlugin' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Dataflow/Binaries/Win64/UnrealEditor-DataflowEnginePlugin.dll')
+InternalLoadLibrary: 'DataflowEngine' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-DataflowEngine.dll')
+InternalLoadLibrary: 'DataflowSimulation' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-DataflowSimulation.dll')
+InternalLoadLibrary: 'DataflowNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Dataflow/Binaries/Win64/UnrealEditor-DataflowNodes.dll')
+InternalLoadLibrary: 'InputEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/EnhancedInput/Binaries/Win64/UnrealEditor-InputEditor.dll')
+InternalLoadLibrary: 'IoStoreInsights' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/IoStoreInsights/Binaries/Win64/UnrealEditor-IoStoreInsights.dll')
+InternalLoadLibrary: 'TraceInsights' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TraceInsights.dll')
+InternalLoadLibrary: 'TraceInsightsCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TraceInsightsCore.dll')
+Initialize
+OnSessionChanged
+Initialize
+OnSessionChanged
+Initialize
+OnSessionChanged
+Initialize
+OnSessionChanged
+Initialize
+OnSessionChanged
+InternalLoadLibrary: 'MassInsightsAnalysis' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/MassInsights/Binaries/Win64/UnrealEditor-MassInsightsAnalysis.dll')
+InternalLoadLibrary: 'MassInsightsUI' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/MassInsights/Binaries/Win64/UnrealEditor-MassInsightsUI.dll')
+InternalLoadLibrary: 'MeshPaintEditorMode' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/MeshPainting/Binaries/Win64/UnrealEditor-MeshPaintEditorMode.dll')
+InternalLoadLibrary: 'MeshPaintingToolset' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/MeshPainting/Binaries/Win64/UnrealEditor-MeshPaintingToolset.dll')
+InternalLoadLibrary: 'CustomizableObjectEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Mutable/Binaries/Win64/UnrealEditor-CustomizableObjectEditor.dll')
+Creating Mutable Customizable Object System.
+InternalLoadLibrary: 'PCG' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/PCG/Binaries/Win64/UnrealEditor-PCG.dll')
+Applying CVar settings from Section [/Script/PCG.PCGEngineSettings] File [Engine]
+InternalLoadLibrary: 'PCGEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/PCG/Binaries/Win64/UnrealEditor-PCGEditor.dll')
+InternalLoadLibrary: 'RenderGraphInsights' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/RenderGraphInsights/Binaries/Win64/UnrealEditor-RenderGraphInsights.dll')
+InternalLoadLibrary: 'RenderTraceInsights' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/RenderTraceInsights/Binaries/Win64/UnrealEditor-RenderTraceInsights.dll')
+InternalLoadLibrary: 'TraceUtilities' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/TraceUtilities/Binaries/Win64/UnrealEditor-TraceUtilities.dll')
+InternalLoadLibrary: 'WorldMetricsCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/WorldMetrics/Binaries/Win64/UnrealEditor-WorldMetricsCore.dll')
+InternalLoadLibrary: 'WorldMetricsTest' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/WorldMetrics/Binaries/Win64/UnrealEditor-WorldMetricsTest.dll')
+InternalLoadLibrary: 'CsvMetrics' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/WorldMetrics/Binaries/Win64/UnrealEditor-CsvMetrics.dll')
+InternalLoadLibrary: 'AnimationSharingEd' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/AnimationSharing/Binaries/Win64/UnrealEditor-AnimationSharingEd.dll')
+InternalLoadLibrary: 'OodleNetworkHandlerComponent' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Compression/OodleNetwork/Binaries/Win64/UnrealEditor-OodleNetworkHandlerComponent.dll')
+InternalLoadLibrary: 'CLionSourceCodeAccess' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/CLionSourceCodeAccess/Binaries/Win64/UnrealEditor-CLionSourceCodeAccess.dll')
+InternalLoadLibrary: 'DumpGPUServices' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/DumpGPUServices/Binaries/Win64/UnrealEditor-DumpGPUServices.dll')
+InternalLoadLibrary: 'GitSourceControl' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/GitSourceControl/Binaries/Win64/UnrealEditor-GitSourceControl.dll')
+Revision control is disabled
+InternalLoadLibrary: 'N10XSourceCodeAccess' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/N10XSourceCodeAccess/Binaries/Win64/UnrealEditor-N10XSourceCodeAccess.dll')
+InternalLoadLibrary: 'NamingTokens' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/NamingTokens/Binaries/Win64/UnrealEditor-NamingTokens.dll')
+InternalLoadLibrary: 'NamingTokensUI' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/NamingTokens/Binaries/Win64/UnrealEditor-NamingTokensUI.dll')
+InternalLoadLibrary: 'NamingTokensUncookedOnly' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/NamingTokens/Binaries/Win64/UnrealEditor-NamingTokensUncookedOnly.dll')
+InternalLoadLibrary: 'NamingTokensEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/NamingTokens/Binaries/Win64/UnrealEditor-NamingTokensEditor.dll')
+InternalLoadLibrary: 'PluginUtils' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/PluginUtils/Binaries/Win64/UnrealEditor-PluginUtils.dll')
+InternalLoadLibrary: 'ProjectLauncher' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/ProjectLauncher/Binaries/Win64/UnrealEditor-ProjectLauncher.dll')
+InternalLoadLibrary: 'CommonLaunchExtensions' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/ProjectLauncher/Binaries/Win64/UnrealEditor-CommonLaunchExtensions.dll')
+InternalLoadLibrary: 'SubversionSourceControl' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/SubversionSourceControl/Binaries/Win64/UnrealEditor-SubversionSourceControl.dll')
+Revision control is disabled
+InternalLoadLibrary: 'UObjectPlugin' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/UObjectPlugin/Binaries/Win64/UnrealEditor-UObjectPlugin.dll')
+InternalLoadLibrary: 'VisualStudioCodeSourceCodeAccess' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/VisualStudioCodeSourceCodeAccess/Binaries/Win64/UnrealEditor-VisualStudioCodeSourceCodeAccess.dll')
+InternalLoadLibrary: 'VisualStudioSourceCodeAccess' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Developer/VisualStudioSourceCodeAccess/Binaries/Win64/UnrealEditor-VisualStudioSourceCodeAccess.dll')
+InternalLoadLibrary: 'AdvancedRenamer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/AdvancedRenamer/Binaries/Win64/UnrealEditor-AdvancedRenamer.dll')
+InternalLoadLibrary: 'AutomationUtils' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/AutomationUtils/Binaries/Win64/UnrealEditor-AutomationUtils.dll')
+InternalLoadLibrary: 'AutomationUtilsEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/AutomationUtils/Binaries/Win64/UnrealEditor-AutomationUtilsEditor.dll')
+InternalLoadLibrary: 'FractureEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ChaosEditor/Binaries/Win64/UnrealEditor-FractureEditor.dll')
+InternalLoadLibrary: 'ChaosSolverEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ChaosSolverPlugin/Binaries/Win64/UnrealEditor-ChaosSolverEditor.dll')
+InternalLoadLibrary: 'ChaosNiagara' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ChaosNiagara/Binaries/Win64/UnrealEditor-ChaosNiagara.dll')
+InternalLoadLibrary: 'ChaosUserDataPT' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ChaosUserDataPT/Binaries/Win64/UnrealEditor-ChaosUserDataPT.dll')
+InternalLoadLibrary: 'ControlRigPhysics' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ControlRigPhysics/Binaries/Win64/UnrealEditor-ControlRigPhysics.dll')
+InternalLoadLibrary: 'ControlRigPhysicsEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/ControlRigPhysics/Binaries/Win64/UnrealEditor-ControlRigPhysicsEditor.dll')
+InternalLoadLibrary: 'TedsCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorage/Binaries/Win64/UnrealEditor-TedsCore.dll')
+InternalLoadLibrary: 'TypedElementFramework' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-TypedElementFramework.dll')
+InternalLoadLibrary: 'MassEntityEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MassEntityEditor.dll')
+InternalLoadLibrary: 'MassEntityDebugger' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-MassEntityDebugger.dll')
+TEDS has been disabled.
+InternalLoadLibrary: 'TedsUI' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorage/Binaries/Win64/UnrealEditor-TedsUI.dll')
+InternalLoadLibrary: 'TedsActorCompatibility' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsActorCompatibility.dll')
+InternalLoadLibrary: 'TedsAlerts' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsAlerts.dll')
+InternalLoadLibrary: 'TedsAssetData' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsAssetData.dll')
+InternalLoadLibrary: 'TedsContentBrowser' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsContentBrowser.dll')
+InternalLoadLibrary: 'TedsDebugger' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsDebugger.dll')
+InternalLoadLibrary: 'TedsOutliner' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsOutliner.dll')
+InternalLoadLibrary: 'TedsPropertyEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsPropertyEditor.dll')
+InternalLoadLibrary: 'TedsQueryStack' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsQueryStack.dll')
+InternalLoadLibrary: 'TedsRevisionControl' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsRevisionControl.dll')
+InternalLoadLibrary: 'TedsSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsSettings.dll')
+InternalLoadLibrary: 'TedsTableViewer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsTableViewer.dll')
+InternalLoadLibrary: 'TedsEverythingPicker' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsEverythingPicker.dll')
+InternalLoadLibrary: 'TedsTypeInfo' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsTypeInfo.dll')
+InternalLoadLibrary: 'TedsTypedElementBridge' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsTypedElementBridge.dll')
+InternalLoadLibrary: 'TedsEditorCompatibility' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsEditorCompatibility.dll')
+InternalLoadLibrary: 'TedsOperations' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-TedsOperations.dll')
+InternalLoadLibrary: 'UnifiedFavorites' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/EditorDataStorageFeatures/Binaries/Win64/UnrealEditor-UnifiedFavorites.dll')
+InternalLoadLibrary: 'GeometryCollectionEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryCollectionPlugin/Binaries/Win64/UnrealEditor-GeometryCollectionEditor.dll')
+InternalLoadLibrary: 'GeometryCollectionTracks' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryCollectionPlugin/Binaries/Win64/UnrealEditor-GeometryCollectionTracks.dll')
+InternalLoadLibrary: 'GeometryCollectionSequencer' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryCollectionPlugin/Binaries/Win64/UnrealEditor-GeometryCollectionSequencer.dll')
+InternalLoadLibrary: 'GeometryCollectionEngine' ('C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-GeometryCollectionEngine.dll')
+InternalLoadLibrary: 'GeometryCollectionNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryCollectionPlugin/Binaries/Win64/UnrealEditor-GeometryCollectionNodes.dll')
+InternalLoadLibrary: 'GeometryCollectionDepNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryCollectionPlugin/Binaries/Win64/UnrealEditor-GeometryCollectionDepNodes.dll')
+InternalLoadLibrary: 'GeometryFlowCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryFlow/Binaries/Win64/UnrealEditor-GeometryFlowCore.dll')
+InternalLoadLibrary: 'GeometryFlowMeshProcessing' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryFlow/Binaries/Win64/UnrealEditor-GeometryFlowMeshProcessing.dll')
+InternalLoadLibrary: 'GeometryFlowMeshProcessingEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryFlow/Binaries/Win64/UnrealEditor-GeometryFlowMeshProcessingEditor.dll')
+InternalLoadLibrary: 'GizmoSettings' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GizmoFramework/Binaries/Win64/UnrealEditor-GizmoSettings.dll')
+InternalLoadLibrary: 'GlobalConfigurationData' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GlobalConfigurationData/Binaries/Win64/UnrealEditor-GlobalConfigurationData.dll')
+InternalLoadLibrary: 'GlobalConfigurationDataCore' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GlobalConfigurationData/Binaries/Win64/UnrealEditor-GlobalConfigurationDataCore.dll')
+InternalLoadLibrary: 'GeometryDataflowNodes' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryDataflow/Binaries/Win64/UnrealEditor-GeometryDataflowNodes.dll')
+InternalLoadLibrary: 'DataflowMedialSkeleton' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/GeometryDataflow/Binaries/Win64/UnrealEditor-DataflowMedialSkeleton.dll')
+InternalLoadLibrary: 'HttpInsights' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/HttpInsights/Binaries/Win64/UnrealEditor-HttpInsights.dll')
+InternalLoadLibrary: 'Landmass' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/Landmass/Binaries/Win64/UnrealEditor-Landmass.dll')
+InternalLoadLibrary: 'LandmassEditor' ('C:/Program Files/Epic Games/UE_5.8/Engine/Plugins/Experimental/Landmass/Binaries/Win64/UnrealEditor-LandmassEditor.dll')
+Missing cached shadermap for /Landmass/Landscape/BlueprintBrushes/Materials/Internal/BrushBounds.BrushBounds in PCD3D_SM5, Default, SM5, Editor (DDC key hash: 56d3a4de26dd0993859e693f69923d9eeec71712), compiling. 
+appError called: Assertion failed: AllJobs.GetNumPendingJobs() == 0 [File:D:\build\++UE5\Sync\Engine\Source\Runtime\Engine\Private\ShaderCompiler\ShaderCompiler.cpp] [Line: 1940] 
+
+
+Windows GetLastError: The operation completed successfully. (0)

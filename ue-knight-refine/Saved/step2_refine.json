@@ -1,0 +1,104 @@
+{
+ "Rogue": {
+  "notes": [
+   "LOD settings applied: 100% / 50% / 25% triangles",
+   "regenerate_lod(3): True"
+  ],
+  "slots": [
+   [
+    "rogue_texture",
+    "M_Rogue_Refined"
+   ],
+   [
+    "rogue_weapon",
+    "M_Rogue_Weapon"
+   ]
+  ],
+  "lod_verts": [
+   4600,
+   2859,
+   1687
+  ],
+  "exports": {
+   "lod0": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD71B760) {suggestions: , warnings: , errors: }>",
+    351968
+   ],
+   "lod1": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD719210) {suggestions: , warnings: , errors: }>",
+    240392
+   ],
+   "lod2": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD71FCC0) {suggestions: , warnings: , errors: }>",
+    167704
+   ],
+   "anim_idle": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD7168A0) {suggestions: , warnings: , errors: }>",
+    196736
+   ],
+   "anim_attack": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD714470) {suggestions: , warnings: , errors: }>",
+    202056
+   ],
+   "anim_special": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD715640) {suggestions: , warnings: , errors: }>",
+    224992
+   ],
+   "anim_cheer": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD716A80) {suggestions: , warnings: , errors: }>",
+    228496
+   ]
+  }
+ },
+ "RogueHooded": {
+  "notes": [
+   "LOD settings applied: 100% / 50% / 25% triangles",
+   "regenerate_lod(3): True"
+  ],
+  "slots": [
+   [
+    "rogue_texture",
+    "M_RogueHooded_Refined"
+   ],
+   [
+    "roguehooded_weapon",
+    "M_RogueHooded_Weapon"
+   ]
+  ],
+  "lod_verts": [
+   4804,
+   2943,
+   1724
+  ],
+  "exports": {
+   "lod0": [
+    "<Struct 'GLTFExportMessages' (0x00000172938F0C60) {suggestions: , warnings: , errors: }>",
+    363004
+   ],
+   "lod1": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD71FCC0) {suggestions: , warnings: , errors: }>",
+    244488
+   ],
+   "lod2": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD71F450) {suggestions: , warnings: , errors: }>",
+    169076
+   ],
+   "anim_idle": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD711080) {suggestions: , warnings: , errors: }>",
+    199020
+   ],
+   "anim_attack": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD7104E0) {suggestions: , warnings: , errors: }>",
+    199032
+   ],
+   "anim_special": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD712AF0) {suggestions: , warnings: , errors: }>",
+    204328
+   ],
+   "anim_cheer": [
+    "<Struct 'GLTFExportMessages' (0x00000172BD7167B0) {suggestions: , warnings: , errors: }>",
+    230780
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "notes": [
+  "new blank map: <Object '/Temp/Untitled_1.Untitled' (0x0000018B26C4EE00) Class 'World'>",
+  "Barbarian: bounds origin z 119.9, half height 119.9",
+  "Mage: bounds origin z 135.8, half height 135.8",
+  "Rogue: bounds origin z 109.3, half height 109.4",
+  "RogueHooded: bounds origin z 112.6, half height 112.6"
+ ],
+ "captures": [
+  [
+   "barbarian_beauty.hdr",
+   120,
+   20000051
+  ],
+  [
+   "mage_beauty.hdr",
+   130,
+   20000051
+  ],
+  [
+   "rogue_beauty.hdr",
+   110,
+   20000051
+  ],
+  [
+   "roguehooded_beauty.hdr",
+   115,
+   20000051
+  ]
+ ]
+}
